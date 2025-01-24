@@ -411,6 +411,16 @@
         padding: 1rem;
     }
 }
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-break {
+        display: block;
+    }
+
+}
 
 @media (max-width: 480px) {
     .hero h1 {
