@@ -59,6 +59,17 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
+/* Animation for Scratch Elements */
+@keyframes blockFloat {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.hero-image img {
+    animation: blockFloat 4s ease-in-out infinite;
+}
+
 .hero-badges {
     display: flex;
     gap: 1rem;
