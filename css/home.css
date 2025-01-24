@@ -366,6 +366,13 @@
     transform: translateX(5px);
 }
 
+.course-card .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
