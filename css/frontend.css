@@ -176,6 +176,17 @@
         transform: translateY(0);
     }
 }
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-light);  /* Schimbăm culoarea să fie albă */
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);  /* Adăugăm un background semi-transparent */
+    padding: 1rem;
+    border-left: 4px solid var(--css-color);
+    border-radius: 0 4px 4px 0;
+}
 
 /* Frontend Buttons */
 .frontend-btn {
@@ -317,7 +328,7 @@
 .browser-content {
     padding: 2rem;
     transform: translateY(20px);
-    opacity: 0;
+    opacity: 0.7;
     transition: all 0.3s ease;
 }
 
@@ -325,6 +336,25 @@
     transform: translateY(0);
     opacity: 1;
 }
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);  /* Forțăm 2 coloane pe tabletă */
+        gap: 1rem;
+    }
+}
+
+.project-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+   
 
 /* Skills Cards */
 .frontend-skill {
@@ -351,10 +381,16 @@
 .frontend-skill:hover {
     transform: translateY(-5px);
 }
-
+}
 .frontend-skill:hover .skill-progress {
     transform: scaleX(1);
 }
+
+.why-us p {
+    font-size: 1.2rem;
+    color:rgb(16, 15, 15);
+    line-height: 1.8;
+    text-align: center;
 
 /* CTA Section */
 .frontend-cta {
@@ -422,15 +458,15 @@
 
 @media (max-width: 480px) {
     .tech-stack {
-        flex-direction: column;
+        flex-direction: row;  /* Schimbăm din column în row */
+        justify-content: center;
+        flex-wrap: nowrap;  /* Prevenim wrap-ul */
     }
     
-    .frontend-btn {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-    
-    .code-preview {
-        font-size: 0.8rem;
+    .tech {
+        flex: 1;  /* Distribuie spațiul egal */
+        min-width: 0;  /* Permite reducerea sub width-ul content-ului */
+        padding: 0.5rem;  /* Padding mai mic pe mobile */
+        text-align: center;
     }
 }
