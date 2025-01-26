@@ -888,3 +888,43 @@
     font-size: 1.1rem;
   }
 }
+/* Fixes pentru mobile */
+@media (max-width: 768px) {
+    .intro-text, 
+    .age-group,
+    .project-card,
+    .feature-box,
+    .skill-card,
+    .why-us {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  
+    .age-features li,
+    .project-card ul li {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  
+    .age-group.visible,
+    .project-card.visible,
+    .feature-box.visible,
+    .skill-card.visible {
+      animation: none;
+      opacity: 1;
+    }
+  
+    .transform-style,
+    .perspective {
+      transform-style: flat;
+      perspective: none;
+    }
+  }
+  
+  /* Fix pentru animații */
+  .visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
