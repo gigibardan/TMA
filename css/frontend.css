@@ -354,7 +354,7 @@
 .project-card h3 {
     color: white;
     margin-bottom: 1rem;
-   
+}
 
 /* Skills Cards */
 .frontend-skill {
@@ -381,7 +381,7 @@
 .frontend-skill:hover {
     transform: translateY(-5px);
 }
-}
+
 .frontend-skill:hover .skill-progress {
     transform: scaleX(1);
 }
@@ -391,7 +391,7 @@
     color:rgb(16, 15, 15);
     line-height: 1.8;
     text-align: center;
-
+}
 /* CTA Section */
 .frontend-cta {
     background: var(--gradient-primary);
