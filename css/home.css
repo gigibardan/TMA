@@ -56,6 +56,14 @@
     margin-left: 0.2em;
     color: #61dafb;
 }
+/* Highlight element position on mobile */
+@media (max-width: 768px) {
+    .highlight {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+   }
 
 /* Matrix effect în background */
 .highlight::before {
@@ -435,3 +443,4 @@
         flex-direction: column;
     }
 }
+
