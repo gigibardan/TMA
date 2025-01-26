@@ -319,6 +319,10 @@
     margin-top: 1rem;
     overflow: hidden;
 }
+.hero-description {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+ }
 
 .skill-progress::after {
     content: '';

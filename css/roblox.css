@@ -173,6 +173,10 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
+.hero-description {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+ }
 
 /* Particles System */
 .roblox-particles {

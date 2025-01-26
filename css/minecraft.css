@@ -157,8 +157,14 @@
 }
 
 /* Minecraft Particles System */
-
-
+.projects-section h2 {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+ }
+.hero-description {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+ }
 .particle {
     position: absolute;
     left: -9999px;  /* Le mutăm în afara ecranului */
