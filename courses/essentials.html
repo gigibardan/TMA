@@ -6,20 +6,21 @@
     <title>LEGO SPIKE Essentials - Viitorul începe aici</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/essentials.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
-    <!-- Navigation (păstrat din codul original) -->
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
-            <a href="index.html" class="logo">
-                <img src="/assets/images/logo.png" alt="TMA Logo">
+            <a href="../index.html" class="logo">
+                <img src="/assets/images/logo-techminds-sigla.png" alt="TMA Logo">
             </a>  
             <button class="menu-button">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html">Acasă</a></li>
+                <li><a href="../index.html">Acasă</a></li>
                 <li class="dropdown">
-                    <a href="index.html">Programare</a>
+                    <a href="../programare.html">Programare</a>
                     <div class="dropdown-content">
                         <a href="courses/scratch.html">Scratch</a>
                         <a href="courses/thunkable.html">Thunkable</a>
@@ -33,7 +34,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="robotics.html">Robotică</a>
+                    <a href="../robotics.html">Robotică</a>
                     <div class="dropdown-content">
                         <a href="essentials.html">LEGO Essentials</a>
                         <a href="courses/spike-prime.html">LEGO Prime</a>
@@ -67,7 +68,7 @@
                         </div>
                         <div class="tech-specs-line">
                             <span class="spec-icon">📚</span>
-                            <span>Program: 12 săptămâni × 2 ore</span>
+                            <span>Program: 12 săptămâni × 1.5 ore</span>
                         </div>
                         <div class="tech-specs-line">
                             <span class="spec-icon">🎯</span>
@@ -75,8 +76,8 @@
                         </div>
                     </div>
                     <div class="hero-actions">
-                        <button class="lego-btn primary">Înscrie-te Acum</button>
-                        <button class="lego-btn secondary">Explorează Cursul</button>
+                        <a href="#cta" class="lego-btn primary">Înscrie-te Acum</a>
+                        <a href="#cta" class="lego-btn secondary">Programează o Vizită</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -132,31 +133,60 @@
     </section>
 
     <!-- Enhanced Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Proiecte Fascinante</h2>
-                <p>Fiecare proiect este o nouă aventură în lumea roboticii</p>
-            </div>
-            <div class="project-showcase">
-                <div class="project-brick">
-                    <div class="project-header">
-                        <span class="project-icon">🎡</span>
-                        <h3>Roata Panoramică</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>O introducere captivantă în lumea motoarelor și a senzorilor</p>
-                        <ul class="project-features">
-                            <li>Control precis al vitezei</li>
-                            <li>Programare secvențială</li>
-                            <li>Efecte de lumini LED</li>
-                        </ul>
-                    </div>
+    <div class="project-carousel swiper">
+        <div class="swiper-wrapper">
+            <div class="lesson-card swiper-slide">
+                <div class="lesson-header">
+                    <span class="lesson-icon">🎠</span>
+                    <h3>Classic Carousel</h3>
                 </div>
-                <!-- [Similar structure for other projects] -->
+                <div class="lesson-content">
+                    <p>Construirea unui carusel simplu care se rotește continuu, explorând mișcarea circulară.</p>
+                </div>
+            </div>
+            <div class="lesson-card swiper-slide">
+                <div class="lesson-header">
+                    <span class="lesson-icon">🚠</span>
+                    <h3>Cable Car</h3>
+                </div>
+                <div class="lesson-content">
+                    <p>Construirea unui teleferic care se mișcă pe o linie dreaptă, utilizând motorul LEGO SPIKE.</p>
+                </div>
+            </div>
+            <div class="lesson-card swiper-slide">
+                <div class="lesson-header">
+                    <span class="lesson-icon">🚁</span>
+                    <h3>Howling Heli</h3>
+                </div>
+                <div class="lesson-content">
+                    <p>Un elicopter care scoate sunete când se rotește, integrând evenimente audio.</p>
+                </div>
+            </div>
+            <div class="lesson-card swiper-slide">
+                <div class="lesson-header">
+                    <span class="lesson-icon">🚘</span>
+                    <h3>Cave Car</h3>
+                </div>
+                <div class="lesson-content">
+                    <p>Construirea unui vehicul care afișează mesaje LED când se mișcă.</p>
+                </div>
+            </div>
+            <div class="lesson-card swiper-slide">
+                <div class="lesson-header">
+                    <span class="lesson-icon">🎡</span>
+                    <h3>Ferris Wheel</h3>
+                </div>
+                <div class="lesson-content">
+                    <p>Construirea unei roți Ferris care se rotește și afișează culori LED sincronizate.</p>
+                </div>
             </div>
         </div>
-    </section>
+        <!-- Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
 
     <!-- Enhanced Skills Section -->
     <section class="skills">
@@ -265,21 +295,7 @@
         </div>
     </section>
 
-    <!-- Enhanced CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Începe Aventura LEGO SPIKE</h2>
-                <p>Transformă pasiunea pentru construcție în abilități pentru viitor</p>
-                <div class="cta-buttons">
-                    <button class="lego-btn primary">Înscrie-te Acum</button>
-                    <button class="lego-btn secondary">Programează o Vizită</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer (păstrat din codul original) -->
      <!-- Footer -->
      <footer class="footer">
         <div class="footer-content">
@@ -378,6 +394,29 @@
             observeSkillBlocks();
         });
     </script>
+
+    <!-- Include Swiper.js -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".project-carousel", {
+            loop: true,
+            autoplay: {
+                delay: 3000, // Schimbă slide-ul la fiecare 3 secunde
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    });
+</script>
 </body>
 
 </html>
