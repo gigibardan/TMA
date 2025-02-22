@@ -3,362 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMA</title>
+    <title>TMA - TITLE_PLACEHOLDER</title>
+    <!-- Common CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-       
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar">
-           <div class="nav-content">
-               <a href="index.html" class="logo">
-                   <img src="./assets/images/logo.png" alt="TMA Logo">
-               </a>  
-               <button class="menu-button">☰</button>
-               <ul class="nav-links">
-                   <li><a href="index.html">Acasă</a></li>
-                   <li class="dropdown">
-                       <a href="index.html">Programare</a>
-                       <div class="dropdown-content">
-                           <a href="courses/scratch.html">Scratch</a>
-                           <a href="courses/thunkable.html">Thunkable</a>
-                           <a href="courses/gdevelop.html">GDevelop</a>
-                           <a href="courses/minecraft.html">Minecraft</a>
-                           <a href="courses/roblox.html">Roblox</a>
-                           <a href="courses/godot.html">Godot</a>
-                           <a href="courses/greenfoot.html">Greenfoot</a>
-                           <a href="courses/python.html">Python</a>
-                           <a href="courses/frontend.html">Frontend</a>
-                       </div>
-                   </li>
-                   <li class="dropdown">
-                       <a href="robotics.html">Robotică</a>
-                       <div class="dropdown-content">
-                           <a href="courses/spike-essentials.html">LEGO Essentials</a>
-                           <a href="courses/spike-prime.html">LEGO Prime</a>
-                           <a href="courses/microbit.html">micro:bit</a>
-                           <a href="courses/arduino.html">Arduino</a>
-                       </div>
-                   <li><a href="about.html">Despre noi</a></li>
-                   <li><a href="contact.html">Contact</a></li>
-               </ul>
-           </div>
-       </nav>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Page specific CSS - CSS_PLACEHOLDER -->
+</head>
+<body>
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="index.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">Scratch</a>
+                    <a href="courses/thunkable.html">Thunkable</a>
+                    <a href="courses/gdevelop.html">GDevelop</a>
+                    <a href="courses/minecraft.html">Minecraft</a>
+                    <a href="courses/roblox.html">Roblox</a>
+                    <a href="courses/godot.html">Godot</a>
+                    <a href="courses/greenfoot.html">Greenfoot</a>
+                    <a href="courses/python.html">Python</a>
+                    <a href="courses/frontend.html">Frontend</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/spike-essentials.html">LEGO Essentials</a>
+                    <a href="courses/spike-prime.html">LEGO Prime</a>
+                    <a href="courses/microbit.html">micro:bit</a>
+                    <a href="courses/arduino.html">Arduino</a>
+                </div>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
     
 
-  <!-- Hero Section -->
-<section class="hero">
+<main>
+    <!-- Hero Section -->
+<section class="hero-section">
+    <div class="particle-container" id="particles-js"></div>
+    
+    <!-- Tech decorations -->
+    <div class="tech-decoration"></div>
+    <div class="tech-decoration"></div>
+    
     <div class="hero-content">
-        <h1>Viitorul începe cu<br class="mobile-break"> <span class="highlight">primul cod</span></h1>
-        <p>Descoperă cursurile noastre inovative de programare pentru copii și tineri</p>
-        <div class="hero-buttons">
-            <a href="#courses" class="button button-primary">Vezi cursurile</a>
-            <a href="/contact" class="button button-secondary">Înscrie-te acum</a>
-        </div>
-        <div class="hero-features">
-            <div class="feature">
-                <span class="feature-icon">🎮</span>
-                <span>Program flexibil</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">👩‍💻</span>
-                <span>Proiecte practice</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">🚀</span>
-                <span>Dezvoltare continuă</span>
+        <div class="hero-text">
+            <h1 class="tech-title">ȘCOALĂ DE ROBOTICĂ ȘI PROGRAMARE</h1>
+            <p class="tech-description">Într-o eră marcată de avansuri tehnologice rapide și constante, TechMinds Academy este locul unde imaginația prinde viață prin tehnologie!</p>
+            <div class="cta-container">
+                <a href="/inscriere" class="cta-button primary-cta">Înscrie-te chiar acum</a>
+                <a href="/program" class="cta-button secondary-cta">Vezi programul</a>
             </div>
         </div>
-    </div>
-    <div class="hero-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
+        <div class="hero-logo">
+            <img src="./assets/images/logo-techminds-academy.png" alt="TechMinds Academy Logo">
+        </div>
     </div>
 </section>
 
-<!-- Stats Banner -->
-<div class="stats-banner">
-    <div class="stat">
-        <span class="stat-number">300+</span>
-        <span class="stat-label">Elevi activi</span>
-    </div>
-    <div class="stat">
-        <span class="stat-number">9</span>
-        <span class="stat-label">Cursuri</span>
-    </div>
-    <div class="stat">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Săptămâni/curs</span>
-    </div>
-</div>
-
-<!-- Courses Section -->
-<section class="courses-section" id="courses">
-    <div class="section-header">
-        <h2>Explorează cursurile noastre</h2>
-        <p>De la primul cod la dezvoltare avansată</p>
+   <!-- Courses Section -->
+<section class="courses-section">
+    <div class="tech-grid">
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
     </div>
     
-    <div class="course-grid">
-        <!-- Scratch -->
-        <div class="course-card">
-            <a href="courses/scratch.html" class="card-link">
-                <div class="card-badge">Începători</div>
-                <div class="card-image" style="background-image: url('assets/images/scratch.webp')"></div>
+    <div class="courses-container">
+        <h2 class="section-title">Descoperă Viitorul Tehnologiei</h2>
+        <p class="section-description">Alege drumul tău în lumea digitală și dezvoltă-ți abilitățile care vor modela viitorul</p>
+        
+        <div class="courses-grid">
+            <!-- Programming Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="https://techminds-academy.ro/assets/images/service/3d-programare.jpg" alt="Programare">
+                </div>
                 <div class="card-content">
-                    <h3>Laboratorul de Jocuri - Scratch </h3>
-                    <div class="card-description">
-                        <p>Dezvoltat de MIT, Scratch transformă programarea într-o experiență intuitivă și creativă prin blocuri vizuale de cod care se îmbină ca un puzzle. Copiii isi creează propriile jocuri, povești animate și proiecte interactive, descoperind pas cu pas logica programării.</p>
-                        <div class="benefits">
-                            <h4>Beneficii cheie:</h4>
-                            <ul>
-                                <li>Dezvoltă gândirea logică și capacitatea de rezolvare a problemelor</li>
-                                <li>Oferă satisfacția creării propriilor jocuri și animații din prima lecție</li>
-                                <li>Construiește fundația perfectă pentru viitoarea tranziție spre programare avansată</li>
-                            </ul>
-                        </div>
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M8 16L4 12L8 8M16 8L20 12L16 16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <div class="course-info">
-                        <span class="duration">12 săptămâni</span>
-                        <span class="frequency">1 ședință/săptămână</span>
-                        <span class="age-range">7-12 ani</span>
+                    <div class="card-text">
+                        <h3>Programare</h3>
+                        <p>Descoperă arta programării prin intermediul tehnologiilor moderne. De la primii pași în Scratch până la dezvoltarea aplicațiilor în Python, îți vom ghida călătoria în lumea codului. Dezvoltă gândirea algoritmică și creează propriile tale aplicații într-un mediu educațional interactiv și stimulant.</p>
+                        <a href="programare.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
-                    <span class="learn-more">Explorează cursul →</span>
                 </div>
-            </a>
-        </div>
+            </div>
 
-        <!-- Thunkable -->
-        <div class="course-card">
-            <a href="courses/thunkable.html" class="card-link">
-                <div class="card-badge">Începători</div>
-                <div class="card-image" style="background-image: url('assets/images/thunkable.png')"></div>
+            <!-- Robotics Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="https://techminds-academy.ro/assets/images/service/3d-robotica.jpg" alt="Robotică">
+                </div>
                 <div class="card-content">
-                    <h3>Atelierul de Aplicații Mobile - Thunkable </h3>
-                    <div class="card-description">
-                        <p>Thunkable este platforma ideală pentru crearea primelor aplicații mobile, oferind un mediu vizual intuitiv și modern. Copiii își dezvoltă propriile aplicații pentru Android și iOS folosind blocuri de cod, testându-le direct pe telefon sau tabletă. Este podul perfect între programarea vizuală și dezvoltarea de aplicații mobile funcționale.</p>
-                        <div class="benefits">
-                            <h4>Beneficii cheie:</h4>
-                            <ul>
-                                <li>Creează aplicații reale, testabile pe propriile dispozitive</li>
-                                <li>Dezvoltă abilități practice de design și experiență utilizator</li>
-                                <li>Construiește proiecte cu impact în lumea reală</li>
-                            </ul>
-                        </div>
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
                     </div>
-                    <div class="course-info">
-                        <span class="duration">12 săptămâni</span>
-                        <span class="frequency">1 ședință/săptămână</span>
-                        <span class="age-range">8-12 ani</span>
+                    <div class="card-text">
+                        <h3>Robotică</h3>
+                        <p>Construiește, programează și dă viață roboților folosind tehnologii de ultimă generație. Cu LEGO Education, micro:bit și Arduino, vei explora fascinanta lume a roboticii într-un mod practic și captivant.</p>
+                        <a href="robotics.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
-                    <span class="learn-more">Explorează cursul →</span>
                 </div>
-            </a>
-        </div>
+            </div>
 
-        <!-- GDevelop -->
-        <div class="course-card">
-            <a href="courses/gdevelop.html" class="card-link">
-                <div class="card-badge">Intermediar</div>
-                <div class="card-image" style="background-image: url('assets/images/gdevelop.png')"></div>
+            <!-- Game Dev Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="https://techminds-academy.ro/assets/images/service/3d-game-development.jpg" alt="Game Development">
+                </div>
                 <div class="card-content">
-                    <h3>Fabrica de Jocuri - GDevelop</h3>
-                    <div class="card-description">
-                        <p>GDevelop este platforma care transformă pasiunea pentru jocuri în abilitatea de a le crea. Folosind un sistem intuitiv de "evenimente și acțiuni", tinerii creatori dezvoltă jocuri 2D complexe care pot fi publicate pe multiple platforme - de la web la mobile și desktop.</p>
-                        <div class="benefits">
-                            <h4>Beneficii cheie:</h4>
-                            <ul>
-                                <li>Creează jocuri complete cu mecanici complexe și efecte vizuale</li>
-                                <li>Dezvoltă gândirea logică și abilitățile de rezolvare a problemelor</li>
-                                <li>Învață concepte reale din industria dezvoltării de jocuri</li>
-                            </ul>
-                        </div>
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
                     </div>
-                    <div class="course-info">
-                        <span class="duration">12 săptămâni</span>
-                        <span class="frequency">1 ședință/săptămână</span>
-                        <span class="age-range">9-12 ani</span>
+                    <div class="card-text">
+                        <h3>Game Development</h3>
+                        <p>Transformă-ți pasiunea pentru jocuri într-o abilitate creativă. De la Minecraft și Roblox până la motoare de joc profesionale ca Godot, vei învăța să creezi propriile tale lumi virtuale și experiențe interactive.</p>
+                        <a href="programare.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
-                    <span class="learn-more">Explorează cursul →</span>
                 </div>
-            </a>
-        </div>
+            </div>
 
-<!-- Minecraft -->
-<div class="course-card">
-    <a href="courses/minecraft.html" class="card-link">
-        <div class="card-badge">Popular</div>
-        <div class="card-image" style="background-image: url('assets/images/minecraft.png')"></div>
-        <div class="card-content">
-            <h3>De la jucător la creator - Minecraft Modding</h3>
-            <div class="card-description">
-                <p>Minecraft Modding îmbină pasiunea pentru jocul preferat cu abilitățile de programare și modelare 3D. Folosind MCreator și Blockbench, copiii învață să creeze propriul conținut pentru Minecraft - de la obiecte și unelte până la creaturi și structuri complexe.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Transformă pasiunea pentru Minecraft în abilități practice</li>
-                        <li>Dezvoltă creativitatea prin crearea propriului conținut</li>
-                        <li>Învață concepte de game design într-un mediu familiar</li>
-                    </ul>
+            <!-- Web Dev Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="https://techminds-academy.ro/assets/images/service/3d-web-development.jpg" alt="Web Development">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Web Development</h3>
+                        <p>Pășește în lumea dezvoltării web moderne. De la bazele HTML și CSS până la JavaScript și framework-uri moderne, vei învăța să creezi site-uri web interactive și aplicații web captivante.</p>
+                        <a href="./courses/frontend.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">9-14 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
         </div>
-    </a>
-</div>
-
-<!-- Roblox -->
-<div class="course-card">
-    <a href="courses/roblox.html" class="card-link">
-        <div class="card-badge">Popular</div>
-        <div class="card-image" style="background-image: url('assets/images/roblox.png')"></div>
-        <div class="card-content">
-            <h3>Universul Dezvoltării de Jocuri - Roblox Lua</h3>
-            <div class="card-description">
-                <p>Roblox Studio și limbajul Lua deschid ușa către dezvoltarea profesională de jocuri. Copiii învață să scrie primul lor cod real într-un mediu familiar și captivant, creând experiențe de joc complexe care pot fi publicate și jucate de milioane de utilizatori.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Primul pas în programarea reală cu rezultate imediat vizibile</li>
-                        <li>Creează jocuri ce pot fi publicate pe platforma Roblox</li>
-                        <li>Dezvoltă abilități de programare cerute în industrie</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">10-15 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
-        </div>
-    </a>
-</div>
-
-<!-- Python -->
-<div class="course-card">
-    <a href="courses/python.html" class="card-link">
-        <div class="card-badge">Avansat</div>
-        <div class="card-image" style="background-image: url('assets/images/pyton.webp')"></div>
-        <div class="card-content">
-            <h3>De la Cod la Aplicații - Python </h3>
-            <div class="card-description">
-                <p>Python este limbajul perfect pentru primul contact cu programarea text, datorită sintaxei sale clare și intuitive. Copiii învață să scrie cod real creând aplicații și jocuri interactive, construind astfel fundația pentru programarea avansată.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Învață unul dintre cele mai populare limbaje de programare</li>
-                        <li>Creează aplicații practice și jocuri de la zero</li>
-                        <li>Dezvoltă o bază solidă pentru programare avansată</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">10-14 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
-        </div>
-    </a>
-</div>
-
-<!-- Greenfoot -->
-<div class="course-card">
-    <a href="courses/greenfoot.html" class="card-link">
-        <div class="card-badge">Avansat</div>
-        <div class="card-image" style="background-image: url('assets/images/greenfoot.png')"></div>
-        <div class="card-content">
-            <h3>Java prin Jocuri - Greenfoot</h3>
-            <div class="card-description">
-                <p>Greenfoot este poarta ideală către programarea Java, unul dintre cele mai căutate limbaje din industrie. Prin crearea de simulări și jocuri simple, copiii învață conceptele fundamentale ale programării orientate pe obiecte într-un mediu vizual și interactiv.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Învață Java într-un mod vizual și interactiv</li>
-                        <li>Dezvoltă fundația pentru programare profesională</li>
-                        <li>Înțelege concepte avansate prin exemple practice</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">11-16 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
-        </div>
-    </a>
-</div>
-
-<!-- Godot -->
-<div class="course-card">
-    <a href="courses/godot.html" class="card-link">
-        <div class="card-badge">Pro</div>
-        <div class="card-image" style="background-image: url('assets/images/godot.webp')"></div>
-        <div class="card-content">
-            <h3> Game Development Pro - Godot </h3>
-            <div class="card-description">
-                <p>Godot este un motor profesional open-source pentru dezvoltarea de jocuri 2D și 3D. Folosind GDScript, un limbaj similar cu Python, tinerii dezvoltatori creează jocuri complexe la standarde industriale, învățând totodată principiile fundamentale ale game development-ului modern.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Dezvoltă jocuri profesionale 2D și 3D</li>
-                        <li>Învață un limbaj de programare modern și intuitiv</li>
-                        <li>Creează proiecte ce pot fi publicate pe orice platformă</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">11-16 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
-        </div>
-    </a>
-</div>
-
-<!-- Frontend -->
-<div class="course-card">
-    <a href="courses/frontend.html" class="card-link">
-        <div class="card-badge">Pro</div>
-        <div class="card-image" style="background-image: url('assets/images/frontend.webp')"></div>
-        <div class="card-content">
-            <h3>Construiește Web-ul Viitorului - Frontend Development</h3>
-            <div class="card-description">
-                <p>Frontend Development deschide ușa către crearea web-ului modern. De la structură și design până la interactivitate, copiii învață să construiască site-uri și aplicații web complete folosind HTML, CSS și JavaScript - tehnologiile fundamentale ale internetului.</p>
-                <div class="benefits">
-                    <h4>Beneficii cheie:</h4>
-                    <ul>
-                        <li>Creează site-uri web reale și interactive</li>
-                        <li>Dezvoltă abilități căutate în industria tech</li>
-                        <li>Îmbină creativitatea cu programarea</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="course-info">
-                <span class="duration">12 săptămâni</span>
-                <span class="frequency">1 ședință/săptămână</span>
-                <span class="age-range">12-18 ani</span>
-            </div>
-            <span class="learn-more">Explorează cursul →</span>
-        </div>
-    </a>
-</div>
-</div>
+    </div>
 </section>
-   
 
-     <!-- Footer -->
-     <footer class="footer">
+
+
+
+
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="tech-particles"></div>
+    <div class="benefits-container">
+        <h2 class="benefits-title">De ce să alegi TechMinds Academy?</h2>
+        
+        <div class="benefits-grid">
+            <!-- Metodologie -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Metodologie Inovativă</h3>
+                    <p>Combinăm învățarea practică cu teoria într-un mod interactiv și antrenant. Copiii învață prin proiecte reale și experimente captivante.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Mentori -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Mentori Dedicați</h3>
+                    <p>Echipa noastră de instructori pasionați ghidează fiecare elev în parte, adaptând predarea la stilul individual de învățare.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Echipamente -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Tehnologie de Ultimă Oră</h3>
+                    <p>Utilizăm cele mai noi tehnologii și echipamente, oferind copiilor acces la instrumente profesionale de învățare.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Proiecte -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M12 22V15.5" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M22 8.5L12 15.5L2 8.5" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Proiecte Creative</h3>
+                    <p>Fiecare curs culminează cu proiecte practice spectaculoase, unde copiii își pot demonstra abilitățile dobândite.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+        </div>
+
+        <div class="methodology-showcase">
+            <div class="showcase-content">
+                <h3>Explorează, Creează, Inovează</h3>
+                <p>La TechMinds Academy, învățarea este o aventură tehnologică</p>
+                <div class="showcase-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Elevi Fericiți</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Proiecte Realizate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfacție</span>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-visuals">
+                <div class="tech-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact</h3>
@@ -415,5 +367,10 @@
             }
         });
     </script>
+
+<script src="/js/courses.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
