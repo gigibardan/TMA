@@ -37,3 +37,47 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(stagger);
     });
 });
+
+//animatie piesa lego
+document.addEventListener('DOMContentLoaded', function() {
+    const hero = document.querySelector('.hero');
+    const legoPiece = document.querySelector('.lego-piece-3d');
+    
+    // Limitele de rotație
+    const maxRotation = 50;
+    
+    hero.addEventListener('mousemove', (e) => {
+        if (!legoPiece) return;
+        
+        // Calculăm poziția relativă a mouse-ului în hero section
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Convertim poziția în procente (-1 la 1)
+        const xPercent = (x / rect.width - 0.5) * 2;
+        const yPercent = (y / rect.height - 0.5) * 2;
+        
+        // Calculăm rotația
+        const rotateY = xPercent * maxRotation;
+        const rotateX = -yPercent * maxRotation;
+        
+        // Aplicăm transformarea
+        legoPiece.style.transform = `
+            translateY(-50%)
+            rotateY(${rotateY}deg)
+            rotateX(${rotateX}deg)
+        `;
+    });
+    
+    // Reset la poziția inițială când mouse-ul părăsește secțiunea
+    hero.addEventListener('mouseleave', () => {
+        if (!legoPiece) return;
+        
+        legoPiece.style.transform = `
+            translateY(-50%)
+            rotateY(0deg)
+            rotateX(0deg)
+        `;
+    });
+});
