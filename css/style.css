@@ -36,7 +36,7 @@
 }
 
 .logo img {
-   height: 40px; /* Ajustează în funcție de dimensiunea dorită */
+   height: 50px; /* Ajustează în funcție de dimensiunea dorită */
    width: auto;
    transition: transform 0.3s ease;
 }
