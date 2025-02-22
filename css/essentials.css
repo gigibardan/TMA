@@ -1,0 +1,670 @@
+/* Enhanced LEGO Theme */
+:root {
+    --lego-yellow: #FFD700;
+    --lego-red: #FF0000;
+    --lego-blue: #006DB7;
+    --lego-green: #00AF4D;
+    --lego-black: #05131D;
+    --lego-bg: #F6F6F6;
+    --lego-gray: #E0E0E0;
+    --stud-size: 24px;
+    --section-spacing: 6rem;
+}
+
+/* Section Enhancements */
+section {
+    padding: var(--section-spacing) 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Enhanced Hero Section */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(45deg, var(--lego-black), #1a1a1a);
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255,215,0,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0,109,183,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.text-block {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+/* Enhanced LEGO Logo Section */
+.lego-logo {
+    margin-bottom: 2rem;
+    max-width: 300px;
+    position: relative;
+}
+
+.lego-logo img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Enhanced Tech Specs */
+.tech-specs {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(5, 19, 29, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255,215,0,0.2);
+}
+
+.tech-specs-line {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* LEGO Style Buttons */
+.hero-actions {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.lego-btn {
+    background: var(--lego-yellow);
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--lego-black);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.lego-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    transform: translateZ(-8px);
+    box-shadow: 0 8px 0 #B29700;
+}
+
+.lego-btn::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: inherit;
+    border-radius: 50%;
+    box-shadow: -40px 0 0 var(--lego-yellow),
+                 40px 0 0 var(--lego-yellow);
+}
+
+.lego-btn:hover {
+    transform: translateY(2px);
+}
+
+.lego-btn.secondary {
+    background: var(--lego-blue);
+    color: white;
+}
+
+.lego-btn.secondary::before {
+    box-shadow: 0 8px 0 #004A80;
+}
+
+.lego-btn.secondary::after {
+    box-shadow: -40px 0 0 var(--lego-blue),
+                40px 0 0 var(--lego-blue);
+}
+
+/* Features Section */
+.features {
+    background: var(--lego-bg);
+    padding: 6rem 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--lego-black);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.lego-brick-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.lego-brick {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: visible;
+}
+
+.lego-brick:hover {
+    transform: translateY(-5px);
+}
+
+.lego-brick.red::before {
+    background: var(--lego-red);
+}
+
+.lego-brick.blue::before {
+    background: var(--lego-blue);
+}
+
+.lego-brick.yellow::before {
+    background: var(--lego-yellow);
+}
+
+.lego-brick::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    right: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.brick-content {
+    position: relative;
+}
+
+.brick-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--lego-black);
+}
+
+.brick-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    background: white;
+    padding: 6rem 0;
+}
+
+.project-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-brick {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.project-brick:hover {
+    transform: translateY(-5px);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-icon {
+    font-size: 2rem;
+    color: var(--lego-blue);
+}
+
+.project-header h3 {
+    font-size: 1.3rem;
+    color: var(--lego-black);
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.project-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+}
+
+.project-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--lego-blue);
+}
+
+/* Skills Section */
+.skills {
+    background: var(--lego-bg);
+    padding: 6rem 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-block {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.skill-block:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-block h3 {
+    color: var(--lego-black);
+    margin-bottom: 0.5rem;
+}
+
+.skill-block p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.skill-progress {
+    height: 4px;
+    background: #eee;
+    margin-top: 1.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-progress::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: var(--progress);
+    background: var(--lego-blue);
+    transform-origin: left;
+    animation: progressLoad 1s ease-out;
+}
+
+@keyframes progressLoad {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Why Us Section */
+.why-us {
+    background: white;
+    padding: 6rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    color: var(--lego-black);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(45deg, var(--lego-blue), var(--lego-black));
+    padding: 6rem 0;
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .lego-brick-container,
+    .project-showcase,
+    .skills-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lego-brick {
+        padding: 2rem;
+    }
+
+    .cta {
+        padding: 4rem 0;
+    }
+}
+
+
+.lego-brick.red { background: var(--lego-red); }
+.lego-brick.blue { background: var(--lego-blue); }
+.lego-brick.yellow { background: var(--lego-yellow); color: var(--lego-black); }
+
+.brick-studs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--stud-size);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.stud {
+    width: var(--stud-size);
+    height: var(--stud-size);
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+/* Enhanced Project Showcase */
+.project-showcase {
+    margin-top: 4rem;
+}
+
+.project-brick {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+}
+
+/* Enhanced Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: var(--lego-black);
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--lego-yellow);
+    border-radius: 2px;
+}
+
+/* Enhanced Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes studPulse {
+    50% {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.3);
+    }
+}
+
+.stud {
+    animation: studPulse 2s infinite;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .lego-logo {
+        max-width: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-visual {
+        text-align: center;
+    }
+
+    .hero-visual img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 4rem;
+        --stud-size: 16px;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .lego-btn {
+        width: 100%;
+    }
+
+    .lego-btn::after {
+        box-shadow: -20px 0 0 var(--lego-yellow),
+                    20px 0 0 var(--lego-yellow);
+    }
+
+    .lego-btn.secondary::after {
+        box-shadow: -20px 0 0 var(--lego-blue),
+                    20px 0 0 var(--lego-blue);
+    }
+
+    .tech-specs {
+        padding: 1rem;
+    }
+
+    .tech-specs-line {
+        font-size: 0.9rem;
+    }
+
+    .lego-brick-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-showcase {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
