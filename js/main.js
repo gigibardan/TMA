@@ -100,6 +100,3 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.course-card').forEach(card => {
-    observer.observe(card);
-});

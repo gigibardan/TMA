@@ -212,8 +212,17 @@
         .info-content p {
             color: #6b7280;
             font-size: 14px;
+            word-wrap: break-word;
+            white-space: normal;
+            max-width: 100%;
         }
 
+        @media (max-width: 600px) {
+            .info-content p {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+        }
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
@@ -435,18 +444,21 @@
         <!-- Contact Form -->
         <div class="contact-form" id="contact-form">
             <h2>Trimite un mesaj</h2>
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/myzkapon" method="POST">
                 <div class="form-group">
-                    <input type="text" placeholder="Nume complet" required>
+                    <label for="name">Nume complet:</label>
+                    <input type="text" id="name" name="name" placeholder="Nume complet" required>
                 </div>
-                
+            
                 <div class="form-group">
-                    <input type="email" placeholder="Email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
-                
+            
                 <div class="form-group">
-                    <select required>
-                        <option value="">Selectează un curs</option>
+                    <label for="course">Selectează un curs:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Alege un curs</option>
                         <option>Python pentru Începători</option>
                         <option>Robotică și Arduino</option>
                         <option>Web Development</option>
@@ -454,13 +466,16 @@
                         <option>Game Development</option>
                     </select>
                 </div>
-                
+            
                 <div class="form-group">
-                    <textarea placeholder="Mesajul tău" required></textarea>
+                    <label for="message">Mesajul tău:</label>
+                    <textarea id="message" name="message" placeholder="Scrie mesajul tău" required></textarea>
                 </div>
-                
+            
                 <button type="submit">Trimite mesajul</button>
             </form>
+            
+            
         </div>
 
         <!-- Contact Info -->
@@ -469,7 +484,8 @@
                 <div class="info-icon">📍</div>
                 <div class="info-content">
                     <h3>Locație</h3>
-                    <p>București, Sector 1</p>
+                    <p>Strada Știrbei Vodă, Nr. 26-28, Etaj 3,</p>
+                    <p> II Union Business Center Sector 1, București</p>
                 </div>
             </div>
 
@@ -477,7 +493,7 @@
                 <div class="info-icon">📧</div>
                 <div class="info-content">
                     <h3>Email</h3>
-                    <p>contact@tma.ro</p>
+                    <p>inscrieri@techminds-academy.ro</p>
                 </div>
             </div>
 
@@ -485,34 +501,50 @@
                 <div class="info-icon">📱</div>
                 <div class="info-content">
                     <h3>Telefon</h3>
-                    <p>+40 700 000 000</p>
+                    <p>+40 758 707 448</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const button = this.querySelector('button');
-            const originalText = button.textContent;
-            
-            button.textContent = 'Se trimite...';
-            button.style.opacity = '0.8';
-            
+    e.preventDefault(); // Oprim redirecționarea
+
+    const form = this;
+    const button = form.querySelector('button');
+    const originalText = button.textContent;
+
+    button.textContent = 'Se trimite...';
+    button.style.opacity = '0.8';
+
+    // Trimitem datele către Formspree prin Fetch API
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            button.textContent = 'Mesaj trimis! ✓';
+            button.style.background = '#10b981';
+            form.reset(); // Resetăm formularul după trimitere
+
             setTimeout(() => {
-                button.textContent = 'Mesaj trimis! ✓';
-                button.style.background = '#10b981';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '';
-                    button.style.opacity = '1';
-                    this.reset();
-                }, 2000);
-            }, 1500);
-        });
+                button.textContent = originalText;
+                button.style.background = '';
+                button.style.opacity = '1';
+            }, 3000);
+        } else {
+            button.textContent = 'Eroare! Încearcă din nou.';
+            button.style.background = '#e63946';
+        }
+    }).catch(error => {
+        button.textContent = 'Eroare! Verifică conexiunea.';
+        button.style.background = '#e63946';
+    });
+});
 
         // Input animations
         const inputs = document.querySelectorAll('input, select, textarea');
@@ -526,6 +558,9 @@
             });
         });
     </script>
+
+    <!-- modify this form HTML and place wherever you want your form -->
+
 </body>
 
  <!-- Footer -->
@@ -535,7 +570,7 @@
             <h3>Contact</h3>
             <ul>
                 <li>Email: contact@tma.ro</li>
-                <li>Telefon: 0700 000 000</li>
+                <li>Telefon: +40 758 707 448</li>
                 <li>Adresă: Strada Exemplu, Nr. 123</li>
             </ul>
         </div>
