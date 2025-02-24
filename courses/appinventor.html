@@ -8,50 +8,38 @@
    <link rel="stylesheet" href="../css/style.css">
    <link rel="stylesheet" href="../css/courses.css">
    <link rel="stylesheet" href="../css/appinventor.css">
+
 </head>
 <body>
- <!-- Navigation -->
- <nav class="navbar">
-    <div class="nav-content">
-        <a href="../index.html" class="logo">
-            <img src="../assets/images/logo-techminds-sigla.png" alt="TMA Logo">
-        </a>  
-        <button class="menu-button">☰</button>
-        <ul class="nav-links">
-            <li><a href="../index.html">Acasă</a></li>
-            <li class="dropdown">
-                <a href="../programare.html">Programare</a>
-                <div class="dropdown-content">
-                    <a href="scratch.html">Scratch</a>
-                    <a href="appInventor.html">AppInventor</a>
-                    <a href="gdevelop.html">GDevelop</a>
-                    <a href="minecraft.html">Minecraft</a>
-                    <a href="roblox.html">Roblox</a>
-                    <a href="godot.html">Godot</a>
-                    <a href="greenfoot.html">Greenfoot</a>
-                    <a href="python.html">Python</a>
-                    <a href="frontend.html">Frontend</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="../robotics.html">Robotică</a>
-                <div class="dropdown-content">
-                    <a href="essentials.html">LEGO Essentials</a>
-                    <a href="prime.html">LEGO Prime</a>
-                    <a href="microbit.html">micro:bit</a>
-                    <a href="arduino.html">Arduino</a>
-                </div>
-                <li><a href="../about.html">Despre noi</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-   <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="course-hero">
+    <div class="ui-elements">
+        <div class="ui-element">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="36" height="36" rx="8" fill="rgba(255,255,255,0.1)"/>
+                <circle cx="18" cy="18" r="6" fill="var(--app-accent)"/>
+            </svg>
+        </div>
+        <div class="ui-element">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="36" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+                <rect y="12" width="24" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+            </svg>
+        </div>
+        <div class="ui-element">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="2"/>
+                <path d="M20 12v8l5 5" stroke="var(--app-accent)" fill="none" stroke-width="2"/>
+            </svg>
+        </div>
+    </div>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
+                <div class="app-badge">
+                    <span class="badge-icon">📱</span>
+                    <span class="badge-text">Mobile Development</span>
+                </div>
                 <h1>AppInventor</h1>
                 <h2>Atelierul de Aplicații Mobile</h2>
                 <p class="hero-description">Transformă ideile în aplicații mobile reale pentru Android și iOS</p>
@@ -61,12 +49,30 @@
                     <span class="badge">Android & iOS</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#inscriere" class="btn-primary">Înscrie-te acum</a>
-                    <a href="#program" class="btn-secondary">Vezi programa</a>
+                    <a href="#inscriere" class="btn-primary">
+                        <span class="btn-icon">🚀</span>
+                        Înscrie-te acum
+                    </a>
+                    <a href="#program" class="btn-secondary">
+                        <span class="btn-icon">📋</span>
+                        Vezi programa
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="../assets/images/appInventor.webp" alt="AppInventor Development">
+                <div class="phone-frame">
+                    <img src="../assets/images/appInventor.webp" alt="AppInventor Development">
+                    <div class="phone-reflection"></div>
+                </div>
+                <div class="floating-elements">
+                    <div class="code-block">
+                        <pre><code>onButton.Click {
+  moveSprite(x, y)
+}</code></pre>
+                    </div>
+                    <div class="design-element"></div>
+                    <div class="app-preview"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -76,6 +82,10 @@
 <section class="course-intro">
     <div class="container">
         <div class="intro-text">
+            <div class="section-badge">
+                <span class="badge-icon">💡</span>
+                <span>Dezvoltare Aplicații Mobile</span>
+            </div>
             <p>AppInventor reprezintă pasul natural în evoluția tânărului programator, permițând crearea de aplicații mobile reale pentru Android și iOS. Folosind o abordare vizuală intuitivă, platforma transformă ideile creative în aplicații funcționale care pot fi testate direct pe dispozitive mobile.</p>
             <div class="approach">
                 <h3>Cum funcționează?</h3>
@@ -84,19 +94,31 @@
         </div>
         <div class="features">
             <div class="feature-box">
-                <div class="feature-icon">📱</div>
+                <div class="feature-icon">
+                    <span class="icon">📱</span>
+                    <div class="icon-bg"></div>
+                </div>
                 <h3>Aplicații Reale</h3>
                 <p>Creează aplicații care funcționează pe dispozitive mobile reale</p>
+                <div class="feature-decoration"></div>
             </div>
             <div class="feature-box">
-                <div class="feature-icon">🎨</div>
+                <div class="feature-icon">
+                    <span class="icon">🎨</span>
+                    <div class="icon-bg"></div>
+                </div>
                 <h3>Design Modern</h3>
                 <p>Învață principiile de UI/UX și design pentru mobile</p>
+                <div class="feature-decoration"></div>
             </div>
             <div class="feature-box">
-                <div class="feature-icon">🔄</div>
+                <div class="feature-icon">
+                    <span class="icon">🔄</span>
+                    <div class="icon-bg"></div>
+                </div>
                 <h3>Testare Instant</h3>
                 <p>Vezi rezultatele direct pe telefon în timp real</p>
+                <div class="feature-decoration"></div>
             </div>
         </div>
     </div>
@@ -105,37 +127,76 @@
 <!-- Learning Objectives -->
 <section id="program" class="learning-section">
     <div class="container">
-        <h2>Ce vor învăța <span class="text-gradient">copiii</span></h2>
+        <div class="section-header">
+            <h2>Ce vor învăța <span class="text-gradient">copiii</span></h2>
+            <p class="section-description">Program structurat pentru dezvoltarea completă a abilităților de programare mobilă</p>
+        </div>
         <div class="learning-grid">
             <div class="learning-card">
-                <div class="learning-icon">📱</div>
-                <h3>Dezvoltare Variată</h3>
-                <p>Crearea unei game variate de aplicații - de la jocuri interactive până la instrumente practice</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>📱</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Dezvoltare Variată</h3>
+                    <p>Crearea unei game variate de aplicații - de la jocuri interactive până la instrumente practice</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
             <div class="learning-card">
-                <div class="learning-icon">🎨</div>
-                <h3>Design Intuitiv</h3>
-                <p>Proiectarea interfețelor prietenoase și intuitive, cu ecrane multiple și navigare fluidă</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🎨</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Design Intuitiv</h3>
+                    <p>Proiectarea interfețelor prietenoase și intuitive, cu ecrane multiple și navigare fluidă</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
             <div class="learning-card">
-                <div class="learning-icon">⚙️</div>
-                <h3>Funcționalități Moderne</h3>
-                <p>Implementarea funcționalităților moderne - de la baze de date pentru salvarea scorurilor până la utilizarea senzorilor dispozitivului</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>⚙️</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Funcționalități Moderne</h3>
+                    <p>Implementarea funcționalităților moderne - de la baze de date pentru salvarea scorurilor până la utilizarea senzorilor dispozitivului</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
             <div class="learning-card">
-                <div class="learning-icon">🔐</div>
-                <h3>Sisteme Complexe</h3>
-                <p>Dezvoltarea aplicațiilor complexe cu sisteme de autentificare și profile de utilizator</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🔐</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Sisteme Complexe</h3>
+                    <p>Dezvoltarea aplicațiilor complexe cu sisteme de autentificare și profile de utilizator</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
             <div class="learning-card">
-                <div class="learning-icon">🎯</div>
-                <h3>Design Visual</h3>
-                <p>Utilizarea instrumentelor de design pentru crearea unei experiențe vizuale atractive</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🎯</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Design Visual</h3>
+                    <p>Utilizarea instrumentelor de design pentru crearea unei experiențe vizuale atractive</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
             <div class="learning-card">
-                <div class="learning-icon">🧮</div>
-                <h3>Logică Avansată</h3>
-                <p>Gestionarea datelor și implementarea logicii complexe de programare</p>
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🧮</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Logică Avansată</h3>
+                    <p>Gestionarea datelor și implementarea logicii complexe de programare</p>
+                </div>
+                <div class="card-progress"></div>
             </div>
         </div>
     </div>
@@ -146,35 +207,65 @@
     <div class="container">
         <h2 class="section-title">Competențe <span class="text-gradient">dezvoltate</span></h2>
         <div class="skills-grid">
-            <div class="skill-card animate-on-scroll">
-                <div class="skill-icon">🎯</div>
+            <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">🎯</div>
+                    <div class="icon-glow"></div>
+                </div>
                 <h3>Design UI/UX</h3>
                 <p>Principii de design și experiență utilizator</p>
-                <div class="skill-progress"></div>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
             </div>
-            <div class="skill-card animate-on-scroll">
-                <div class="skill-icon">💡</div>
+            <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">💡</div>
+                    <div class="icon-glow"></div>
+                </div>
                 <h3>Gândire Product</h3>
                 <p>Orientare spre produs și utilizator final</p>
-                <div class="skill-progress"></div>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
             </div>
-            <div class="skill-card animate-on-scroll">
-                <div class="skill-icon">🧮</div>
+            <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">🧮</div>
+                    <div class="icon-glow"></div>
+                </div>
                 <h3>Logică Aplicată</h3>
                 <p>Programare în context real și practic</p>
-                <div class="skill-progress"></div>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
             </div>
-            <div class="skill-card animate-on-scroll">
-                <div class="skill-icon">🚀</div>
+            <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">🚀</div>
+                    <div class="icon-glow"></div>
+                </div>
                 <h3>Implementare</h3>
                 <p>Transformarea ideilor în aplicații reale</p>
-                <div class="skill-progress"></div>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
             </div>
-            <div class="skill-card animate-on-scroll">
-                <div class="skill-icon">🔍</div>
+            <div class="skill-card">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">🔍</div>
+                    <div class="icon-glow"></div>
+                </div>
                 <h3>Problem Solving</h3>
                 <p>Rezolvarea structurată a problemelor</p>
-                <div class="skill-progress"></div>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
             </div>
         </div>
     </div>
@@ -186,31 +277,40 @@
         <h2>Proiecte <span class="text-gradient">practice</span></h2>
         <div class="project-carousel">
             <div class="project-card">
-                <div class="project-icon">📝</div>
-                <h3>Aplicații Practice</h3>
-                <ul>
-                    <li>Todo List</li>
-                    <li>Notes App</li>
-                    <li>Instrumente personalizate</li>
-                </ul>
+                <div class="card-inner">
+                    <div class="project-icon">📝</div>
+                    <h3>Aplicații Practice</h3>
+                    <ul>
+                        <li>Todo List</li>
+                        <li>Notes App</li>
+                        <li>Instrumente personalizate</li>
+                    </ul>
+                    <div class="card-glow"></div>
+                </div>
             </div>
             <div class="project-card">
-                <div class="project-icon">🎮</div>
-                <h3>Jocuri Interactive</h3>
-                <ul>
-                    <li>Sisteme de scor</li>
-                    <li>Quiz-uri</li>
-                    <li>Aplicații educaționale</li>
-                </ul>
+                <div class="card-inner">
+                    <div class="project-icon">🎮</div>
+                    <h3>Jocuri Interactive</h3>
+                    <ul>
+                        <li>Sisteme de scor</li>
+                        <li>Quiz-uri</li>
+                        <li>Aplicații educaționale</li>
+                    </ul>
+                    <div class="card-glow"></div>
+                </div>
             </div>
             <div class="project-card">
-                <div class="project-icon">👥</div>
-                <h3>Platforme Sociale</h3>
-                <ul>
-                    <li>Profile utilizatori</li>
-                    <li>Sisteme de chat</li>
-                    <li>Sharing features</li>
-                </ul>
+                <div class="card-inner">
+                    <div class="project-icon">👥</div>
+                    <h3>Platforme Sociale</h3>
+                    <ul>
+                        <li>Profile utilizatori</li>
+                        <li>Sisteme de chat</li>
+                        <li>Sharing features</li>
+                    </ul>
+                    <div class="card-glow"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -219,8 +319,14 @@
 <!-- Why Us Section -->
 <section class="why-us">
     <div class="container">
-        <h2>De ce AppInventor la TMA?</h2>
-        <p>În cadrul cursului nostru, copiii creează aplicații cu scop real, pe care le pot folosi și distribui. Fiecare proiect dezvoltat adaugă o nouă piesă în portofoliul lor tehnologic, construind treptat abilitățile necesare pentru viitoarea tranziție spre dezvoltarea mobilă profesională.</p>
+        <div class="content-wrapper">
+            <h2>De ce AppInventor la TechMinds Academy?</h2>
+            <p>În cadrul cursului nostru, copiii creează aplicații cu scop real, pe care le pot folosi și distribui. Fiecare proiect dezvoltat adaugă o nouă piesă în portofoliul lor tehnologic, construind treptat abilitățile necesare pentru viitoarea tranziție spre dezvoltarea mobilă profesională.</p>
+            <div class="tech-decoration">
+                <div class="tech-circle"></div>
+                <div class="tech-line"></div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -231,9 +337,19 @@
             <h2>Începe să creezi aplicații mobile</h2>
             <p>Transformă-ți ideile în aplicații reale și învață dezvoltarea mobilă într-un mod distractiv și practic.</p>
             <div class="cta-buttons">
-                <a href="#inscriere" class="btn-primary">Înscrie-te acum</a>
-                <a href="#contact" class="btn-secondary">Află mai multe</a>
+                <a href="#inscriere" class="btn-primary">
+                    <span class="btn-glow"></span>
+                    <span class="btn-icon">🚀</span>
+                    Înscrie-te acum
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <span class="btn-icon">📱</span>
+                    Află mai multe
+                </a>
             </div>
+        </div>
+        <div class="cta-decoration">
+            <div class="decoration-element"></div>
         </div>
     </div>
 </section>
