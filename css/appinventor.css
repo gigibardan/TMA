@@ -1,19 +1,19 @@
-/* thunkable.css - Stiluri specifice pentru pagina Thunkable */
+/* appInventor.css - Stiluri specifice pentru pagina Thunkable */
 
 :root {
-    --thunkable-primary: #FF6B6B;      /* Roșu-coral pentru energie și creativitate */
-    --thunkable-secondary: #4ECDC4;    /* Turcoaz pentru tehnologie și inovație */
-    --thunkable-accent: #45B7D1;       /* Albastru deschis pentru mobile */
-    --thunkable-dark: #2C3E50;         /* Albastru închis pentru text și accente */
+    --appInventor-primary: #FF6B6B;      /* Roșu-coral pentru energie și creativitate */
+    --appInventor-secondary: #4ECDC4;    /* Turcoaz pentru tehnologie și inovație */
+    --appInventor-accent: #45B7D1;       /* Albastru deschis pentru mobile */
+    --appInventor-dark: #2C3E50;         /* Albastru închis pentru text și accente */
 }
 
 /* Hero Section Override */
 .course-hero {
-    background: linear-gradient(135deg, var(--thunkable-primary) 0%, var(--thunkable-dark) 100%);
+    background: linear-gradient(135deg, var(--appInventor-primary) 0%, var(--appInventor-dark) 100%);
 }
 
 .hero-text h2 {
-    color: var(--thunkable-secondary);
+    color: var(--appInventor-secondary);
     animation: glow 2s ease-in-out infinite;
 }
 
@@ -40,11 +40,11 @@
 }
 
 .feature-box:hover {
-    border-color: var(--thunkable-secondary);
+    border-color: var(--appInventor-secondary);
 }
 
 .feature-box .feature-icon {
-    color: var(--thunkable-primary);
+    color: var(--appInventor-primary);
     position: relative;
 }
 
@@ -73,17 +73,17 @@
 .learning-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    border-left-color: var(--thunkable-primary);
+    border-left-color: var(--appInventor-primary);
 }
 
 .learning-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--thunkable-primary);
+    color: var(--appInventor-primary);
 }
 
 .learning-card h3 {
-    color: var(--thunkable-dark);
+    color: var(--appInventor-dark);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -103,24 +103,24 @@
 }
 
 .skill-card::after {
-    background: linear-gradient(90deg, var(--thunkable-primary), var(--thunkable-secondary));
+    background: linear-gradient(90deg, var(--appInventor-primary), var(--appInventor-secondary));
 }
 
 .skill-card .skill-icon {
-    color: var(--thunkable-primary);
+    color: var(--appInventor-primary);
 }
 
 /* Projects Section Override */
 .project-card {
-    border-top: 4px solid var(--thunkable-primary);
+    border-top: 4px solid var(--appInventor-primary);
 }
 
 .project-card:hover {
-    border-top-color: var(--thunkable-secondary);
+    border-top-color: var(--appInventor-secondary);
 }
 
 .project-card .project-icon {
-    color: var(--thunkable-primary);
+    color: var(--appInventor-primary);
 }
 
 /* Why Us Section Enhancement */
@@ -142,22 +142,22 @@
 
 /* CTA Section Override */
 .cta-section {
-    background: linear-gradient(135deg, var(--thunkable-primary) 0%, var(--thunkable-dark) 100%);
+    background: linear-gradient(135deg, var(--appInventor-primary) 0%, var(--appInventor-dark) 100%);
 }
 
 .btn-primary {
-    background: var(--thunkable-secondary);
+    background: var(--appInventor-secondary);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background: var(--thunkable-accent);
+    background: var(--appInventor-accent);
     transform: translateY(-2px);
 }
 
 /* Text Gradient Override */
 .text-gradient {
-    background: linear-gradient(90deg, var(--thunkable-primary), var(--thunkable-secondary));
+    background: linear-gradient(90deg, var(--appInventor-primary), var(--appInventor-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
