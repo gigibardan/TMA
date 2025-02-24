@@ -71,6 +71,37 @@
         </div>
     </section>
 
+<<<<<<< HEAD
+=======
+    <section class="interactive-prime">
+        <div class="prime-hub">
+            <div class="hub-matrix">
+                <!-- 5x5 LED Matrix pentru hub-ul SPIKE Prime -->
+                <div class="prime-led"></div>
+                <div class="prime-led"></div>
+                <div class="prime-led"></div>
+                <div class="prime-led"></div>
+                <div class="prime-led"></div>
+            </div>
+            <div class="hub-buttons">
+                <button class="center-button"></button>
+                <div class="direction-buttons">
+                    <button class="left-button">◀</button>
+                    <button class="right-button">▶</button>
+                </div>
+            </div>
+            <div class="hub-ports">
+                <div class="port">A</div>
+                <div class="port">B</div>
+                <div class="port">C</div>
+                <div class="port">D</div>
+                <div class="port">E</div>
+                <div class="port">F</div>
+            </div>
+        </div>
+    </section>
+
+>>>>>>> gigi
     <!-- Technologies Section -->
     <section id="discover" class="technologies">
         <h2>Tehnologii Avansate</h2>
@@ -312,6 +343,46 @@
             observeElements(document.querySelectorAll('.fade-in'), 'visible');
             observeElements(document.querySelectorAll('.slide-in'), 'visible');
         });
+<<<<<<< HEAD
+=======
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.slide-in').forEach(item => {
+        observer.observe(item);
+    });
+});
+
+// Animație pentru LED-urile SPIKE Prime
+function animatePrimeLEDs() {
+    const leds = document.querySelectorAll('.prime-led');
+    let currentLed = 0;
+
+    setInterval(() => {
+        leds.forEach(led => led.classList.remove('active'));
+        leds[currentLed].classList.add('active');
+        currentLed = (currentLed + 1) % leds.length;
+    }, 1000);
+}
+
+// Adaugă în DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    // ... codul existent ...
+    animatePrimeLEDs();
+});
+>>>>>>> gigi
     </script>
 </body>
 </html>

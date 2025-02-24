@@ -103,6 +103,123 @@
     min-width: 180px;
 }
 
+<<<<<<< HEAD
+=======
+/* HUB */
+
+.interactive-prime {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prime-hub {
+    background: #FFD700; /* Schimbat în galben LEGO */
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); /* Ajustat umbra pentru galben */
+}
+
+.hub-matrix {
+    display: flex;
+    gap: 10px;
+}
+
+.prime-led {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.prime-led.active {
+    background: #FFFFFF; /* LED-uri albe când sunt active */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.hub-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.center-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #00FF00; /* Verde pentru butonul central */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.direction-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.direction-buttons button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF; /* Alb pentru butoanele direcționale */
+    border: 2px solid #333; /* Adăugat border pentru contrast */
+    color: #333; /* Culoare text schimbată pentru contrast */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.hub-ports {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.port {
+    width: 30px;
+    height: 30px;
+    background: #333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animații pentru butoane și LED-uri */
+.center-button:hover {
+    background: #00DD00; /* Verde mai închis la hover */
+    transform: scale(1.1);
+}
+
+.direction-buttons button:hover {
+    background: #F0F0F0; /* Alb ușor mai închis la hover */
+    transform: scale(1.1);
+}
+
+.port:hover {
+    background: #FFD700;
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .prime-hub {
+        transform: scale(0.8);
+    }
+}
+
+>>>>>>> gigi
 
 /* Technologies Section */
 .technologies {
@@ -359,6 +476,7 @@
     transform: translateY(0);
 }
 
+<<<<<<< HEAD
 /* Learning Path */
 .learning-path {
     background: var(--light-bg);
@@ -371,10 +489,33 @@
     position: relative;
 }
 
+=======
+.learning-path {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.learning-path h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.path-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Linia verticală pentru desktop */
+>>>>>>> gigi
 .path-timeline::before {
     content: '';
     position: absolute;
     left: 50%;
+<<<<<<< HEAD
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
@@ -398,6 +539,135 @@
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+=======
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-warm);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    width: 50%;
+    padding: 0 2.5rem;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* Punctele pe timeline */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-tertiary);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-content h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.timeline-content p {
+    color: var(--accent-tertiary);
+    margin: 0;
+}
+
+/* Animație slide-in */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.5s ease-out;
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Media Queries pentru Mobile */
+@media screen and (max-width: 768px) {
+    .path-timeline {
+        padding-left: 2rem;
+    }
+
+    /* Repoziționăm linia verticală pentru mobile */
+    .path-timeline::before {
+        left: 0;
+        transform: none;
+    }
+
+    /* Ajustări pentru elementele timeline */
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 2.5rem;
+        padding-right: 1rem;
+    }
+
+    /* Ajustări pentru punctele de pe timeline */
+    .timeline-item::before {
+        left: -10px !important;
+    }
+
+    /* Ajustări pentru conținut */
+    .timeline-content {
+        margin-left: 1rem;
+    }
+
+    /* Modificăm animația pentru mobile */
+    .slide-in {
+        transform: translateX(30px);
+    }
+}
+
+/* Media Queries pentru ecrane foarte mici */
+@media screen and (max-width: 480px) {
+    .learning-path h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+>>>>>>> gigi
 }
 
 /* Skills Matrix Section */
