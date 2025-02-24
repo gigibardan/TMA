@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppInventor - Atelierul de Aplicații Mobile</title>
+    <title>Game Development & Interactive Robotics</title>
    <!-- Common CSS -->
    <link rel="stylesheet" href="../css/style.css">
    <link rel="stylesheet" href="../css/courses.css">
-   <link rel="stylesheet" href="../css/appinventor.css">
+   <link rel="stylesheet" href="../css/makecode-arcade.css">
 
 </head>
 
@@ -50,45 +50,33 @@
     </div>
 </nav>
 <body>
+
+
+
+
+
 <!-- Hero Section -->
-<section class="course-hero">
-    <div class="ui-elements">
-        <div class="ui-element">
-            <svg width="40" height="40" viewBox="0 0 40 40">
-                <rect width="36" height="36" rx="8" fill="rgba(255,255,255,0.1)"/>
-                <circle cx="18" cy="18" r="6" fill="var(--app-accent)"/>
-            </svg>
-        </div>
-        <div class="ui-element">
-            <svg width="40" height="40" viewBox="0 0 40 40">
-                <rect width="36" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
-                <rect y="12" width="24" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
-            </svg>
-        </div>
-        <div class="ui-element">
-            <svg width="40" height="40" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="16" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="2"/>
-                <path d="M20 12v8l5 5" stroke="var(--app-accent)" fill="none" stroke-width="2"/>
-            </svg>
-        </div>
-    </div>
+<section class="course-hero microbit-hero">
+    <div class="circuit-grid"></div>
+    <div class="pixel-particles"></div>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="app-badge">
-                    <span class="badge-icon">📱</span>
-                    <span class="badge-text">Mobile Development</span>
+                <div class="course-badge">
+                    <span class="badge-icon">🎮</span>
+                    <span class="badge-text">GameDev & Robotics</span>
                 </div>
-                <h1>AppInventor</h1>
-                <h2>Atelierul de Aplicații Mobile</h2>
-                <p class="hero-description">Transformă ideile în aplicații mobile reale pentru Android și iOS</p>
+                <h1>micro:bit Arcade</h1>
+                <h2>Game Development & Interactive Robotics</h2>
+                <p class="hero-description">Creează jocuri, controlează roboți și dă viață ideilor tale cu micro:bit și KittenBot Arcade Shield</p>
                 <div class="hero-badges">
-                    <span class="badge">8-12 ani</span>
-                    <span class="badge">Nivel Intermediar</span>
-                    <span class="badge">Android & iOS</span>
+                    <span class="badge">9-14 ani</span>
+                    <span class="badge">MakeCode</span>
+                    <span class="badge">Physical Computing</span>
                 </div>
                 <div class="hero-buttons">
                     <a href="#inscriere" class="btn-primary">
+                        <span class="btn-glow"></span>
                         <span class="btn-icon">🚀</span>
                         Înscrie-te acum
                     </a>
@@ -99,18 +87,21 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="phone-frame">
-                    <img src="../assets/images/appInventor.webp" alt="AppInventor Development">
-                    <div class="phone-reflection"></div>
+                <div class="device-frame">
+                    <img src="../assets/images/makecodearcade.jpg" alt="Micro:bit cu KittenBot Arcade Shield">
+                    <div class="device-glow"></div>
                 </div>
-                <div class="floating-elements">
+                <div class="code-elements">
                     <div class="code-block">
-                        <pre><code>onButton.Click {
-  moveSprite(x, y)
-}</code></pre>
+                        <pre><code>forever(function() {
+  if (controller.A.isPressed()) {
+    sprite.move(1)
+  }
+})</code></pre>
                     </div>
-                    <div class="design-element"></div>
-                    <div class="app-preview"></div>
+                    <div class="pixel-art">
+                        <div class="pixel-grid"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,45 +109,45 @@
 </section>
 
 <!-- Introduction & Features -->
-<section class="course-intro">
+<section class="course-intro microbit-section">
     <div class="container">
         <div class="intro-text">
             <div class="section-badge">
-                <span class="badge-icon">💡</span>
-                <span>Dezvoltare Aplicații Mobile</span>
+                <span class="badge-icon">🎮</span>
+                <span>Game Development & Robotică</span>
             </div>
-            <p>AppInventor reprezintă pasul natural în evoluția tânărului programator, permițând crearea de aplicații mobile reale pentru Android și iOS. Folosind o abordare vizuală intuitivă, platforma transformă ideile creative în aplicații funcționale care pot fi testate direct pe dispozitive mobile.</p>
+            <p>Cursul nostru de micro:bit Arcade combină programarea vizuală cu electronica și game development-ul, oferind o experiență completă de învățare. Folosind microcontrollerul micro:bit împreună cu KittenBot NewBit Arcade Shield, elevii pot crea propriile jocuri și proiecte interactive care există atât în lumea digitală, cât și în cea fizică.</p>
             <div class="approach">
-                <h3>Cum funcționează?</h3>
-                <p>Dezvoltarea aplicațiilor în AppInventor combină programarea vizuală cu elementele specifice lumii mobile: interfețe tactile, design modern și funcționalități interactive. Copiii învață să creeze aplicații intuitive și utile, punând bazele dezvoltării mobile într-un mod accesibil și practic.</p>
+                <h3>Physical Computing & Game Development</h3>
+                <p>Prin platforma vizuală MakeCode, elevii învață să programeze într-un mod accesibil și captivant, aplicând conceptele de coding în crearea de jocuri și controlul componentelor electronice. Această abordare hands-on construiește o fundație solidă în programare, electronică și game design.</p>
             </div>
         </div>
         <div class="features">
             <div class="feature-box">
                 <div class="feature-icon">
-                    <span class="icon">📱</span>
+                    <span class="icon">🎮</span>
                     <div class="icon-bg"></div>
                 </div>
-                <h3>Aplicații Reale</h3>
-                <p>Creează aplicații care funcționează pe dispozitive mobile reale</p>
+                <h3>Game Development</h3>
+                <p>Creează jocuri arcade cu sprite-uri, coliziuni și scoruri</p>
                 <div class="feature-decoration"></div>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
-                    <span class="icon">🎨</span>
+                    <span class="icon">🤖</span>
                     <div class="icon-bg"></div>
                 </div>
-                <h3>Design Modern</h3>
-                <p>Învață principiile de UI/UX și design pentru mobile</p>
+                <h3>Robotică Interactivă</h3>
+                <p>Controlează LED-uri, motoare și alte componente</p>
                 <div class="feature-decoration"></div>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
-                    <span class="icon">🔄</span>
+                    <span class="icon">🔌</span>
                     <div class="icon-bg"></div>
                 </div>
-                <h3>Testare Instant</h3>
-                <p>Vezi rezultatele direct pe telefon în timp real</p>
+                <h3>Physical Computing</h3>
+                <p>Conectează lumea digitală cu cea fizică prin senzori</p>
                 <div class="feature-decoration"></div>
             </div>
         </div>
@@ -164,76 +155,76 @@
 </section>
 
 <!-- Learning Objectives -->
-<section id="program" class="learning-section">
+<section id="program" class="learning-section microbit-learning">
     <div class="container">
         <div class="section-header">
             <h2>Ce vor învăța <span class="text-gradient">copiii</span></h2>
-            <p class="section-description">Program structurat pentru dezvoltarea completă a abilităților de programare mobilă</p>
+            <p class="section-description">Program structurat pentru dezvoltarea abilităților de programare, game design și electronics</p>
         </div>
         <div class="learning-grid">
-            <div class="learning-card">
+            <div class="learning-card animate-on-scroll">
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🎮</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Game Design Basics</h3>
+                    <p>Fundamentele game design-ului: personaje, nivele, scoruri și mecanici de joc</p>
+                </div>
+                <div class="card-progress"></div>
+            </div>
+            <div class="learning-card animate-on-scroll">
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>💻</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Programare Vizuală</h3>
+                    <p>Programare prin blocuri în Microsoft MakeCode și tranziția spre JavaScript</p>
+                </div>
+                <div class="card-progress"></div>
+            </div>
+            <div class="learning-card animate-on-scroll">
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>🔍</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Debugging & Testing</h3>
+                    <p>Identificarea și rezolvarea problemelor din cod și componente electronice</p>
+                </div>
+                <div class="card-progress"></div>
+            </div>
+            <div class="learning-card animate-on-scroll">
+                <div class="card-content">
+                    <div class="learning-icon">
+                        <span>⚡</span>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Electronics Basics</h3>
+                    <p>Înțelegerea circuitelor și componentelor electronice de bază</p>
+                </div>
+                <div class="card-progress"></div>
+            </div>
+            <div class="learning-card animate-on-scroll">
                 <div class="card-content">
                     <div class="learning-icon">
                         <span>📱</span>
                         <div class="icon-glow"></div>
                     </div>
-                    <h3>Dezvoltare Variată</h3>
-                    <p>Crearea unei game variate de aplicații - de la jocuri interactive până la instrumente practice</p>
+                    <h3>User Interface</h3>
+                    <p>Crearea interfețelor de utilizator intuitive pentru jocuri și aplicații</p>
                 </div>
                 <div class="card-progress"></div>
             </div>
-            <div class="learning-card">
+            <div class="learning-card animate-on-scroll">
                 <div class="card-content">
                     <div class="learning-icon">
-                        <span>🎨</span>
+                        <span>🧩</span>
                         <div class="icon-glow"></div>
                     </div>
-                    <h3>Design Intuitiv</h3>
-                    <p>Proiectarea interfețelor prietenoase și intuitive, cu ecrane multiple și navigare fluidă</p>
-                </div>
-                <div class="card-progress"></div>
-            </div>
-            <div class="learning-card">
-                <div class="card-content">
-                    <div class="learning-icon">
-                        <span>⚙️</span>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>Funcționalități Moderne</h3>
-                    <p>Implementarea funcționalităților moderne - de la baze de date pentru salvarea scorurilor până la utilizarea senzorilor dispozitivului</p>
-                </div>
-                <div class="card-progress"></div>
-            </div>
-            <div class="learning-card">
-                <div class="card-content">
-                    <div class="learning-icon">
-                        <span>🔐</span>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>Sisteme Complexe</h3>
-                    <p>Dezvoltarea aplicațiilor complexe cu sisteme de autentificare și profile de utilizator</p>
-                </div>
-                <div class="card-progress"></div>
-            </div>
-            <div class="learning-card">
-                <div class="card-content">
-                    <div class="learning-icon">
-                        <span>🎯</span>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>Design Visual</h3>
-                    <p>Utilizarea instrumentelor de design pentru crearea unei experiențe vizuale atractive</p>
-                </div>
-                <div class="card-progress"></div>
-            </div>
-            <div class="learning-card">
-                <div class="card-content">
-                    <div class="learning-icon">
-                        <span>🧮</span>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3>Logică Avansată</h3>
-                    <p>Gestionarea datelor și implementarea logicii complexe de programare</p>
+                    <h3>Advanced Interactions</h3>
+                    <p>Combinarea senzorilor și actuatorilor pentru proiecte complexe interactive</p>
                 </div>
                 <div class="card-progress"></div>
             </div>
@@ -241,66 +232,114 @@
     </div>
 </section>
 
+<!-- Hardware & Tech Section -->
+<section class="hardware-section">
+    <div class="container">
+        <h2 class="section-title">Tehnologii <span class="text-gradient">utilizate</span></h2>
+        <div class="tech-grid">
+            <div class="tech-card animate-on-scroll">
+                <div class="tech-icon">
+                    <img src="../assets/images/microbit-icon.svg" alt="micro:bit">
+                </div>
+                <h3>BBC micro:bit</h3>
+                <p>Microcontroller cu LED-uri, butoane, senzori de mișcare și temperatură</p>
+                <ul class="tech-features">
+                    <li>Procesor ARM Cortex-M</li>
+                    <li>Matrice 5x5 LED-uri</li>
+                    <li>Bluetooth & Radio</li>
+                    <li>Accelerometru & Magnetometru</li>
+                </ul>
+            </div>
+            <div class="tech-card animate-on-scroll">
+                <div class="tech-icon">
+                    <img src="../assets/images/kittenbot-icon.svg" alt="KittenBot">
+                </div>
+                <h3>NewBit Arcade Shield</h3>
+                <p>Add-on pentru micro:bit cu funcționalități de consolă de jocuri</p>
+                <ul class="tech-features">
+                    <li>Display Color 160x128px</li>
+                    <li>D-pad & Butoane de Acțiune</li>
+                    <li>Difuzor integrat</li>
+                    <li>Porturi de extensie</li>
+                </ul>
+            </div>
+            <div class="tech-card animate-on-scroll">
+                <div class="tech-icon">
+                    <img src="../assets/images/makecode-icon.svg" alt="MakeCode">
+                </div>
+                <h3>Microsoft MakeCode</h3>
+                <p>Platformă de programare vizuală bazată pe blocuri</p>
+                <ul class="tech-features">
+                    <li>Programare drag-and-drop</li>
+                    <li>Comutare între blocuri și JavaScript</li>
+                    <li>Simulator integrat</li>
+                    <li>Biblioteci pentru Arcade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Skills Section -->
-<section class="skills-section">
+<section class="skills-section microbit-skills">
     <div class="container">
         <h2 class="section-title">Competențe <span class="text-gradient">dezvoltate</span></h2>
         <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card animate-on-scroll">
                 <div class="skill-icon-wrapper">
-                    <div class="skill-icon">🎯</div>
+                    <div class="skill-icon">🧠</div>
                     <div class="icon-glow"></div>
                 </div>
-                <h3>Design UI/UX</h3>
-                <p>Principii de design și experiență utilizator</p>
+                <h3>Computational Thinking</h3>
+                <p>Gândire algoritmică și rezolvarea problemelor</p>
                 <div class="skill-progress">
                     <div class="progress-bar"></div>
                 </div>
                 <div class="card-decoration"></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card animate-on-scroll">
+                <div class="skill-icon-wrapper">
+                    <div class="skill-icon">🎮</div>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Game Design</h3>
+                <p>Principii și mecanici de game design</p>
+                <div class="skill-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card-decoration"></div>
+            </div>
+            <div class="skill-card animate-on-scroll">
                 <div class="skill-icon-wrapper">
                     <div class="skill-icon">💡</div>
                     <div class="icon-glow"></div>
                 </div>
-                <h3>Gândire Product</h3>
-                <p>Orientare spre produs și utilizator final</p>
+                <h3>Creativitate Tehnică</h3>
+                <p>Îmbinarea tehnologiei cu creativitatea</p>
                 <div class="skill-progress">
                     <div class="progress-bar"></div>
                 </div>
                 <div class="card-decoration"></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card animate-on-scroll">
                 <div class="skill-icon-wrapper">
-                    <div class="skill-icon">🧮</div>
+                    <div class="skill-icon">🔌</div>
                     <div class="icon-glow"></div>
                 </div>
-                <h3>Logică Aplicată</h3>
-                <p>Programare în context real și practic</p>
+                <h3>Electronics Knowledge</h3>
+                <p>Înțelegerea circuitelor și componentelor</p>
                 <div class="skill-progress">
                     <div class="progress-bar"></div>
                 </div>
                 <div class="card-decoration"></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card animate-on-scroll">
                 <div class="skill-icon-wrapper">
-                    <div class="skill-icon">🚀</div>
+                    <div class="skill-icon">🛠️</div>
                     <div class="icon-glow"></div>
                 </div>
-                <h3>Implementare</h3>
-                <p>Transformarea ideilor în aplicații reale</p>
-                <div class="skill-progress">
-                    <div class="progress-bar"></div>
-                </div>
-                <div class="card-decoration"></div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon-wrapper">
-                    <div class="skill-icon">🔍</div>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Problem Solving</h3>
-                <p>Rezolvarea structurată a problemelor</p>
+                <h3>Debugging</h3>
+                <p>Identificarea și rezolvarea erorilor</p>
                 <div class="skill-progress">
                     <div class="progress-bar"></div>
                 </div>
@@ -311,42 +350,42 @@
 </section>
 
 <!-- Projects Section -->
-<section class="projects-section">
+<section class="projects-section microbit-projects">
     <div class="container">
         <h2>Proiecte <span class="text-gradient">practice</span></h2>
         <div class="project-carousel">
-            <div class="project-card">
+            <div class="project-card animate-on-scroll">
                 <div class="card-inner">
-                    <div class="project-icon">📝</div>
-                    <h3>Aplicații Practice</h3>
+                    <div class="project-icon">🎯</div>
+                    <h3>Jocuri Arcade</h3>
                     <ul>
-                        <li>Todo List</li>
-                        <li>Notes App</li>
-                        <li>Instrumente personalizate</li>
+                        <li>Space Invaders</li>
+                        <li>Snake Game</li>
+                        <li>Platformer 2D</li>
                     </ul>
                     <div class="card-glow"></div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card animate-on-scroll">
                 <div class="card-inner">
-                    <div class="project-icon">🎮</div>
-                    <h3>Jocuri Interactive</h3>
+                    <div class="project-icon">🤖</div>
+                    <h3>Proiecte Interactive</h3>
                     <ul>
-                        <li>Sisteme de scor</li>
-                        <li>Quiz-uri</li>
-                        <li>Aplicații educaționale</li>
+                        <li>Smart Gadgets</li>
+                        <li>Reactive Lights</li>
+                        <li>Music Controllers</li>
                     </ul>
                     <div class="card-glow"></div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card animate-on-scroll">
                 <div class="card-inner">
-                    <div class="project-icon">👥</div>
-                    <h3>Platforme Sociale</h3>
+                    <div class="project-icon">🎭</div>
+                    <h3>Digital Art</h3>
                     <ul>
-                        <li>Profile utilizatori</li>
-                        <li>Sisteme de chat</li>
-                        <li>Sharing features</li>
+                        <li>Pixel Art Creator</li>
+                        <li>Animation Tools</li>
+                        <li>Interactive Installations</li>
                     </ul>
                     <div class="card-glow"></div>
                 </div>
@@ -356,11 +395,11 @@
 </section>
 
 <!-- Why Us Section -->
-<section class="why-us">
+<section class="why-us microbit-why">
     <div class="container">
         <div class="content-wrapper">
-            <h2>De ce AppInventor la TechMinds Academy?</h2>
-            <p>În cadrul cursului nostru, copiii creează aplicații cu scop real, pe care le pot folosi și distribui. Fiecare proiect dezvoltat adaugă o nouă piesă în portofoliul lor tehnologic, construind treptat abilitățile necesare pentru viitoarea tranziție spre dezvoltarea mobilă profesională.</p>
+            <h2>De ce micro:bit la TechMinds Academy?</h2>
+            <p>La TechMinds Academy, transformăm învățarea programării și electronicii într-o aventură captivantă. Combinația dintre micro:bit și KittenBot Arcade Shield oferă o platformă ideală pentru introducerea copiilor în lumea game development-ului și a roboticii într-un mod accesibil și distractiv. Cursanții noștri nu doar învață să programeze, ci creează proiecte tangibile care îmbină software-ul cu hardware-ul, dezvoltând o înțelegere completă a tehnologiei.</p>
             <div class="tech-decoration">
                 <div class="tech-circle"></div>
                 <div class="tech-line"></div>
@@ -370,11 +409,11 @@
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section">
+<section class="cta-section microbit-cta">
     <div class="container">
         <div class="cta-content">
-            <h2>Începe să creezi aplicații mobile</h2>
-            <p>Transformă-ți ideile în aplicații reale și învață dezvoltarea mobilă într-un mod distractiv și practic.</p>
+            <h2>Începe aventura în lumea micro:bit</h2>
+            <p>Transformă-ți ideile în jocuri și gadgeturi interactive folosind tehnologia micro:bit și KittenBot</p>
             <div class="cta-buttons">
                 <a href="#inscriere" class="btn-primary">
                     <span class="btn-glow"></span>
@@ -392,6 +431,19 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
