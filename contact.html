@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
-         html {
+        html {
             scroll-behavior: smooth;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -224,6 +226,7 @@
                 line-height: 1.4;
             }
         }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
@@ -255,7 +258,7 @@
                 display: none;
             }
         }
-        
+
 
         /* Tablet Responsive */
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -267,6 +270,7 @@
                 font-size: 2.8rem;
             }
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -319,8 +323,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-section::before {
@@ -348,8 +359,13 @@
         }
 
         @keyframes moveBubble {
-            from { transform: translateY(0px); }
-            to { transform: translateY(-30px); }
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-30px);
+            }
         }
 
         .cta-button {
@@ -365,9 +381,17 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         .cta-button:hover {
@@ -391,52 +415,106 @@
         }
 
         #contact-form {
-            scroll-margin-top: 100px; /* Ajustează acest offset în funcție de înălțimea meniului */
+            scroll-margin-top: 100px;
+            /* Ajustează acest offset în funcție de înălțimea meniului */
         }
     </style>
+
+
+
+<style>
+.map-container {
+    grid-column: 1 / -1;
+    margin-top: 30px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.map-container h2 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.google-map {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.google-map:hover {
+    box-shadow: 0 8px 30px rgba(56, 87, 214, 0.2);
+    transform: translateY(-5px);
+}
+
+.google-map iframe {
+    border-radius: 12px;
+}
+
+/* Make map responsive */
+@media (max-width: 768px) {
+    .google-map {
+        height: 350px;
+    }
+    
+    .map-container {
+        padding: 30px 20px;
+    }
+}
+
+</style>
+
 </head>
+
 <body>
     <!-- Navigation -->
-   <nav class="navbar">
-    <div class="nav-content">
-        <a href="index.html" class="logo">
-            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
-        </a>  
-        <button class="menu-button">☰</button>
-        <ul class="nav-links">
-            <li><a href="index.html">Acasă</a></li>
-            <li class="dropdown">
-                <a href="programare.html">Programare</a>
-                <div class="dropdown-content">
-                    <a href="courses/scratch.html">Scratch</a>
-                    <a href="courses/thunkable.html">Thunkable</a>
-                    <a href="courses/gdevelop.html">GDevelop</a>
-                    <a href="courses/minecraft.html">Minecraft</a>
-                    <a href="courses/roblox.html">Roblox</a>
-                    <a href="courses/godot.html">Godot</a>
-                    <a href="courses/greenfoot.html">Greenfoot</a>
-                    <a href="courses/python.html">Python</a>
-                    <a href="courses/frontend.html">Frontend</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="robotics.html">Robotică</a>
-                <div class="dropdown-content">
-                    <a href="courses/essentials.html">LEGO Essentials</a>
-                    <a href="courses/prime.html">LEGO Prime</a>
-                    <a href="courses/microbit.html">micro:bit</a>
-                    <a href="courses/arduino.html">Arduino</a>
-                </div>
-            <li><a href="about.html">Despre noi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+            </a>
+            <button class="menu-button">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li class="dropdown">
+                    <a href="programare.html">Programare</a>
+                    <div class="dropdown-content">
+                        <a href="courses/scratch.html">Scratch</a>
+                        <a href="courses/thunkable.html">Thunkable</a>
+                        <a href="courses/gdevelop.html">GDevelop</a>
+                        <a href="courses/minecraft.html">Minecraft</a>
+                        <a href="courses/roblox.html">Roblox</a>
+                        <a href="courses/godot.html">Godot</a>
+                        <a href="courses/greenfoot.html">Greenfoot</a>
+                        <a href="courses/python.html">Python</a>
+                        <a href="courses/frontend.html">Frontend</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="robotics.html">Robotică</a>
+                    <div class="dropdown-content">
+                        <a href="courses/essentials.html">LEGO Essentials</a>
+                        <a href="courses/prime.html">LEGO Prime</a>
+                        <a href="courses/microbit.html">micro:bit</a>
+                        <a href="courses/arduino.html">Arduino</a>
+                    </div>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="hero-section">
         <div class="hero-content">
             <h1>Contactează-ne</h1>
-            <p>Ai întrebări sau vrei să afli mai multe despre cursurile noastre? Scrie-ne și te vom ajuta cu plăcere!</p>
+            <p>Ai întrebări sau vrei să afli mai multe despre cursurile noastre? Scrie-ne și te vom ajuta cu plăcere!
+            </p>
             <a href="#contact-form" class="cta-button">Trimite un mesaj</a>
         </div>
     </section>
@@ -451,12 +529,12 @@
                     <label for="name">Nume complet:</label>
                     <input type="text" id="name" name="name" placeholder="Nume complet" required>
                 </div>
-            
+
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
-            
+
                 <div class="form-group">
                     <label for="course">Selectează un curs:</label>
                     <select id="course" name="course" required>
@@ -468,16 +546,16 @@
                         <option>Game Development</option>
                     </select>
                 </div>
-            
+
                 <div class="form-group">
                     <label for="message">Mesajul tău:</label>
                     <textarea id="message" name="message" placeholder="Scrie mesajul tău" required></textarea>
                 </div>
-            
+
                 <button type="submit">Trimite mesajul</button>
             </form>
-            
-            
+
+
         </div>
 
         <!-- Contact Info -->
@@ -509,53 +587,70 @@
         </div>
     </div>
 
+
+    <!-- Google Map -->
+<div class="map-container">
+    <h2>Ne găsești aici</h2>
+    <div class="google-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.6516693851865!2d26.0906307!3d44.4384428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff49bf80b8d9%3A0xed271554c0a55f84!2sStrada%20%C8%98tirbei%20Vod%C4%83%2026-28%2C%20Bucure%C8%99ti%20010113!5e0!3m2!1sro!2sro!4v1708956615019!5m2!1sro!2sro" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Oprim redirecționarea
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Oprim redirecționarea
 
-    const form = this;
-    const button = form.querySelector('button');
-    const originalText = button.textContent;
+            const form = this;
+            const button = form.querySelector('button');
+            const originalText = button.textContent;
 
-    button.textContent = 'Se trimite...';
-    button.style.opacity = '0.8';
+            button.textContent = 'Se trimite...';
+            button.style.opacity = '0.8';
 
-    // Trimitem datele către Formspree prin Fetch API
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            button.textContent = 'Mesaj trimis! ✓';
-            button.style.background = '#10b981';
-            form.reset(); // Resetăm formularul după trimitere
+            // Trimitem datele către Formspree prin Fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    button.textContent = 'Mesaj trimis! ✓';
+                    button.style.background = '#10b981';
+                    form.reset(); // Resetăm formularul după trimitere
 
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.background = '';
-                button.style.opacity = '1';
-            }, 3000);
-        } else {
-            button.textContent = 'Eroare! Încearcă din nou.';
-            button.style.background = '#e63946';
-        }
-    }).catch(error => {
-        button.textContent = 'Eroare! Verifică conexiunea.';
-        button.style.background = '#e63946';
-    });
-});
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = '';
+                        button.style.opacity = '1';
+                    }, 3000);
+                } else {
+                    button.textContent = 'Eroare! Încearcă din nou.';
+                    button.style.background = '#e63946';
+                }
+            }).catch(error => {
+                button.textContent = 'Eroare! Verifică conexiunea.';
+                button.style.background = '#e63946';
+            });
+        });
 
         // Input animations
         const inputs = document.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
-            input.addEventListener('focus', function() {
+            input.addEventListener('focus', function () {
                 this.parentElement.style.transform = 'translateY(-2px)';
             });
-            
-            input.addEventListener('blur', function() {
+
+            input.addEventListener('blur', function () {
                 this.parentElement.style.transform = 'translateY(0)';
             });
         });
@@ -565,8 +660,8 @@
 
 </body>
 
- <!-- Footer -->
- <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
     <div class="footer-content">
         <div class="footer-section">
             <h3>Contact</h3>
