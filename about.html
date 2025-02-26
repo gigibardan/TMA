@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/about-trainers.css">
     <style>
         .cta-container {
     display: flex;
@@ -53,6 +54,33 @@
 }
 
 @media (max-width: 768px) {
+    .cta-button-primary{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px) !important;
+    }
+    
+    .carousel-container {
+        overflow-x: hidden !important;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px) !important;
+        position: relative !important;
+    }
+    
+    .carousel-track {
+        width: 100% !important;
+        position: relative !important;
+        left: 0 !important;
+    }
+    .curricula-button{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px) !important;
+    }
+
+    
+
     .cta-container {
         flex-direction: column;
         gap: 1rem;
@@ -63,7 +91,7 @@
         justify-content: center;
     }
 }
-        /* Stiluri de bază și layout */
+        /* Stiluri de bază și layout */
 .about-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -80,342 +108,7 @@
     background-color: #f8f9fa;
 }
 
-/* Titluri și text */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-    text-align: center;
-}
 
-.section-content {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 2rem;
-}
-
-/* Grid și coloane */
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-top: 3rem;
-}
-
-/* Butoane și CTA */
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #FFD700;
-    color: #333;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #FFC700;
-    transform: translateY(-2px);
-}
-
-/* Animații */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Trainer Cards */
-.trainers-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.trainer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.trainer-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.trainer-image {
-    object-position: top center;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    transition: transform 0.5s ease;
-}
-
-.trainer-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 1rem 0 0.5rem;
-    color: #333;
-}
-
-.trainer-specialization {
-    color: #0066cc;
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-}
-
-.trainer-bio {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* Program Schedule */
-.program-schedule {
-    margin-top: 2rem;
-}
-
-.schedule-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.schedule-item:before {
-    content: "🕐";
-    margin-right: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .two-columns {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .trainer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trainer-card {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .trainer-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 0;
-    }
-
-    .trainer-content {
-        flex: 1;
-    }
-}
-
-
-.trainers-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.trainer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.trainer-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Animație diferită pentru fiecare card */
-.trainer-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-.trainer-card:nth-child(2) {
-    animation-delay: 0.3s;
-}
-.trainer-card:nth-child(3) {
-    animation-delay: 0.5s;
-}
-
-.trainer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.2);
-}
-
-.trainer-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.2), transparent 70%);
-    transform: translateX(-100%);
-    transition: 0.6s;
-}
-
-.trainer-card:hover::after {
-    transform: translateX(100%);
-}
-
-.trainer-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    transition: transform 0.5s ease;
-    animation: scaleIn 0.6s ease-out forwards;
-}
-
-.trainer-card:hover .trainer-image {
-    transform: scale(1.05);
-}
-
-.trainer-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 1rem 0 0.5rem;
-    color: #333;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.trainer-name::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #0066cc;
-    transition: width 0.3s ease;
-}
-
-.trainer-card:hover .trainer-name::after {
-    width: 50px;
-}
-
-.trainer-specialization {
-    color: #0066cc;
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.trainer-card:hover .trainer-specialization {
-    opacity: 1;
-}
-
-.trainer-bio {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #555;
-    transition: transform 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .trainer-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .trainer-card {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .trainer-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 0;
-    }
-
-    .trainer-content {
-        flex: 1;
-    }
-
-    .trainer-name {
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .trainer-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .trainer-card {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .trainer-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 0;
-    }
-
-    .trainer-content {
-        flex: 1;
-    }
-
-    .trainer-name {
-        margin-top: 0;
-    }
-}
 .cta-button-primary {
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -456,40 +149,39 @@
     </style>
 </head>
 <body>
-    <body>
-        <!-- Navigation -->
-       <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-content">
             <a href="index.html" class="logo">
                 <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
             </a>  
             <button class="menu-button">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html">Acasă</a></li>
+                <li><a href="index.html">Acasă</a></li>
                 <li class="dropdown">
                     <a href="programare.html">Programare</a>
                     <div class="dropdown-content">
                         <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
-                        <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                        <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
                         <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
                         <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
-                        <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                        <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
                         <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
-                        <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                        <a href="courses/minecraft.html">⛏ Minecraft - Modding</a>
                         <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
                         <a href="courses/godot.html">🎬 Godot - Game Development</a>
                         <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
-                        <a href="courses/python.html">🐍 Python - Aplicații</a>
+                        <a href="courses/python.html">🐍 Python - Aplicații</a>
                         <a href="courses/frontend.html">💻 Frontend - Web</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <a href="robotics.html">Robotică</a>
                     <div class="dropdown-content">
-                        <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
-                        <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
-                        <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
-                        <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                        <a href="courses/essentials.html">LEGO Essentials</a>
+                        <a href="courses/prime.html">LEGO Prime</a>
+                        <a href="courses/microbit.html">micro:bit</a>
+                        <a href="courses/arduino.html">Arduino</a>
                     </div>
                 <li><a href="about.html">Despre noi</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -500,8 +192,8 @@
     <!-- Hero Section -->
     <div class="about-hero">
         <div class="about-content">
-            <h1>Inovație în Educația Tech</h1>
-            <p>Formăm viitorul programării prin metode moderne de învățare</p>
+            <h1>Inovație în Educația Tech</h1>
+            <p>Formăm viitorul programării prin metode moderne de învățare</p>
         </div>
     </div>
 
@@ -510,30 +202,30 @@
         <section class="about-section">
             <div class="section-container fade-in">
                 <h1 class="section-title" style="color: #2E5A9C">Despre noi</h1>
-                <p class="section-content">
-                    TechMinds Academy: locul unde imaginația se întâlnește cu tehnologia pentru a da naștere unor proiecte inovatoare!
+                <p class="section-content" style="font-size: 1.1rem;">
+                    TechMinds Academy: locul unde imaginația se întâlnește cu tehnologia pentru a da naștere unor proiecte inovatoare!
                 </p>
-                <p class="section-content">
-                    Pasiunea noastră pentru tehnologie și dorința de a oferi copiilor o educație orientată spre viitor ne-au motivat să creăm TechMinds Academy - un spațiu unde copiii pot explora, experimenta și învăța prin practică.
+                <p class="section-content" style="font-size: 1.1rem;">
+                    Pasiunea noastră pentru tehnologie și dorința de a oferi copiilor o educație orientată spre viitor ne-au motivat să creăm TechMinds Academy - un spațiu unde copiii pot explora, experimenta și învăța prin practică.
                 </p>
     
                 <!-- CTA Buttons -->
                 <div class="cta-container">
-                    <a href="/programare.html" class="curricula-button">
+                    <a href="/index.html" class="curricula-button" >
                         Curricula Programare →
                     </a>
-                    <a href="/robotics.html" class="curricula-button">
+                    <a href="/programare.html" class="curricula-button">
                         Curricula Robotica →
                     </a>
                 </div>
     
                 <!-- Main content paragraphs -->
                 <div class="content-section fade-in">
-                    <p class="section-content">
-                        La TechMinds Academy, nu ne limităm doar la predarea unor simple noțiuni tehnice. Ne dorim să formăm tineri capabili să gândească critic, să rezolve probleme complexe și să utilizeze tehnologia pentru a aduce o schimbare pozitivă în lume.
+                    <p class="section-content" style="font-size: 1.1rem;">
+                        La TechMinds Academy, nu ne limităm doar la predarea unor simple noțiuni tehnice. Ne dorim să formăm tineri capabili să gândească critic, să rezolve probleme complexe și să utilizeze tehnologia pentru a aduce o schimbare pozitivă în lume.
                     </p>
-                    <p class="section-content">
-                        Prin proiecte practice, elevii au ocazia să aplice cunoștințele dobândite într-un context real, fiind încurajați să participe la competiții locale și internaționale de robotică și programare.
+                    <p class="section-content" style="font-size: 1.1rem;">
+                        Prin proiecte practice, elevii au ocazia să aplice cunoștințele dobândite într-un context real, fiind încurajați să participe la competiții locale și internaționale de robotică și programare.
                     </p>
                 </div>
     
@@ -545,7 +237,11 @@
                             <div class="trainer-content">
                                 <h3 class="trainer-name">Gheorghe Bardan</h3>
                                 <div class="trainer-specialization">Robotica, Web Development</div>
-                                <p class="trainer-bio">Sunt un profesor pasionat de tehnologie, cu peste 3 ani de experiență în predarea programării și roboticii pentru copii și tineri.</p>
+                                <p class="trainer-bio-short">Sunt un profesor pasionat de tehnologie, cu peste 3 ani de experiență în predarea programării și roboticii pentru copii și tineri. </p>
+                                <div class="trainer-bio-full">
+                                    <p>Îmi place să combin expertiza tehnică dobândită în industria IT cu metode pedagogice interactiv pentru a inspira următoarea generație de programatori și inovatori. Sunt un profesor pasionat de tehnologie, cu peste 3 ani de experiență în predarea programării și roboticii pentru copii și tineri. Îmi place să combin expertiza tehnică dobândită în industria IT cu metode pedagogice interactive pentru a inspira următoarea generație de programatori și inovatori. Mă concentrez pe învățarea prin practică, folosind programe vizuale intuitive pentru a face programarea accesibilă tuturor.</p>
+                                </div>
+                                <button class="read-more-btn">Citește mai mult</button>
                             </div>
                         </div>
                 
@@ -554,8 +250,13 @@
                             <div class="trainer-content">
                                 <h3 class="trainer-name">Constantin Mitocaru</h3>
                                 <div class="trainer-specialization">Programare, Robotica</div>
-                                <p class="trainer-bio">Cu o vastă experiență în predare și pasiune pentru tehnologie, sunt dedicat să inspir următoarea generație de programatori.</p>
-                            </div>
+                                <p class="trainer-bio-short">Cu o vastă experiență în predare și pasiune pentru tehnologie, sunt dedicat să inspir și să ghidez următoarea generație de programatori și ingineri. </p>
+                                <div class="trainer-bio-full">
+                                    <p> În cadrul acestei școli îmbin creativitatea cu logica, joaca cu învățarea, ajutând cursanții să își dezvolte abilități tehnice esențiale într-un mod interactiv și practic.
+
+                                        Cred în învățarea prin proiecte și colaborare, oferind fiecărui elev sprijinul necesar pentru a excela în domenii precum programare și robotică. Împreună construim viitorul, pas cu pas, cod cu cod!</p>
+                                </div>
+                                <button class="read-more-btn">Citește mai mult</button>                            </div>
                         </div>
                 
                         <div class="trainer-card">
@@ -563,8 +264,14 @@
                             <div class="trainer-content">
                                 <h3 class="trainer-name">Vlad Dumitru</h3>
                                 <div class="trainer-specialization">Game Development, Programare, Robotica</div>
-                                <p class="trainer-bio">Îmi dedic timpul lucrului cu copii și adolescenți, ghidându-i să descopere lumea fascinantă a codului.</p>
-                            </div>
+                                <p class="trainer-bio-short">Tehnologia, programarea și robotica sunt mai mult decât pasiuni pentru mine – sunt o aventură pe care îmi place să o împărtășesc cu alții </p>
+                                <div class="trainer-bio-full">
+                                    <p>  Îmi dedic timpul lucrului cu copii și adolescenți, ghidându-i să descopere lumea fascinantă a codului și să își creeze propriile proiecte.
+
+                                        Îmi place să cred că fiecare linie de cod și fiecare roboțel construit sunt pași spre o lume mai inovatoare. Hai să explorăm împreună posibilitățile infinite ale tehnologiei!</p>
+                                    
+                                </div>
+                                <button class="read-more-btn">Citește mai mult</button>  
                         </div>
                     </div>
                 </div>
@@ -575,23 +282,20 @@
     <div class="section-container">
         <div class="two-columns">
             <div class="slide-in-left">
-                <h2 class="section-title">Misiunea noastră</h2>
-                <p class="section-content" style="font-size: 1.3rem;">
-                    La TechMinds Academy, misiunea noastră este să cultivăm potențialul inovator al fiecărui copil, oferindu-le instrumentele și cunoștințele necesare pentru a naviga cu succes într-o lume digitală în continuă schimbare. De aceea, am creat un mediu de învățare interactiv, unde teoria se îmbină perfect cu practica.
-                </p>
-                <p class="section-content" style="font-size: 1.3rem;">
-                    Programele noastre, adaptate vârstei și intereselor fiecăruia dintre cursanți, îi încurajează să exploreze, să experimenteze și să își dezvolte gândirea critică. Prin proiecte captivante și activități hands-on, transformăm învățarea tehnologiei într-o aventură care stârnește curiozitatea și pasiunea pentru descoperire.
+                <h2 class="section-title" style="color: #2E5A9C">Misiunea noastră</h2>
+                <p class="section-content" style="font-size: 1.1rem;">
+                    La TechMinds Academy, misiunea noastră este să cultivăm potențialul inovator al fiecărui copil, oferindu-le instrumentele și cunoștințele necesare pentru a naviga cu succes într-o lume digitală în continuă schimbare. De aceea, am creat un mediu de învățare interactiv, unde teoria se îmbină perfect cu practica.
                 </p>
             </div>
             <div class="slide-in-right">
-                <h2 class="section-title">Valorile noastre</h2>
-                <ul class="section-content stagger-fade-in" style="font-size: 1.3rem; padding-left: 20px;">
-                    <li>Inovație: Promovăm gândirea inovatoare și explorarea noilor tehnologii.</li>
-                    <li>Creativitate: Încurajăm exprimarea liberă a ideilor și dezvoltarea proiectelor personale.</li>
-                    <li>Colaborare: Cultivăm spiritul de echipă și abilitățile de comunicare.</li>
-                    <li>Excelență: Ne angajăm să oferim o educație de cea mai înaltă calitate.</li>
-                    <li>Reziliență: Învățăm copiii să depășească obstacolele și să învețe din greșeli.</li>
-                    <li>Impact Pozitiv: Încurajăm utilizarea tehnologiei pentru a aduce o contribuție pozitivă în comunitate.</li>
+                <h2 class="section-title" style="color: #2E5A9C">Valorile noastre</h2>
+                <ul class="section-content stagger-fade-in" style="font-size: 1.1rem; padding-left: 30px;">
+                    <li>Inovație: Promovăm gândirea inovatoare și explorarea noilor tehnologii.</li>
+                    <li>Creativitate: Încurajăm exprimarea liberă a ideilor și dezvoltarea proiectelor personale.</li>
+                    <li>Colaborare: Cultivăm spiritul de echipă și abilitățile de comunicare.</li>
+                    <li>Excelență: Ne angajăm să oferim o educație de cea mai înaltă calitate.</li>
+                    <li>Reziliență: Învățăm copiii să depășească obstacolele și să învețe din greșeli.</li>
+                    <li>Impact Pozitiv: Încurajăm utilizarea tehnologiei pentru a aduce o contribuție pozitivă în comunitate.</li>
                 </ul>
             </div>
         </div>
@@ -599,69 +303,99 @@
 </section>
 
 <section class="carousel-section">
-    <h2 class="section-title">Investește în educație</h2>
-    <p class="section-content">
-      Investiția în educația tehnologică este o decizie pe termen lung care îi va oferi copilului tău oportunități nelimitate și șansa de a-și dezvolta potențialul într-un mediu stimulativ și profesionist.
+    <h2 class="section-title" style="color: #2E5A9C">Investește în educație</h2>
+    <p class="section-content" style="font-size: 1.1rem;">
+      Investiția în educația tehnologică este o decizie pe termen lung care îi va oferi copilului tău oportunități nelimitate și șansa de a-și dezvolta potențialul într-un mediu stimulativ și profesionist.
     </p>
-    <a href="/inscriere" class="cta-button-primary">Înscrie-te chiar acum →</a>
+    <a href="/inscriere.html" class="cta-button-primary">Înscrie-te chiar acum →</a>
   
     <div class="carousel-container">
       <button class="carousel-button prev-button">←</button>
       <div class="carousel-track">
         <div class="carousel-slide">
-          <a href="courses/scratch.html">
-            <img src="assets/images/scratch.webp" alt="Programare Scratch">
-            <div class="course-title">Scratch</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/python.html">
-            <img src="assets/images/pyton.webp" alt="Programare Python">
-            <div class="course-title">Python</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/thunkable.html">
-            <img src="assets/images/thunkable.png" alt="Dezvoltare Thunkable">
-            <div class="course-title">Thunkable</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/gdevelop.html">
-            <img src="assets/images/gdevelop.png" alt="Game Development cu GDevelop">
-            <div class="course-title">GDevelop</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/minecraft.html">
-            <img src="assets/images/minecraft.png" alt="Programare Minecraft">
-            <div class="course-title">Minecraft</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/roblox.html">
-            <img src="assets/images/roblox.png" alt="Dezvoltare Roblox">
-            <div class="course-title">Roblox</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/godot.html">
-            <img src="assets/images/godot.webp" alt="Game Development cu Godot">
-            <div class="course-title">Godot</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/greenfoot.html">
-            <img src="assets/images/greenfoot.png" alt="Programare Greenfoot">
-            <div class="course-title">Greenfoot</div>
-          </a>
-        </div>
-        <div class="carousel-slide">
-          <a href="courses/frontend.html">
-            <img src="assets/images/frontend.webp" alt="Web Development">
-            <div class="course-title">Frontend</div>
-          </a>
-        </div>
+            <a href="courses/scratch.html">
+              <img src="assets/images/scratch.webp" alt="Programare Scratch">
+              <div class="course-title">🎮 Scratch - Jocuri</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/appinventor.html">
+              <img src="assets/images/appinventor.webp" alt="Aplicații Mobile">
+              <div class="course-title">📱 AppInventor - Aplicații Mobile</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/construct.html">
+              <img src="assets/images/construct3.png" alt="Jocuri 2D">
+              <div class="course-title">🎯 Construct 3 - Jocuri 2D</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/gdevelop.html">
+              <img src="assets/images/gdevelop.png" alt="Platforme 2D">
+              <div class="course-title">🎲 GDevelop - Platforme 2D</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/alice.html">
+              <img src="assets/images/alice3.webp" alt="Animații 3D">
+              <div class="course-title">🌍 Alice 3 - Animații 3D</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/makecode-arcade.html">
+              <img src="assets/images/makecodearcade.jpg" alt="Jocuri & Electronice">
+              <div class="course-title">🎮 micro:bit - Jocuri & Electronice</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/minecraft.html">
+              <img src="assets/images/minecraft.png" alt="Minecraft Modding">
+              <div class="course-title">⛏ Minecraft - Modding</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/roblox.html">
+              <img src="assets/images/roblox.png" alt="Jocuri Online">
+              <div class="course-title">🌐 Roblox - Jocuri Online</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/godot.html">
+              <img src="assets/images/godot.webp" alt="Game Development">
+              <div class="course-title">🎬 Godot - Game Development</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/greenfoot.html">
+              <img src="assets/images/greenfoot.png" alt="Java Programming">
+              <div class="course-title">☕ Greenfoot - Java</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/python.html">
+              <img src="assets/images/pyton.webp" alt="Aplicații Python">
+              <div class="course-title">🐍 Python - Aplicații</div>
+            </a>
+          </div>
+          
+          <div class="carousel-slide">
+            <a href="courses/frontend.html">
+              <img src="assets/images/frontend.webp" alt="Web Development">
+              <div class="course-title">💻 Frontend - Web</div>
+            </a>
+          </div>
+          
       </div>
       <button class="carousel-button next-button">→</button>
     </div>
@@ -669,38 +403,37 @@
 
 
 <!-- Schedule and Costs Section -->
-<section id="schedule-costs" class="about-section dark">
+<section class="about-section dark">
     <div class="section-container">
         <div class="two-columns">
             <div>
-                <h2 class="section-title">Program</h2>
-                <p class="section-content">
-                    Ședințele au o durata de 90 de minute si 15 minute pauza.
+                <h2 class="section-title" style="color: #2E5A9C">Program</h2>
+                <p class="section-content" style="font-size: 1.1rem;">
+                    Ședințele au o durata de 90 de minute si 15 minute pauza.
                 </p>
-                <div class="program-schedule">
-                    <div class="schedule-item" style="font-size: 1.3rem;">10:00-12:00</div>
-                    <div class="schedule-item" style="font-size: 1.3rem;">12:00-14:00</div>
-                    <div class="schedule-item" style="font-size: 1.3rem;">14:00-16:00</div>
-                    <div class="schedule-item" style="font-size: 1.3rem;">16:00-18:00</div>
+                <div class="program-schedule" style="margin-left: auto; margin-right: auto; width: 80%; max-width: 600px;"> 
+                    <div class="schedule-item" style="font-size: 1.1rem;">10:00-12:00</div>
+                    <div class="schedule-item" style="font-size: 1.1rem;">12:00-14:00</div>
+                    <div class="schedule-item" style="font-size: 1.1rem;">14:00-16:00</div>
+                    <div class="schedule-item" style="font-size: 1.1rem;">16:00-18:00</div>
                 </div>
             </div>
             <div>
-                <h2 class="section-title">Costuri</h2>
-                <div class="section-content">
-                    <p>Costul pentru un curs va fi de 160 lei/ședință</p>
-                    <p>Pentru primele 3 luni se ofera un preț promoțional de 125 lei/ședință</p>
-                    <p>Pentru orice înscriere realizată până la data de 1 martie, se va beneficia de o reducere suplimentară de 10%</p>
+                <h2 class="section-title" style="color: #2E5A9C">Costuri</h2>
+                <div class="section-content" style="font-size: 1.1rem;">
+                    <p style="font-size: 1.1rem;">Costul pentru un curs va fi de 160 lei/ședință</p>
+                    <p style="font-size: 1.1rem;">Pentru primele 3 luni se ofera un preț promoțional de 125 lei/ședință</p>
+                    <p style="font-size: 1.1rem;">Pentru orice înscriere realizată până la data de 1 martie, se va beneficia de o reducere suplimentară de 10%</p>
                 </div>
                 
-                <a href="/inscriere" class="cta-button-primary">Înscrie-te chiar acum →</a>
+                <a href="/inscriere.html" class="cta-button-primary">Înscrie-te chiar acum →</a>
             </div>
         </div>
     </div>
 </section>
 
-</div><!-- Închidere pentru .about-content -->
+</div><!-- Închidere pentru .about-content -->
 
-<!-- Footer -->
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
@@ -709,7 +442,7 @@
             <ul>
                 <li>Email: contact@tma.ro</li>
                 <li>Telefon: 0700 000 000</li>
-                <li>Adresă: Strada Exemplu, Nr. 123</li>
+                <li>Adresă: Strada Exemplu, Nr. 123</li>
             </ul>
         </div>
         <div class="footer-section">
@@ -730,12 +463,12 @@
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Informații</h3>
+            <h3>Informații</h3>
             <ul>
                 <li><a href="/about.html">Despre noi</a></li>
                 <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/terms.html">Termeni și condiții</a></li>
-                <li><a href="/privacy.html">Confidențialitate</a></li>
+                <li><a href="/terms.html">Termeni și condiții</a></li>
+                <li><a href="/privacy.html">Confidențialitate</a></li>
             </ul>
         </div>
     </div>
@@ -765,12 +498,14 @@
         // Animation triggers
         const sections = document.querySelectorAll('.section-container');
         sections.forEach((section, index) => {
-            section.classList.add(`delay-${index + 1}`);
+            section.classList.add(delay-${index + 1});
         });
     });
 </script>
 <script src="js/carousel.js"></script>
 <script src="js/animations.js"></script>
+<script src="../js/courses.js"></script>
+<script src="js/read-more.js"></script>
 
 </body>
 </html>

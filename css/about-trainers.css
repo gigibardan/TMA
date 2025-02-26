@@ -1,0 +1,468 @@
+/* Titluri și text */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Grid și coloane */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+/* Butoane și CTA */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #FFD700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFC700;
+    transform: translateY(-2px);
+}
+
+/* Animații */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Trainer Cards */
+.trainers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.trainer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Animație diferită pentru fiecare card */
+.trainer-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.trainer-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.trainer-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.2);
+}
+
+.trainer-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.2), transparent 70%);
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+
+.trainer-card:hover::after {
+    transform: translateX(100%);
+}
+
+.trainer-image {
+    width: 100%;
+    object-position: center top;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease;
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+.trainer-card:hover .trainer-image {
+    transform: scale(1.05);
+}
+
+.trainer-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.trainer-name::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.trainer-card:hover .trainer-name::after {
+    width: 50px;
+}
+
+.trainer-specialization {
+    color: #0066cc;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.trainer-card:hover .trainer-specialization {
+    opacity: 1;
+}
+
+.trainer-bio {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+/* Stiluri pentru bio scurt și complet */
+.trainer-bio-short {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.trainer-bio-full {
+    display: none;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Stiluri pentru butonul Read More */
+.read-more-btn {
+    background-color: transparent;
+    color: #0066cc;
+    border: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.read-more-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0.4rem;
+    left: 0;
+    background-color: #0066cc;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+    transform: scaleX(1);
+}
+
+/* Program Schedule */
+.program-schedule {
+    margin-top: 2rem;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.schedule-item:before {
+    content: "🕐";
+    margin-right: 1rem;
+}
+
+/* Responsive Design pentru mobil */
+@media (max-width: 768px) {
+    /* Ajustări pentru layout general */
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Containerul trainerilor - mai aproape de marginile ecranului */
+    .trainers-container {
+        padding: 0.25rem;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* Grid trainer transformat în coloană */
+    .trainer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Card trainer - apropiat de marginile ecranului */
+    .trainer-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 8px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Imagine trainer */
+    .trainer-image {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        display: block;
+        box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+        border: 3px solid #fff;
+    }
+
+    /* Conținut trainer */
+    .trainer-content {
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Nume trainer */
+    .trainer-name {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Linie decorativă sub nume */
+    .trainer-name::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #0066cc;
+        margin: 0.5rem auto;
+    }
+
+    /* Specializare trainer */
+    .trainer-specialization {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+    }
+
+    /* Bio trainer */
+    .trainer-bio, .trainer-bio-short, .trainer-bio-full {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Ajustări pentru secțiunea about */
+    .about-section {
+        padding: 1.5rem 0.5rem;
+        margin: 1rem 0;
+    }
+
+    /* Buton read more */
+    .read-more-btn {
+        display: inline-block;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+/* CSS pentru a forța cardurile să se extindă complet spre marginile ecranului pe mobil */
+
+/* CSS pentru a centra cardurile cu lățime de 90% pe mobil */
+
+@media (max-width: 768px) {
+    /* Ajustăm containerul principal pentru a permite centrarea */
+    .about-content {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Ajustăm secțiunea pentru a permite centrarea */
+    .about-section {
+        padding: 1.5rem 0 !important;
+        width: 100% !important;
+    }
+    
+    /* Ajustăm containerul trainerilor */
+    .trainers-container {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Ajustăm grid-ul de traineri */
+    .trainer-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centrez cardurile */
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    /* Ajustăm cardurile pentru a ocupa 90% din lățime și a fi centrate */
+    .trainer-card {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important; /* Centrez cardul */
+        padding: 1rem !important; /* Padding intern pentru conținut */
+        border-radius: 8px !important;
+    }
+    
+    /* Păstrăm stilurile existente pentru conținutul din interior */
+    .trainer-image {
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50% !important;
+        margin: 0 auto 1rem !important;
+        display: block !important;
+    }
+    
+    .trainer-content {
+        text-align: center !important;
+    }
+    
+    .trainer-name {
+        font-size: 1.2rem !important;
+        margin: 0.5rem 0 !important;
+    }
+    
+    .trainer-specialization {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .trainer-bio-short, .trainer-bio {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Ajustăm butonul de read more */
+    .read-more-btn {
+        margin-top: 0.5rem !important;
+        display: inline-block !important;
+    }
+}
+/* Ajustări pentru paragrafele de conținut */
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem; /* Reducem spațiul dintre paragrafe */
+    padding: 0 0.75rem; /* Adăugăm padding lateral pentru text */
+}
+
+/* Ajustări pentru secțiunea de conținut generală */
+.content-section {
+    padding: 0 1rem; /* Ajustăm padding-ul lateral */
+}
+
+/* Ajustări pentru secțiunea despre (about) */
+.about-section {
+    padding: 2rem 1rem; /* Ajustăm padding-ul general */
+}
+
+/* Ajustări pentru alte div-uri de conținut */
+.content-container,
+.section-wrapper,
+.page-content {
+    padding: 0 1rem; /* Adăugăm padding lateral */
+}
+
+/* Responsive design pentru mobile */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 0 1rem; /* Mai mult padding pe mobil pentru lizibilitate */
+        font-size: 1rem; /* Reducem puțin font-size pe mobil */
+        line-height: 1.6; /* Reducem înălțimea liniei */
+        margin-bottom: 1rem; /* Reducem spațiul dintre paragrafe */
+    }
+    
+    .content-section {
+        padding: 0 0.5rem; /* Reducem padding-ul lateral pe mobil */
+    }
+    
+    .about-section,
+    .content-container,
+    .section-wrapper,
+    .page-content {
+        padding: 1rem 0.5rem; /* Ajustăm padding-ul general pe mobil */
+    }
+}
