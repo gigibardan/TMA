@@ -1,0 +1,15 @@
+# Activează motorul de rescriere
+RewriteEngine On
+
+# Redirecționează de la .html la versiunea fără extensie
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# Servește fișierul .html când se accesează URL fără extensie
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Setează index.html ca fișier implicit
+DirectoryIndex index.html
