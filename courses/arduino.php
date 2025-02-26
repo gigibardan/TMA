@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <div class="nav-content">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo-techminds-sigla.png" alt="TMA Logo">
@@ -50,7 +50,9 @@
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+
+    <?php include '../header.php'; ?>
 
     <!-- Main Content -->
     <main>
