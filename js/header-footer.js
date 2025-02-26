@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error(`Error loading ${url}:`, error));
     }
 
-    loadComponent("header.html", "header");
-    loadComponent("footer.html", "footer");
+    loadComponent("../header.html", "header");
+    loadComponent("../footer.html", "footer");
 });
