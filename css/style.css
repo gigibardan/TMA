@@ -48,11 +48,28 @@
 }
 
 /* Mobile optimization */
+
 @media (max-width: 768px) {
    .logo img {
        height: 32px; /* Puțin mai mic pe mobile */
    }
+   
+   /* Modifică culoarea textului în dropdown pe mobil */
+   .dropdown-content {
+      background-color: #3a69aa; /* Un fundal mai închis pentru contrast */
+   }
+   
+   .navbar .dropdown-content a {
+      color: #ffffff !important;
+      border-bottom: 1px solid #4a79ba;
+   }
+   
+   .dropdown-content a:hover {
+      background-color: #2E5A9C; /* Culoare de hover diferită */
+      color: #ffffff; /* Menține textul alb și la hover */
+   }
 }
+
  .nav-links {
     display: flex;
     gap: 1rem;
@@ -97,7 +114,7 @@
 }
 
 .dropdown-content a {
-   color: #ffffff;
+   color: #224373;
    padding: 0.5rem 1rem;
    display: flex;
    align-items: center;
@@ -111,7 +128,7 @@
 
 .dropdown-content a:hover {
    background-color: #f5f5f5;
-   color: #2E5A9C;
+   color: #2e5a9c;
 }
  
  .menu-button {
