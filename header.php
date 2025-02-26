@@ -1,5 +1,6 @@
 <?php 
 $basePath = (strpos($_SERVER['REQUEST_URI'], "/courses/") !== false) ? "../" : "./"; 
+echo "<!-- header.php loaded -->"; 
 ?>
 
 <nav class="navbar">
