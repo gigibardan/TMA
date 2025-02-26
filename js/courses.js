@@ -97,9 +97,13 @@ class CourseAnimations {
     initParallax() {
         const heroImage = document.querySelector('.hero-image');
         if (heroImage) {
+            // Setează inițial un scale mai mare
+            heroImage.style.transform = 'scale(1.1)';
+            
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
-                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+                const scale = Math.max(0.9, 1.1 - scrolled * 0.001);
+                heroImage.style.transform = `scale(${scale})`;
             });
         }
     }
