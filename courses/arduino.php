@@ -52,7 +52,7 @@
         </div>
     </nav> -->
 
-    <?php include '../header.php'; ?>
+    <?php include '../header.html'; ?>
 
     <!-- Main Content -->
     <main>
