@@ -1,46 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="../index.html" class="logo">
-                <img src="../assets/images/logo-techminds-sigla.png" alt="TMA Logo">
-            </a>  
-            <button class="menu-button">☰</button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Acasă</a></li>
-                <li class="dropdown">
-                    <a href="../index.html">Programare</a>
-                    <div class="dropdown-content">
-                        <a href="scratch.html">Scratch</a>
-                        <a href="thunkable.html">Thunkable</a>
-                        <a href="gdevelop.html">GDevelop</a>
-                        <a href="minecraft.html">Minecraft</a>
-                        <a href="roblox.html">Roblox</a>
-                        <a href="godot.html">Godot</a>
-                        <a href="greenfoot.html">Greenfoot</a>
-                        <a href="python.html">Python</a>
-                        <a href="frontend.html">Frontend</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="../robotics.html">Robotică</a>
-                    <div class="dropdown-content">
-                        <a href="essentials.html">LEGO Essentials</a>
-                        <a href="prime.html">LEGO Prime</a>
-                        <a href="microbit.html">micro:bit</a>
-                        <a href="arduino.html">Arduino</a>
-                    </div>
-                <li><a href="../about.html">Despre noi</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-</body>
-</html>
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="index.php" class="logo">
+            <img src="assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.php">Acasă</a></li>
+            <li class="dropdown">
+                <a href="#">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.php">Scratch</a>
+                    <a href="courses/thunkable.php">Thunkable</a>
+                    <a href="courses/gdevelop.php">GDevelop</a>
+                    <a href="courses/minecraft.php">Minecraft</a>
+                    <a href="courses/roblox.php">Roblox</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.php">LEGO Essentials</a>
+                    <a href="courses/prime.php">LEGO Prime</a>
+                    <a href="courses/microbit.php">micro:bit</a>
+                    <a href="courses/arduino.php">Arduino</a>
+                </div>
+            </li>
+            <li><a href="about.php">Despre noi</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </div>
+</nav>
