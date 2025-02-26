@@ -1,3 +1,7 @@
+<?php 
+$basePath = (strpos($_SERVER['REQUEST_URI'], "/courses/") !== false) ? "../" : "./"; 
+?>
+
 <nav class="navbar">
     <div class="nav-content">
         <a href="index.php" class="logo">
