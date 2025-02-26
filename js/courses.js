@@ -173,3 +173,18 @@ class CourseAnimations {
 document.addEventListener('DOMContentLoaded', () => {
     new CourseAnimations();
 });
+
+//burger 
+// Mobile menu toggle
+const menuButton = document.querySelector('.menu-button');
+const navLinks = document.querySelector('.nav-links');
+
+menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbar')) {
+        navLinks.classList.remove('active');
+    }
+});

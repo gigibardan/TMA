@@ -606,62 +606,6 @@
     </div>
 </div>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Oprim redirecționarea
-
-            const form = this;
-            const button = form.querySelector('button');
-            const originalText = button.textContent;
-
-            button.textContent = 'Se trimite...';
-            button.style.opacity = '0.8';
-
-            // Trimitem datele către Formspree prin Fetch API
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    button.textContent = 'Mesaj trimis! ✓';
-                    button.style.background = '#10b981';
-                    form.reset(); // Resetăm formularul după trimitere
-
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.style.background = '';
-                        button.style.opacity = '1';
-                    }, 3000);
-                } else {
-                    button.textContent = 'Eroare! Încearcă din nou.';
-                    button.style.background = '#e63946';
-                }
-            }).catch(error => {
-                button.textContent = 'Eroare! Verifică conexiunea.';
-                button.style.background = '#e63946';
-            });
-        });
-
-        // Input animations
-        const inputs = document.querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('focus', function () {
-                this.parentElement.style.transform = 'translateY(-2px)';
-            });
-
-            input.addEventListener('blur', function () {
-                this.parentElement.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
-
-    <!-- modify this form HTML and place wherever you want your form -->
-
-</body>
-
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
@@ -731,5 +675,62 @@
         </div>
     </div>
 </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Oprim redirecționarea
+
+            const form = this;
+            const button = form.querySelector('button');
+            const originalText = button.textContent;
+
+            button.textContent = 'Se trimite...';
+            button.style.opacity = '0.8';
+
+            // Trimitem datele către Formspree prin Fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    button.textContent = 'Mesaj trimis! ✓';
+                    button.style.background = '#10b981';
+                    form.reset(); // Resetăm formularul după trimitere
+
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = '';
+                        button.style.opacity = '1';
+                    }, 3000);
+                } else {
+                    button.textContent = 'Eroare! Încearcă din nou.';
+                    button.style.background = '#e63946';
+                }
+            }).catch(error => {
+                button.textContent = 'Eroare! Verifică conexiunea.';
+                button.style.background = '#e63946';
+            });
+        });
+
+        // Input animations
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function () {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+
+            input.addEventListener('blur', function () {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+    <script src="./js/courses.js"></script>
+
+
+</body>
 
 </html>
