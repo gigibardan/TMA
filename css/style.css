@@ -54,9 +54,8 @@
        height: 32px; /* Puțin mai mic pe mobile */
    }
    
-   /* Modifică culoarea textului în dropdown pe mobil */
    .dropdown-content {
-      background-color: #3a69aa; /* Un fundal mai închis pentru contrast */
+      background-color: #3a69aa; 
    }
    
    .navbar .dropdown-content a {
@@ -65,8 +64,8 @@
    }
    
    .dropdown-content a:hover {
-      background-color: #2E5A9C; /* Culoare de hover diferită */
-      color: #ffffff; /* Menține textul alb și la hover */
+      background-color: #2E5A9C; 
+      color: #ffffff; 
    }
 }
 
@@ -114,7 +113,7 @@
 }
 
 .dropdown-content a {
-   color: #224373;
+   color: #224373 !important;
    padding: 0.5rem 1rem;
    display: flex;
    align-items: center;
