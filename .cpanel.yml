@@ -1,0 +1,32 @@
+---
+deployment:
+  tasks:
+    - export DEPLOY_DIR=/home/$USER/public_html
+
+    # Create necessary directories if they don't exist
+    - mkdir -p $DEPLOY_DIR/assets/images
+    - mkdir -p $DEPLOY_DIR/courses
+    - mkdir -p $DEPLOY_DIR/css
+    - mkdir -p $DEPLOY_DIR/js
+
+    # Deploy HTML files
+    - /bin/cp -R index.html about.html contact.html inscriere.html programare.html robotics.html gdpr.html $DEPLOY_DIR/
+
+    # Deploy assets
+    - /bin/cp -R assets/images/* $DEPLOY_DIR/assets/images/
+
+    # Deploy CSS files
+    - /bin/cp -R css/* $DEPLOY_DIR/css/
+
+    # Deploy JavaScript files
+    - /bin/cp -R js/* $DEPLOY_DIR/js/
+
+    # Deploy courses directory
+    - /bin/cp -R courses/* $DEPLOY_DIR/courses/
+
+    # Set correct permissions
+    - find $DEPLOY_DIR -type d -exec chmod 755 {} \;
+    - find $DEPLOY_DIR -type f -exec chmod 644 {} \;
+
+    # Ensure the project is fully deployed
+    - echo "Deployment completed successfully!"

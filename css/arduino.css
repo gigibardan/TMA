@@ -1,0 +1,849 @@
+:root {
+    --arduino-blue: #00979C;
+    --arduino-dark-blue: #006468;
+    --arduino-light-blue: #00C0C7;
+    --dark: #1a1a1a;
+    --text: #ffffff;
+    --code-bg: #1E1E1E;
+    --success: #4CAF50;
+    --warning: #FFC107;
+    --error: #F44336;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Circuit Background */
+.circuit-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.circuit-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, rgba(0,151,156,0.1) 1px, transparent 1px),
+        linear-gradient(rgba(0,151,156,0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.led {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--arduino-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--arduino-light-blue);
+    animation: ledPulse 2s infinite;
+}
+
+@keyframes ledPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Code Editor */
+.code-editor-header {
+    background: #2D2D2D;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #FF5F56; }
+.dot.yellow { background: #FFBD2E; }
+.dot.green { background: #27C93F; }
+
+.file-name {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #808080;
+}
+
+.code-editor {
+    background: var(--code-bg);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 2rem;
+}
+
+.code-editor pre {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    color: #D4D4D4;
+}
+
+/* Glitch Effect */
+.glitch {
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0.05em 0 0 var(--arduino-light-blue),
+                -0.025em -0.05em 0 var(--arduino-dark-blue),
+                0.025em 0.05em 0 var(--arduino-blue);
+    animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    animation: glitch-top 1s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch::after {
+    animation: glitch-bottom 1.5s infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--arduino-light-blue);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Arduino Board Visual */
+.arduino-board {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--arduino-blue);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: transform 0.3s ease;
+}
+
+.arduino-board:hover {
+    transform: perspective(1000px) rotateY(-5deg);
+}
+
+.component {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.component:hover {
+    transform: translateZ(20px);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, var(--arduino-light-blue), var(--arduino-dark-blue));
+    box-shadow: 0 0 15px rgba(0, 151, 156, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 151, 156, 0.8);
+}
+
+.btn-primary {
+    background: var(--arduino-blue);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-circuit {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.1) 51%, transparent 52%) 0 0,
+        linear-gradient(0deg, transparent 50%, rgba(255,255,255,0.1) 51%, transparent 52%) 0 0;
+    background-size: 4px 4px;
+    animation: circuitMove 20s linear infinite;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--arduino-blue);
+    color: var(--arduino-blue);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--arduino-blue);
+    border-radius: 15px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--arduino-blue);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite;
+}
+
+/* Animations */
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 var(--arduino-light-blue), -0.025em -0.05em 0 var(--arduino-dark-blue), 0.025em 0.05em 0 var(--arduino-blue); }
+    14% { text-shadow: 0.05em 0 0 var(--arduino-light-blue), -0.025em -0.05em 0 var(--arduino-dark-blue), 0.025em 0.05em 0 var(--arduino-blue); }
+    15% { text-shadow: -0.05em -0.025em 0 var(--arduino-light-blue), 0.025em 0.025em 0 var(--arduino-dark-blue), -0.05em -0.05em 0 var(--arduino-blue); }
+    49% { text-shadow: -0.05em -0.025em 0 var(--arduino-light-blue), 0.025em 0.025em 0 var(--arduino-dark-blue), -0.05em -0.05em 0 var(--arduino-blue); }
+    50% { text-shadow: 0.025em 0.05em 0 var(--arduino-light-blue), 0.05em 0 0 var(--arduino-dark-blue), 0 -0.05em 0 var(--arduino-blue); }
+    99% { text-shadow: 0.025em 0.05em 0 var(--arduino-light-blue), 0.05em 0 0 var(--arduino-dark-blue), 0 -0.05em 0 var(--arduino-blue); }
+    100% { text-shadow: -0.025em 0 0 var(--arduino-light-blue), -0.025em -0.025em 0 var(--arduino-dark-blue), -0.025em -0.05em 0 var(--arduino-blue); }
+}
+
+@keyframes scrollWheel {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 0.3; }
+}
+
+@keyframes circuitMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+/* Features Section */
+.features {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, var(--dark), #141414);
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    background: linear-gradient(120deg, var(--arduino-blue), var(--arduino-light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(var(--arduino-blue), 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--arduino-blue),
+        transparent
+    );
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--arduino-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--arduino-light-blue);
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Course Structure */
+.course-structure {
+    padding: 100px 0;
+    background: #141414;
+    position: relative;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 60px auto 0;
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--arduino-blue);
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+    position: relative;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(var(--arduino-blue), 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--arduino-blue);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -50px;
+}
+
+.timeline-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--arduino-blue);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    color: var(--arduino-light-blue);
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-content li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--arduino-blue);
+}
+
+/* Projects Grid */
+.projects {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-image {
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: var(--arduino-light-blue);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* Call to Action */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(45deg, var(--arduino-dark-blue), var(--arduino-blue));
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-content::before {
+        left: -40px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .cta {
+        padding: 60px 0;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Arduino Board Styling */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arduino-board {
+    width: 500px;
+    height: 350px;
+    background: #00979D;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(5deg) rotateY(-15deg);
+    transition: all 0.3s ease;
+}
+
+.board-base {
+    position: absolute;
+    inset: 10px;
+    background: #008184;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.board-base::before {
+    content: 'ARDUINO UNO';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.components {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Microcontroller Component */
+.component[data-name="microcontroller"] {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 120px;
+    height: 80px;
+    pointer-events: auto;
+}
+
+.chip {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #444;
+}
+
+.chip::before {
+    content: 'ATmega328P';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.pins {
+    position: absolute;
+    inset: -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pins::before,
+.pins::after {
+    content: '';
+    width: calc(100% + 10px);
+    height: 12px;
+    background: repeating-linear-gradient(
+        90deg,
+        #666,
+        #666 2px,
+        transparent 2px,
+        transparent 6px
+    );
+}
+
+/* USB Port Component */
+.component[data-name="usb"] {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 50px;
+    height: 30px;
+    pointer-events: auto;
+}
+
+.port {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 2px;
+    position: relative;
+}
+
+.port::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #111;
+    border-radius: 1px;
+}
+
+/* LEDs Component */
+.component[data-name="leds"] {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    display: flex;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.component[data-name="leds"] .led {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.led.power {
+    background: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.led.tx {
+    background: #FFC107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    animation: blink 1s infinite;
+}
+
+.led.rx {
+    background: #2196F3;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+    animation: blink 1.3s infinite;
+}
+
+/* Hover Info Panel */
+.hover-info {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--arduino-blue);
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hover-info h4 {
+    color: var(--arduino-light-blue);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.hover-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.hover-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hover-info li {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    padding: 2px 0;
+}
+
+/* Hover Effects */
+.component {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.component:hover {
+    transform: translateZ(10px);
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.component:hover ~ .hover-info {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.led.tx {
+    animation: blink 1s infinite linear alternate;
+    animation-delay: 0.2s;
+}
+
+.led.rx {
+    animation: blink 1.3s infinite linear alternate;
+    animation-delay: 0.4s;
+}
+
+/* Interactive State */
+.component:active {
+    transform: translateZ(30px);
+    outline: 3px solid var(--arduino-light-blue);
+    outline-offset: 3px;
+}
+
+
+/* Component Highlights */
+.component::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.component:hover::after {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
