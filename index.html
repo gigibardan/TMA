@@ -7,6 +7,7 @@
     <!-- Common CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/popup.css">
     
     <!-- Page specific CSS - CSS_PLACEHOLDER -->
 </head>
@@ -385,28 +386,87 @@
 </footer>
 
 
+<!-- Sub footer -->
+<div id="popup-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center; padding: 20px;">
+    <div style="background: white; max-width: 500px; width: 100%; border-radius: 12px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <button id="close-popup-btn" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; justify-content: center; align-items: center;">&times;</button>
+        
+        <div style="width: 100%;">
+            <img src="./assets/images/ziua-portilor-deschise.jpeg" alt="Ziua Porților Deschise" style="width: 100%; height: auto; display: block; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+        </div>
+        
+        <div style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                <span style="background-color: #FFD500; color: #333; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 14px;">28 februarie - 1 martie</span>
+                <span style="background-color: #FFD500; color: #333; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 14px;">10:00 - 16:00</span>
+            </div>
+            
+            <p style="margin-bottom: 15px; line-height: 1.5; color: #333;">La Ziua Porților Deschise TechMinds Academy, vei descoperi școala noastră prin demonstrații live de programare și roboți interactivi. Oferă-i copilului tău o experiență tech care îi poate modela viitorul!</p>
+            
+            <div style="margin-bottom: 20px; color: #555; font-size: 14px;">
+                <i class="fas fa-map-marker-alt"></i> Vino la sediul nostru:<br>
+                <span style="padding-left: 20px;">Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center Sector 1, București</span>
+            </div>
+            
+            <a href="./contact.html" style="display: block; background-color: #0055BF; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; text-align: center;">Contactează-ne acum</a>
+        </div>
+        
+        <div style="padding: 15px; border-top: 1px solid #eee; display: flex; justify-content: flex-end;">
+            <label style="display: flex; align-items: center; gap: 5px; font-size: 14px; color: #777; cursor: pointer;">
+                <input type="checkbox" id="no-show-again"> Nu mai arăta acest mesaj
+            </label>
+        </div>
+    </div>
+</div>
 
-
-
-    <script>
-        // Mobile menu toggle
-        const menuButton = document.querySelector('.menu-button');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.navbar')) {
-                navLinks.classList.remove('active');
+<script>
+    // Așteptăm încărcarea completă a documentului
+    document.addEventListener('DOMContentLoaded', function() {
+        // Referințe către elementele popup-ului
+        const popupOverlay = document.getElementById('popup-overlay');
+        const closeButton = document.getElementById('close-popup-btn');
+        const noShowAgain = document.getElementById('no-show-again');
+        
+        // Verificăm dacă utilizatorul a optat să nu mai vadă popup-ul
+        const dontShow = localStorage.getItem('dontShowOpenDayPopup');
+        
+        if (dontShow !== 'true') {
+            // Arătăm popup-ul după 3 secunde
+            setTimeout(function() {
+                popupOverlay.style.display = 'flex';
+            }, 3000);
+        }
+        
+        // Funcția pentru închiderea popup-ului
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+            
+            // Salvăm preferința utilizatorului dacă a bifat checkbox-ul
+            if (noShowAgain.checked) {
+                localStorage.setItem('dontShowOpenDayPopup', 'true');
+            }
+        }
+        
+        // Adăugăm event listener pentru butonul de închidere
+        closeButton.addEventListener('click', closePopup);
+        
+        // Adăugăm event listener pentru click în afara popup-ului
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                closePopup();
             }
         });
-    </script>
+        
+        console.log('Popup script loaded successfully');
+    });
+</script>
+
+   
 
 <script src="./js/courses.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/main.js"></script>
+
 
 
 </body>
