@@ -23,6 +23,17 @@ $mail->Username = getenv('EMAIL_USER');
 $mail->Password = getenv('EMAIL_PASS');
 
 
+// Verifică dacă variabilele de mediu sunt încărcate
+$smtpUser = getenv('SMTP_USER');
+$smtpPass = getenv('SMTP_PASS');
+$smtpHost = getenv('SMTP_HOST');
+$smtpPort = getenv('SMTP_PORT');
+$smtpSecure = getenv('SMTP_SECURE');
+
+if (!$smtpUser || !$smtpPass || !$smtpHost || !$smtpPort || !$smtpSecure) {
+    die(json_encode(["error" => "Variabilele de mediu nu au fost încărcate corect!"]));
+}
+
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
