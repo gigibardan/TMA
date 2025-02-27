@@ -11,13 +11,13 @@ require '../libs/src/PHPMailer.php';
 require '../libs/src/SMTP.php';
 require '../libs/src/Exception.php';
 
+require '../libs/loadenv.php'; // Include loader-ul
+load_env(__DIR__ . '/../.env'); // Încarcă variabilele din fișierul .env
+
 // Allow CORS (only if needed)
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 $mail->Username = getenv('EMAIL_USER');
 $mail->Password = getenv('EMAIL_PASS');
