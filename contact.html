@@ -526,17 +526,17 @@
         <!-- Contact Form -->
         <div class="contact-form" id="contact-form">
             <h2>Trimite un mesaj</h2>
-            <form id="contactForm" action="https://formspree.io/f/myzkapon" method="POST">
+            <form id="contactForm" action="api/send_email.php" method="POST">
                 <div class="form-group">
                     <label for="name">Nume complet:</label>
                     <input type="text" id="name" name="name" placeholder="Nume complet" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="course">Selectează un curs:</label>
                     <select id="course" name="course" required>
@@ -548,12 +548,12 @@
                         <option>Game Development</option>
                     </select>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="message">Mesajul tău:</label>
                     <textarea id="message" name="message" placeholder="Scrie mesajul tău" required></textarea>
                 </div>
-
+            
                 <button type="submit" class="button-post">Trimite mesajul</button>
             </form>
 
@@ -675,46 +675,7 @@
         </div>
     </div>
 </footer>
-
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Oprim redirecționarea
-
-            const form = this;
-            const button = form.querySelector('button');
-            const originalText = button.textContent;
-
-            button.textContent = 'Se trimite...';
-            button.style.opacity = '0.8';
-
-            // Trimitem datele către Formspree prin Fetch API
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    button.textContent = 'Mesaj trimis! ✓';
-                    button.style.background = '#10b981';
-                    form.reset(); // Resetăm formularul după trimitere
-
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.style.background = '';
-                        button.style.opacity = '1';
-                    }, 3000);
-                } else {
-                    button.textContent = 'Eroare! Încearcă din nou.';
-                    button.style.background = '#e63946';
-                }
-            }).catch(error => {
-                button.textContent = 'Eroare! Verifică conexiunea.';
-                button.style.background = '#e63946';
-            });
-        });
-
         // Input animations
         const inputs = document.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
@@ -729,6 +690,7 @@
     </script>
 
     <script src="./js/courses.js"></script>
+    <script src="./js/contact.js"></script>
 
 
 </body>
