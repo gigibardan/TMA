@@ -19,10 +19,6 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$mail->Username = getenv('EMAIL_USER');
-$mail->Password = getenv('EMAIL_PASS');
-
-
 // Verifică dacă variabilele de mediu sunt încărcate
 $smtpUser = getenv('SMTP_USER');
 $smtpPass = getenv('SMTP_PASS');
