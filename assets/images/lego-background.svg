@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <!-- Gradient de fundal -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0055BF" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#003A64" stop-opacity="0.95" />
+    </linearGradient>
+    
+    <!-- Pattern pentru studs LEGO -->
+    <pattern id="studPattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="8" fill="rgba(255, 255, 255, 0.05)" />
+    </pattern>
+    
+    <!-- Pattern pentru grid LEGO -->
+    <pattern id="gridPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 100 0 100 100 0 100 Z" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+    </pattern>
+    
+    <!-- Filtru pentru efect de strălucire -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fundal cu gradient -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  
+  <!-- Grid și pattern-uri LEGO -->
+  <rect width="100%" height="100%" fill="url(#studPattern)" />
+  <rect width="100%" height="100%" fill="url(#gridPattern)" />
+  
+  <!-- Linii diagonale subtile -->
+  <g opacity="0.07">
+    <line x1="0" y1="0" x2="1200" y2="800" stroke="white" stroke-width="1" />
+    <line x1="200" y1="0" x2="1200" y2="600" stroke="white" stroke-width="1" />
+    <line x1="400" y1="0" x2="1200" y2="400" stroke="white" stroke-width="1" />
+    <line x1="600" y1="0" x2="1200" y2="200" stroke="white" stroke-width="1" />
+    <line x1="0" y1="200" x2="1000" y2="800" stroke="white" stroke-width="1" />
+    <line x1="0" y1="400" x2="800" y2="800" stroke="white" stroke-width="1" />
+    <line x1="0" y1="600" x2="600" y2="800" stroke="white" stroke-width="1" />
+  </g>
+  
+  <!-- Forme de LEGO stilizate - In background -->
+  <!-- Piese LEGO 2x4 stilizate în fundal -->
+  <g opacity="0.1">
+    <!-- Piesă 1 -->
+    <rect x="100" y="150" width="160" height="80" rx="5" fill="white" />
+    <g transform="translate(130, 150)">
+      <circle cx="0" cy="0" r="10" fill="white" />
+      <circle cx="40" cy="0" r="10" fill="white" />
+      <circle cx="80" cy="0" r="10" fill="white" />
+      <circle cx="120" cy="0" r="10" fill="white" />
+    </g>
+    
+    <!-- Piesă 2 -->
+    <rect x="800" y="200" width="160" height="80" rx="5" fill="white" />
+    <g transform="translate(830, 200)">
+      <circle cx="0" cy="0" r="10" fill="white" />
+      <circle cx="40" cy="0" r="10" fill="white" />
+      <circle cx="80" cy="0" r="10" fill="white" />
+      <circle cx="120" cy="0" r="10" fill="white" />
+    </g>
+    
+    <!-- Piesă 3 -->
+    <rect x="400" y="500" width="160" height="80" rx="5" fill="white" />
+    <g transform="translate(430, 500)">
+      <circle cx="0" cy="0" r="10" fill="white" />
+      <circle cx="40" cy="0" r="10" fill="white" />
+      <circle cx="80" cy="0" r="10" fill="white" />
+      <circle cx="120" cy="0" r="10" fill="white" />
+    </g>
+    
+    <!-- Piesă 4 -->
+    <rect x="900" y="600" width="80" height="80" rx="5" fill="white" />
+    <g transform="translate(920, 600)">
+      <circle cx="0" cy="0" r="10" fill="white" />
+      <circle cx="40" cy="0" r="10" fill="white" />
+    </g>
+    
+    <!-- Piesă 5 -->
+    <rect x="200" y="700" width="120" height="40" rx="5" fill="white" />
+    <g transform="translate(230, 700)">
+      <circle cx="0" cy="0" r="10" fill="white" />
+      <circle cx="40" cy="0" r="10" fill="white" />
+      <circle cx="80" cy="0" r="10" fill="white" />
+    </g>
+  </g>
+  
+  <!-- Blueprint/schematic lines -->
+  <g opacity="0.05">
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#FFD500" stroke-width="1" stroke-dasharray="10,5" />
+    <line x1="600" y1="0" x2="600" y2="800" stroke="#FFD500" stroke-width="1" stroke-dasharray="10,5" />
+    <circle cx="600" cy="400" r="300" fill="none" stroke="#FFD500" stroke-width="1" stroke-dasharray="10,5" />
+    <circle cx="600" cy="400" r="200" fill="none" stroke="#FFD500" stroke-width="1" stroke-dasharray="10,5" />
+    <circle cx="600" cy="400" r="100" fill="none" stroke="#FFD500" stroke-width="1" stroke-dasharray="10,5" />
+  </g>
+  
+  <!-- Elemente de construcție LEGO cu opacitate diferită -->
+  <g opacity="0.07">
+    <!-- Plăcuțe de construcție -->
+    <rect x="50" y="100" width="300" height="5" rx="2" fill="#FFD500" />
+    <rect x="850" y="150" width="300" height="5" rx="2" fill="#FFD500" />
+    <rect x="150" y="300" width="400" height="5" rx="2" fill="#FFD500" />
+    <rect x="650" y="450" width="400" height="5" rx="2" fill="#FFD500" />
+    <rect x="250" y="600" width="300" height="5" rx="2" fill="#FFD500" />
+    
+    <!-- Conectori circulari -->
+    <circle cx="100" cy="100" r="15" fill="none" stroke="#FFD500" stroke-width="2" />
+    <circle cx="900" cy="150" r="15" fill="none" stroke="#FFD500" stroke-width="2" />
+    <circle cx="200" cy="300" r="15" fill="none" stroke="#FFD500" stroke-width="2" />
+    <circle cx="700" cy="450" r="15" fill="none" stroke="#FFD500" stroke-width="2" />
+    <circle cx="300" cy="600" r="15" fill="none" stroke="#FFD500" stroke-width="2" />
+  </g>
+  
+  <!-- Linii de cod/blueprint în stil LEGO -->
+  <g opacity="0.04">
+    <text x="100" y="50" font-family="monospace" font-size="12" fill="white">LEGO® SPIKE™ ESSENTIALS</text>
+    <text x="100" y="70" font-family="monospace" font-size="12" fill="white">BUILD // LEARN // CREATE</text>
+    <text x="100" y="90" font-family="monospace" font-size="12" fill="white">// CODING FOR KIDS</text>
+    
+    <text x="800" y="350" font-family="monospace" font-size="12" fill="white">function legoRobot() {</text>
+    <text x="820" y="370" font-family="monospace" font-size="12" fill="white">  moveForward(2);</text>
+    <text x="820" y="390" font-family="monospace" font-size="12" fill="white">  turn(90);</text>
+    <text x="820" y="410" font-family="monospace" font-size="12" fill="white">  if (seeObstacle()) {</text>
+    <text x="840" y="430" font-family="monospace" font-size="12" fill="white">    avoidObstacle();</text>
+    <text x="820" y="450" font-family="monospace" font-size="12" fill="white">  }</text>
+    <text x="800" y="470" font-family="monospace" font-size="12" fill="white">}</text>
+  </g>
+</svg>
