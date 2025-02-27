@@ -24,54 +24,29 @@ section {
 }
 
 /* Enhanced Hero Section */
-.hero{
-    padding: 4rem 0;
+/* Modificări pentru înălțimea hero-ului */
+.hero {
+    min-height: 70vh; /* Setăm aceeași înălțime ca la celălalt hero */
+    padding: 0; /* Eliminăm padding-ul pentru a controla înălțimea doar cu min-height */
     background: linear-gradient(45deg, var(--lego-blue), #003a64);
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.hero::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
-            transparent 0,
-            transparent 24px,
-            rgba(255,255,255,0.1) 24px,
-            rgba(255,255,255,0.1) 25px
-        ),
-        repeating-linear-gradient(
-            -45deg,
-            transparent 0,
-            transparent 24px,
-            rgba(255,0,0,0.05) 24px,
-            rgba(255,0,0,0.05) 25px
-        );
-    animation: legoGridMove 20s linear infinite;
-    opacity: 0.3;
+.hero .container {
+    width: 100%;
+    z-index: 2;
+    position: relative;
 }
-
-@keyframes legoGridMove {
-    0% {
-        background-position: 0 0, 0 0;
-    }
-    100% {
-        background-position: 50px 50px, -50px -50px;
-    }
-}
-
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.2fr 1.1fr;
+    gap: 3rem; /* Redus de la 4rem pentru a fi mai compact */
     align-items: center;
+    padding: 4rem 2rem; /* Adăugăm padding aici în loc de .hero */
 }
 
 .hero-text {
@@ -81,16 +56,21 @@ section {
 }
 
 .hero-text h1 {
-    font-size: 4.5rem;
+    font-size: 3.8rem; /* Redus de la 4.5rem pentru a se potrivi mai bine cu înălțimea */
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
-.text-block {
-    display: block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards;
+/* Media query pentru dispozitive mobile */
+@media screen and (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
 }
 
 /* Enhanced LEGO Logo Section */
@@ -321,9 +301,147 @@ section {
     transition: transform 0.1s ease-out;
 }
 
+/* Piese LEGO plutitoare - Stiluri */
+.floating-lego-pieces {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Pentru a permite interacțiunea cu elementele de sub ele */
+    z-index: 1;
+    overflow: hidden;
+}
 
+/* Stiluri generale pentru piesele LEGO */
+.floating-lego {
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    border-radius: 3px;
+    animation: float 15s linear infinite;
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Stiluri pentru piesele LEGO 2x4 */
+.lego-2x4 {
+    width: 60px;
+    height: 30px;
+}
+
+/* Stiluri pentru piesele LEGO 2x2 */
+.lego-2x2 {
+    width: 40px;
+    height: 40px;
+}
+
+/* Stiluri pentru piesele LEGO 1x2 */
+.lego-1x2 {
+    width: 30px;
+    height: 15px;
+}
+
+/* Culori LEGO clasice */
+.lego-red { background-color: #D01012; }
+.lego-blue { background-color: #0055BF; }
+.lego-yellow { background-color: #FFD500; }
+.lego-green { background-color: #237841; }
+.lego-black { background-color: #05131D; }
+.lego-white { background-color: #FFFFFF; }
+
+/* Studuri pentru piesele LEGO */
+.floating-lego-studs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.lego-2x4 .floating-lego-studs {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.lego-2x2 .floating-lego-studs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.lego-1x2 .floating-lego-studs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.floating-stud {
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    border-radius: 50%;
+    margin: 2px auto;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Animații pentru piesele plutitoare */
+@keyframes float {
+    0% {
+        transform: translateY(120vh) translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-20vh) translateX(15vw) rotate(360deg);
+    }
+}
+
+/* Variații ale animației pentru diversitate */
+.float-delay-1 {
+    animation-delay: -3s;
+    animation-duration: 20s;
+}
+
+.float-delay-2 {
+    animation-delay: -7s;
+    animation-duration: 18s;
+}
+
+.float-delay-3 {
+    animation-delay: -12s;
+    animation-duration: 22s;
+}
+
+.float-delay-4 {
+    animation-delay: -16s;
+    animation-duration: 17s;
+}
+
+.float-left {
+    animation-name: float-left;
+}
+
+.float-right {
+    animation-name: float-right;
+}
+
+@keyframes float-left {
+    0% {
+        transform: translateY(120vh) translateX(-10vw) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-20vh) translateX(20vw) rotate(360deg);
+    }
+}
+
+@keyframes float-right {
+    0% {
+        transform: translateY(120vh) translateX(20vw) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-20vh) translateX(-10vw) rotate(-360deg);
+    }
+}
 /* Dimensiunile standard pentru o piesă LEGO 2x4 */
-.lego-face {
+ .lego-face {
     position: absolute;
     background: var(--lego-yellow);
     border: 1px solid rgba(0,0,0,0.1);
@@ -332,7 +450,7 @@ section {
 
 .lego-face.front,
 .lego-face.back {
-    width: 180px; /* 2x lungimea standard */
+    width: 180px; 
     height: 60px;
     color: var(--lego-yellow);
 }
@@ -378,7 +496,7 @@ section {
 .lego-face.bottom {
     transform: rotateX(-90deg) translateZ(21px);
     background: var(--lego-yellow);
-}
+} 
 
 /* Studs mai realiste */
 .lego-studs-container {
