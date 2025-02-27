@@ -16,9 +16,9 @@
     --gradient-warm: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
 }
 
-/* Hero Section */
+/* Hero Section - Optimizat */
 .prime-hero {
-    min-height: 90vh;
+    min-height: 70vh; /* Redus de la 90vh */
     background: var(--gradient-primary);
     position: relative;
     overflow: hidden;
@@ -51,12 +51,12 @@
 .prime-hero-content {
     position: relative;
     z-index: 2;
-    padding: 6rem 2rem;
+    padding: 4rem 2rem; /* Redus de la 6rem */
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem; /* Redus de la 4rem */
     align-items: center;
 }
 
@@ -65,26 +65,35 @@
 }
 
 .prime-hero-heading {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Redus de la 3.5rem */
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Redus de la 2rem */
 }
 
 .prime-hero-subtext {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Redus de la 1.2rem */
     line-height: 1.6;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* Redus de la 3rem */
     display: flex;
     gap: 1rem;
     align-items: center;
-
 }
 
 .prime-hero-image {
     position: relative;
     transform: perspective(1000px) rotateY(-15deg);
     transition: transform 0.5s ease;
+    max-height: 50vh; /* Adăugat pentru a controla înălțimea imaginii */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prime-hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asigură că imaginea se încadrează complet */
 }
 
 .prime-hero-image:hover {
@@ -95,12 +104,29 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1.5rem; /* Redus de la 2rem */
 }
 
 .hero-buttons .prime-button {
     white-space: nowrap;
     min-width: 180px;
+}
+
+/* Media Query pentru dispozitive mobile */
+@media screen and (max-width: 768px) {
+    .prime-hero-content {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+    }
+    
+    .prime-hero-heading {
+        font-size: 2.5rem;
+    }
+    
+    .prime-hero-image {
+        max-height: 40vh;
+        margin-top: 1rem;
+    }
 }
 
 /* HUB */

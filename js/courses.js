@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new CourseAnimations();
 });
 
-//burger 
+ 
 // Mobile menu toggle
 const menuButton = document.querySelector('.menu-button');
 const navLinks = document.querySelector('.nav-links');
