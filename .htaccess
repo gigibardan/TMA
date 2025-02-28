@@ -1,6 +1,9 @@
 # Activează motorul de rescriere
 RewriteEngine On
 
+# Redirecționează /signup către index.html
+RewriteRule ^signup$ /index.html [R=301,L]
+
 # Redirecționează de la .html la versiunea fără extensie
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
 RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
