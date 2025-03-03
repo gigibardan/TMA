@@ -1,0 +1,118 @@
+/* Stiluri specifice pentru pagina Termeni și Condiții */
+
+.terms-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.terms-header h1 {
+    color: #2E5A9C;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.terms-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.terms-section {
+    margin-bottom: 2.5rem;
+}
+
+.terms-section h2 {
+    color: #2E5A9C;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.terms-section h3 {
+    color: #2E5A9C;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.terms-section p, .terms-section li {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.terms-section ul, .terms-section ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section li {
+    margin-bottom: 0.5rem;
+}
+
+.terms-section a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-section a:hover {
+    color: #2E5A9C;
+    text-decoration: underline;
+}
+
+.highlight-box {
+    background: #e8f4ff;
+    border-left: 4px solid #4A90E2;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.highlight-box h3 {
+    margin-top: 0;
+}
+
+.highlight-box ul {
+    margin-bottom: 0;
+}
+
+.update-date {
+    text-align: right;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1.5rem;
+    }
+    
+    .terms-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .terms-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .terms-section h3 {
+        font-size: 1.1rem;
+    }
+}

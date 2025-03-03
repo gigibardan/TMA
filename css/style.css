@@ -268,48 +268,71 @@
 }
 
 /* Footer bottom */
+
 .footer-bottom {
    background: #141414;
    padding: 1.5rem 0;
    border-top: 1px solid #333;
-   font-size: 0.85rem;
+   font-size: 0.9rem;
 }
 
 .footer-bottom-content {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 2rem;
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
    align-items: center;
-   flex-wrap: wrap;
    gap: 1rem;
 }
 
 .footer-legal-links {
    display: flex;
-   gap: 0.5rem;
+   gap: 1rem;
    align-items: center;
+   flex-wrap: wrap;
+}
+
+.footer-legal-links a {
+   color: #e0e0e0; /* Culoare mai deschisă pentru link-uri */
+   text-decoration: none;
+   transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-legal-links a:hover {
+   color: #ffffff; /* Alb complet la hover */
+   text-decoration: underline;
 }
 
 .footer-copyright {
    text-align: center;
+   color: #aaaaaa; /* Gri deschis pentru copyright */
 }
 
 .footer-anpc-links {
    display: flex;
    gap: 1rem;
    align-items: center;
+   justify-content: flex-end; /* Aliniază la dreapta în container */
 }
 
 .footer-anpc-links img {
    height: 40px;
    width: auto;
-   transition: transform 0.3s;
+   transition: transform 0.3s, filter 0.3s;
+   filter: brightness(1.2); /* Face imaginile puțin mai strălucitoare */
+   vertical-align: middle;
+}
+
+.footer-anpc-links a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .footer-anpc-links a:hover img {
    transform: translateY(-2px);
+   filter: brightness(1.4); /* Și mai strălucitoare la hover */
 }
 
 .separator {
@@ -328,6 +351,18 @@
    }
 }
 
+@media (max-width: 900px) {
+   .footer-bottom-content {
+       grid-template-columns: 1fr;
+       gap: 1.5rem;
+   }
+   
+   .footer-legal-links, .footer-copyright, .footer-anpc-links {
+       justify-content: center;
+       text-align: center;
+   }
+}
+
 @media (max-width: 768px) {
    .footer-content {
        grid-template-columns: 1fr;
@@ -338,23 +373,21 @@
        grid-column: auto;
    }
    
-   .footer-bottom-content {
-       flex-direction: column;
-       text-align: center;
-       gap: 1.5rem;
-   }
-   
-   .footer-legal-links, .footer-copyright, .footer-anpc-links {
-       width: 100%;
-       justify-content: center;
-   }
-   
    .footer {
        padding-top: 2.5rem;
    }
    
    .social-links {
        justify-content: center;
+   }
+
+   .footer-legal-links {
+       flex-direction: column;
+       gap: 0.8rem;
+   }
+
+   .separator {
+       display: none; /* Eliminăm separatorul pe ecrane mici */
    }
 }
 
