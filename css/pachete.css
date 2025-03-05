@@ -1,0 +1,549 @@
+/* Hero Section (override pentru pagina de pachete) */
+.hero-section {
+    min-height: 40vh; /* Reducem înălțimea de la 70vh la 40vh */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a, #2E5A9C);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0; /* Adăugăm padding vertical pentru a asigura spațiu suficient */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 2rem; /* Reducem padding-ul vertical */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Ajustăm și dimensiunea logo-ului pentru un hero mai compact */
+.hero-logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Secțiunea de pachete */
+.packages-section {
+    background: linear-gradient(135deg, #1e4d8c 0%, #2e6ed3 100%);
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Grid-ul tehnic de background */
+.tech-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.tech-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(74, 144, 226, 0.1) 50%,
+        transparent 100%);
+    animation: techLine 8s linear infinite;
+}
+
+.tech-line:nth-child(1) { top: 25%; animation-delay: -2s; }
+.tech-line:nth-child(2) { top: 50%; animation-delay: -4s; }
+.tech-line:nth-child(3) { top: 75%; animation-delay: -6s; }
+
+@keyframes techLine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.packages-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    color: #d0e0f0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Grid-ul de pachete */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+/* Card de pachet */
+.package-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.package-card[data-category="programare"] {
+    border-top: 4px solid #4A90E2;
+}
+
+.package-card[data-category="robotica"] {
+    border-top: 4px solid #FF6B6B;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.9), 
+        rgba(30, 77, 140, 0.7)
+    );
+    z-index: 1;
+}
+
+.card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+}
+
+.package-card:hover .card-background img {
+    opacity: 0.25;
+    transform: scale(1);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Card Header cu icon și titlu pe același rând */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #fff;
+    position: relative;
+}
+
+.card-header h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: #4A90E2;
+    transition: width 0.3s ease;
+}
+
+.package-card[data-category="robotica"] .card-header h3::after {
+    background: #FF6B6B;
+}
+
+.package-card:hover .card-header h3::after {
+    width: 60px;
+}
+
+.card-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.package-card[data-category="robotica"] .card-icon {
+    background: linear-gradient(135deg, #FF6B6B, #d43a3a);
+}
+
+.icon-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #4A90E2;
+    border-radius: 16px;
+    filter: blur(20px);
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+.package-card[data-category="robotica"] .icon-glow {
+    background: #FF6B6B;
+}
+
+.package-card:hover .icon-glow {
+    opacity: 0.5;
+    filter: blur(30px);
+}
+
+.tech-icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.package-card[data-category="robotica"] .card-badge {
+    background: linear-gradient(135deg, #FF6B6B, #d43a3a);
+}
+
+.card-text h3 {
+    display: none; /* Ascundem h3 din card-text deoarece acum este în card-header */
+}
+
+.card-text p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Features list */
+.card-features {
+    margin-bottom: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.feature-item i {
+    color: #4A90E2;
+    margin-right: 0.8rem;
+    font-size: 1rem;
+}
+
+.package-card[data-category="robotica"] .feature-item i {
+    color: #FF6B6B;
+}
+
+.feature-item span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+/* Price styling */
+.card-price {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.price-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Payment button styling */
+.card-payment {
+    margin-bottom: 1rem;
+}
+
+stripe-buy-button {
+    --button-height: 44px !important;
+    --button-width: 100% !important;
+    --button-color: #4A90E2 !important;
+    --button-radius: 8px !important;
+    --button-border-width: 0px !important;
+    --button-font-weight: 600 !important;
+    --button-hover-color: #357ABD !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.package-card[data-category="robotica"] stripe-buy-button {
+    --button-color: #FF6B6B !important;
+    --button-hover-color: #d43a3a !important;
+}
+
+/* Metode de plată */
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.payment-methods i {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.payment-methods i:hover {
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.payment-methods .fa-cc-visa {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.payment-methods .fa-cc-mastercard {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.payment-methods .fa-cc-amex {
+    color: rgba(184, 218, 255, 0.9);
+}
+
+.payment-methods .fa-cc-discover {
+    color: rgba(255, 200, 100, 0.9);
+}
+
+.payment-methods .fa-cc-apple-pay {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.payment-methods .fa-cc-paypal {
+    color: rgba(150, 200, 255, 0.9);
+}
+
+/* FAQ Section */
+.faq-section {
+    background: #f5f9ff;
+    padding: 5rem 2rem;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-section .section-title {
+    color: #2E5A9C;
+    margin-bottom: 3rem;
+    text-shadow: none;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #4A90E2;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: #2E5A9C;
+    margin: 0;
+}
+
+.faq-toggle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e9f2ff;
+    color: #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+    background: #4A90E2;
+    color: white;
+}
+
+/* Efect de hover pentru întrebările din FAQ */
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-question:hover h3 {
+    color: #1a4a8d;
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px !important; /* Important pentru a suprascrie stilul inline */
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .card-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .packages-section {
+        padding: 4rem 1rem;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-header {
+        flex-direction: row; /* Păstrăm iconul și titlul pe același rând chiar și pe mobile */
+        align-items: center;
+    }
+    
+    .card-header h3 {
+        font-size: 1.4rem;
+    }
+    
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .tech-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .card-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .price-value {
+        font-size: 1.8rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}

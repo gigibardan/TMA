@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMinds Academy | Pachete de cursuri</title>
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pachete.css">
+    
+    <!-- Stripe JS -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    
+    <!-- Page specific CSS - CSS_PLACEHOLDER -->
+</head>
+<body>
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="programare.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                    <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                    <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                    <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                    <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                    <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                    <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                    <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                    <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                    <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                    <a href="courses/python.html">🐍 Python - Aplicații</a>
+                    <a href="courses/frontend.html">💻 Frontend - Web</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                    <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                    <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                    <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                </div>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    
+
+<main>
+    <!-- Hero Section pentru Pachete -->
+    <section class="hero-section">
+        <div class="particle-container" id="particles-js"></div>
+        
+        <!-- Tech decorations -->
+        <div class="tech-decoration"></div>
+        <div class="tech-decoration"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="tech-title">PACHETE EDUCAȚIONALE</h1>
+                <p class="tech-description">Alege pachetul perfect pentru o aventură captivantă în lumea tehnologiei. Fie că îți dorești să explorezi programarea sau să descoperi robotica, avem soluția ideală pentru tine!<br>
+                    Oferim opțiuni flexibile pentru a se potrivi nevoilor tale educaționale.</p>
+            </div>
+            <div class="hero-logo">
+                <img src="./assets/images/logo-techminds-academy.png" alt="TechMinds Academy Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea de Pachete -->
+    <section class="packages-section">
+        <div class="tech-grid">
+            <div class="tech-line"></div>
+            <div class="tech-line"></div>
+            <div class="tech-line"></div>
+        </div>
+        
+        <div class="packages-container">
+            
+            <div class="packages-grid">
+                <!-- Pachet 1: Programare Standard -->
+                <div class="package-card" data-category="programare">
+                    <div class="card-background">
+                        <img src="./assets/images/programarepachet1.jpg" alt="Programare Background">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <div class="icon-glow"></div>
+                                <i class="fas fa-code tech-icon"></i>
+                            </div>
+                            <h3>Pachet Programare Standard</h3>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-badge">Popular</div>
+                            <p>4 ședințe de programare pentru dezvoltarea abilităților digitale. Cursurile sunt adaptate pentru toate nivelurile de experiență.</p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>4 ședințe de curs</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Materiale didactice incluse</span>
+                                </div>
+                                
+                            </div>
+                            <div class="card-price">
+                                <span class="price-value">640 RON</span>
+                                <span class="price-period">pachet complet</span>
+                            </div>
+                            
+                            <div class="card-payment">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1QzKIoL5EMW6XT767pw9mP97"
+                                    publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                    locale="ro"
+                                >
+                                </stripe-buy-button>
+                            </div>
+                            
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                                <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                                <i class="fab fa-cc-amex" aria-hidden="true"></i>
+                                <i class="fab fa-cc-discover" aria-hidden="true"></i>
+                                <i class="fab fa-cc-apple-pay" aria-hidden="true"></i>
+                                <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pachet 2: Programare Flexibil -->
+                <div class="package-card" data-category="programare">
+                    <div class="card-background">
+                        <img src="./assets/images/programarepachet2.jpg" alt="Programare Flexibil Background">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <div class="icon-glow"></div>
+                                <i class="fas fa-laptop-code tech-icon"></i>
+                            </div>
+                            <h3>Pachet Programare Flexibil</h3>
+                        </div>
+                        <div class="card-text">
+                            <h3>Pachet Programare Flexibil</h3>
+                            <div class="card-badge">Flexibil</div>
+
+                            <p>Alege exact numărul de ședințe de care ai nevoie pentru a-ți atinge obiectivele educaționale în domeniul programării.</p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ședințe la alegere (1-99)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Flexibilitate maximă</span>
+                                </div>
+                              
+                            </div>
+                            <div class="card-price">
+                                <span class="price-value">160 RON</span>
+                                <span class="price-period">per ședință</span>
+                            </div>
+                            
+                            <div class="card-payment">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1QzK0gL5EMW6XT76IP3QL49A"
+                                    publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                    locale="ro"
+                                >
+                                </stripe-buy-button>
+                            </div>
+
+                            
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                                <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                                <i class="fab fa-cc-amex" aria-hidden="true"></i>
+                                <i class="fab fa-cc-discover" aria-hidden="true"></i>
+                                <i class="fab fa-cc-apple-pay" aria-hidden="true"></i>
+                                <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pachet 3: Robotică Standard -->
+                <div class="package-card" data-category="robotica">
+                    <div class="card-background">
+                        <img src="./assets/images/robiticapachet1.jpg" alt="Robotică Background">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <div class="icon-glow"></div>
+                                <i class="fas fa-robot tech-icon"></i>
+                            </div>
+                            <h3>Pachet Robotică Standard</h3>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-badge">Popular</div>
+                            <p>4 ședințe de robotică pentru a învăța principiile de bază ale roboticii și automatizării. Cursuri practice cu kit-uri profesionale.</p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>4 ședințe de curs</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Acces la kit-uri robotice</span>
+                                </div>
+                               
+                            </div>
+                            <div class="card-price">
+                                <span class="price-value">640 RON</span>
+                                <span class="price-period">pachet complet</span>
+                            </div>
+                            
+                            <div class="card-payment">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1QzKLCL5EMW6XT76ljxQ2JUg"
+                                    publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                    locale="ro"
+                                >
+                                </stripe-buy-button>
+                            </div>
+
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                                <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                                <i class="fab fa-cc-amex" aria-hidden="true"></i>
+                                <i class="fab fa-cc-discover" aria-hidden="true"></i>
+                                <i class="fab fa-cc-apple-pay" aria-hidden="true"></i>
+                                <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pachet 4: Robotică Flexibil -->
+                <div class="package-card" data-category="robotica">
+                    <div class="card-background">
+                        <img src="./assets/images/roboticapachet2.jpg" alt="Robotică Flexibil Background">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <div class="icon-glow"></div>
+                                <i class="fas fa-microchip tech-icon"></i>
+                            </div>
+                            <h3>Pachet Robotică Flexibil</h3>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-badge">Flexibil</div>
+                            <p>Selectează numărul de ședințe de robotică potrivit pentru tine și explorează universul fascinant al roboticii și automatizării.</p>
+                            <div class="card-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ședințe la alegere (1-99)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Ritmul tău de învățare</span>
+                                </div>
+                             
+                            </div>
+                            <div class="card-price">
+                                <span class="price-value">160 RON</span>
+                                <span class="price-period">per ședință</span>
+                            </div>
+                            
+                            <div class="card-payment">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1QzKNSL5EMW6XT76nHSDmu5m"
+                                    publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                    locale="ro"
+                                >
+                                </stripe-buy-button>
+                            </div>
+                            
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                                <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                                <i class="fab fa-cc-amex" aria-hidden="true"></i>
+                                <i class="fab fa-cc-discover" aria-hidden="true"></i>
+                                <i class="fab fa-cc-apple-pay" aria-hidden="true"></i>
+                                <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Secțiunea de Întrebări Frecvente -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">ÎNTREBĂRI FRECVENTE</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Cum se desfășoară plata și ce metode de plată acceptați?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden;">
+                        <p>Plata se face rapid și securizat prin platforma Stripe, lider global în procesarea plăților online. Acceptăm toate cardurile bancare principale (Visa, Mastercard, American Express) precum și plăți prin Apple Pay, Google Pay și alte metode moderne. Sistemul este complet criptat și asigură protecția datelor dumneavoastră financiare.</p>
+                    </div>
+                </div>
+               
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ce vârstă trebuie să aibă copilul meu pentru a participa?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden;">
+                        <p>Cursurile noastre sunt adaptate pentru copii cu vârste între 7 și 16 ani, organizate pe grupe de vârstă. Avem metodologii didactice specifice pentru fiecare categorie de vârstă.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Este necesară experiență anterioară în programare sau robotică?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden;">
+                        <p>Nu este necesară experiență anterioară. Cursurile noastre sunt structurate pentru a introduce conceptele de bază, progresând treptat spre teme mai complexe, adaptate nivelului fiecărui elev.</p>
+                    </div>
+                </div>
+                
+               
+              
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section company-info">
+            <div class="footer-logo">
+                <img src="./assets/images/logo-techminds-sigla.png" alt="TechMinds Academy Logo">
+            </div>
+            <p>Dezvoltăm competențele digitale ale generației de mâine prin cursuri interactive de programare și robotică.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61572403241620" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/official.techminds.academy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/official-techminds-academy/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Cursuri Populare</h3>
+            <ul>
+                <li><a href="courses/scratch.html">🎮 Scratch - Jocuri</a></li>
+                <li><a href="courses/minecraft.html">⛏️ Minecraft - Modding</a></li>
+                <li><a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a></li>
+                <li><a href="courses/python.html">🐍 Python - Aplicații</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Navigare Rapidă</h3>
+            <ul>
+                <li><a href="programare.html">Programare</a></li>
+                <li><a href="robotics.html">Robotică</a></li>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact-info">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center Sector 1, București</span></li>
+                <li><i class="fas fa-phone"></i> <span>+40 758 707 448</span></li>
+                <li><i class="fas fa-envelope"></i> <span>office@techminds-academy.ro</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-legal-links">
+                <a href="politicadeconfidentialitate.html">Politică de Confidențialitate</a>
+                <span class="separator">|</span>
+                <a href="politicadecookies.html">Politică de Cookie-uri</a>
+                <span class="separator">|</span>
+                <a href="termenisiconditii.html">Termeni și Condiții</a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechMinds Academy. Toate drepturile rezervate.</p>
+            </div>
+            
+            <div class="footer-anpc-links">
+                <a href="https://reclamatiisal.anpc.ro/" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sal.png" alt="ANPC - Soluționarea Alternativă a Litigiilor">
+                </a>
+                <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sol.png" alt="ANPC - Soluționarea Online a Litigiilor">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+   
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+<script src="./js/courses.js"></script>
+<script src="./js/pachete.js"></script>
+
+
+
+</body>
+</html>
