@@ -188,3 +188,62 @@ document.addEventListener('click', (e) => {
         navLinks.classList.remove('active');
     }
 });
+
+
+
+// Funcție pentru inserarea unui nou element în navbar
+function insertPacheteLinkInNavbar() {
+    // Găsim lista de linkuri din navbar
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Verificăm dacă elementul există
+    if (!navLinks) {
+        console.error("Nu s-a găsit elementul .nav-links");
+        return;
+    }
+    
+    // Creăm noul element li
+    const newNavItem = document.createElement('li');
+    
+    // Creăm elementul ancoră
+    const newLink = document.createElement('a');
+    newLink.href = "https://techminds-academy.ro/pachete";
+    newLink.textContent = "Prețuri";
+    
+    // Adăugăm ancora în elementul li
+    newNavItem.appendChild(newLink);
+    
+    // Găsim elementul Robotică pentru a insera după el
+    // sau Despre noi pentru a insera înainte de el
+    const roboticsLi = Array.from(navLinks.querySelectorAll('li')).find(li => {
+        const link = li.querySelector('a');
+        return link && link.textContent === "Robotică";
+    });
+    
+    const aboutLi = Array.from(navLinks.querySelectorAll('li')).find(li => {
+        const link = li.querySelector('a');
+        return link && link.textContent === "Despre noi";
+    });
+    
+    if (roboticsLi && aboutLi) {
+        // Inserăm după Robotică și înainte de Despre noi
+        navLinks.insertBefore(newNavItem, aboutLi);
+    } else if (roboticsLi) {
+        // Inserăm după Robotică dacă există
+        const nextSibling = roboticsLi.nextElementSibling;
+        if (nextSibling) {
+            navLinks.insertBefore(newNavItem, nextSibling);
+        } else {
+            navLinks.appendChild(newNavItem);
+        }
+    } else if (aboutLi) {
+        // Inserăm înainte de Despre noi dacă Robotică nu există
+        navLinks.insertBefore(newNavItem, aboutLi);
+    } else {
+        // Dacă nu găsim nici Robotică, nici Despre noi, adăugăm la sfârșit
+        navLinks.appendChild(newNavItem);
+    }
+}
+
+// Executăm funcția după ce DOM-ul a fost încărcat complet
+document.addEventListener('DOMContentLoaded', insertPacheteLinkInNavbar);
