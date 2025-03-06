@@ -6,13 +6,13 @@
     background: linear-gradient(135deg, #1a1a1a, #2E5A9C);
     display: flex;
     align-items: center;
-    padding: 2rem 0; /* Adăugăm padding vertical pentru a asigura spațiu suficient */
+    padding: 1rem 0; /* Adăugăm padding vertical pentru a asigura spațiu suficient */
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 1.5rem 2rem; /* Reducem padding-ul vertical */
+    padding: 1rem 2rem; /* Reducem padding-ul vertical */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -26,6 +26,41 @@
 .hero-logo img {
     max-width: 80%;
     height: auto;
+}
+
+/* Optimizare pentru mobil - Logo sus */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.1rem;
+    }
+    
+    .hero-text {
+        order: 2;
+    }
+    .tech-description {
+      
+        margin-bottom: 1rem;
+        
+    }
+    
+    .hero-logo {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1Srem;
+    }
+    
+    .hero-logo img {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+    .tech-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* Secțiunea de pachete */
@@ -144,8 +179,8 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom, 
-        rgba(0,0,0,0.9), 
-        rgba(30, 77, 140, 0.7)
+        rgba(0, 0, 0, 0.7), 
+        rgba(30, 77, 140, 0.5)
     );
     z-index: 1;
 }
