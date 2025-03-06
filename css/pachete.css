@@ -202,10 +202,11 @@
 .card-content {
     position: relative;
     z-index: 2;
-    padding: 2.5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1rem;
 }
 
 /* Card Header cu icon și titlu pe același rând */
@@ -528,7 +529,7 @@ stripe-buy-button {
     }
     
     .card-content {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }
 
@@ -538,7 +539,7 @@ stripe-buy-button {
     }
 
     .card-content {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     
     .card-header {
