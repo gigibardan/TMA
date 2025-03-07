@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulile Laboratorului de Programare și Robotică</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                              url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .container {
+            max-width: 210mm; /* A3 width in portrait mode */
+            min-height: 287mm; /* A3 height in portrait mode */
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 10px solid #3498db;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            padding-top: 10px;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #2c3e50;
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px 0px #3498db;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .robot-emoji {
+            font-size: 50px;
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+            animation: hover 2s ease-in-out infinite;
+        }
+        
+        .rules-list {
+            list-style-type: none;
+            counter-reset: rule-counter;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .rule-item {
+            margin-bottom: 14px;
+            padding: 10px 15px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rule-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .rule-number {
+            background-color: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .rule-emoji {
+            font-size: 28px;
+            margin-left: 35px;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .rule-text {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+        
+        .rule-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .circuit-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .circuit-line {
+            position: absolute;
+            background-color: #3498db;
+            border-radius: 10px;
+        }
+        
+        .circuit-dot {
+            position: absolute;
+            background-color: #3498db;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+        
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+                max-width: 100%;
+                min-height: auto;
+            }
+            
+            .rule-item:hover {
+                transform: none;
+                box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circuit-lines">
+            <!-- Circuit design elements -->
+            <div class="circuit-line" style="width: 2px; height: 100px; top: 50px; left: 50px;"></div>
+            <div class="circuit-line" style="width: 100px; height: 2px; top: 150px; left: 50px;"></div>
+            <div class="circuit-dot" style="top: 150px; left: 150px;"></div>
+            
+            <div class="circuit-line" style="width: 2px; height: 200px; top: 100px; right: 100px;"></div>
+            <div class="circuit-line" style="width: 150px; height: 2px; top: 300px; right: 100px;"></div>
+            <div class="circuit-dot" style="top: 300px; right: 250px;"></div>
+            
+            <div class="circuit-line" style="width: 2px; height: 150px; bottom: 100px; left: 200px;"></div>
+            <div class="circuit-line" style="width: 100px; height: 2px; bottom: 100px; left: 200px;"></div>
+            <div class="circuit-dot" style="bottom: 100px; left: 300px;"></div>
+        </div>
+        
+        <div class="header">
+            <h1>
+                <span class="robot-emoji">🤖</span>
+                Regulile Laboratorului de Programare și Robotică
+                <span class="robot-emoji">🤖</span>
+            </h1>
+            <p style="text-align: center; color: #7f8c8d; font-size: 20px; margin-top: 10px;">🌟 Ne purtăm frumos cu roboțeii și calculatoarele!</p>
+        </div>
+        
+        <ol class="rules-list">
+            <li class="rule-item">
+                <div class="rule-number">1</div>
+                <div class="rule-emoji">💧</div>
+                <div class="rule-text">
+                    <div class="rule-title">Lichidele și electronicele nu sunt prieteni!</div>
+                    <div>Păstrați băuturile și gustările la distanță de computere și roboți.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">2</div>
+                <div class="rule-emoji">👐</div>
+                <div class="rule-text">
+                    <div class="rule-title">Mâini curate = Cod curat</div>
+                    <div>Spălați-vă pe mâini înainte de a atinge tastaturi și componente.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">3</div>
+                <div class="rule-emoji">🔧</div>
+                <div class="rule-text">
+                    <div class="rule-title">Raportați piesele stricate </div>
+                    <div>Nu încercați să reparați singuri echipamentele defecte.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">4</div>
+                <div class="rule-emoji">🔌</div>
+                <div class="rule-text">
+                    <div class="rule-title">Nu deconectați nimic fără permisiune</div>
+                    <div>Toate cablurile și echipamentele sunt conectate cu un scop.</div>
+                </div>
+            </li>
+            
+            
+            <li class="rule-item">
+                <div class="rule-number">5</div>
+                <div class="rule-emoji">🚶</div>
+                <div class="rule-text">
+                    <div class="rule-title">Mergeți, nu alergați</div>
+                    <div>Mișcați-vă cu grijă pentru a evita accidentele cu echipamente.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">6</div>
+                <div class="rule-emoji">👂</div>
+                <div class="rule-text">
+                    <div class="rule-title">Ascultați instrucțiunile cu atenție</div>
+                    <div>Instructorii detectează erorile înainte să se întâmple!</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">7</div>
+                <div class="rule-emoji">🤝</div>
+                <div class="rule-text">
+                    <div class="rule-title">Împărțiți resursele ca buni programatori</div>
+                    <div>Componente și echipamente sunt pentru toată lumea.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">8</div>
+                <div class="rule-emoji">🧰</div>
+                <div class="rule-text">
+                    <div class="rule-title">Păstrați ordinea în laborator</div>
+                    <div>Returnați componentele la locul lor și curățați după voi.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">9</div>
+                <div class="rule-emoji">📱</div>
+                <div class="rule-text">
+                    <div class="rule-title">Utilizați tehnologia responsabil</div>
+                    <div>Telefonul poate fi folosit doar pentru documentare sau cronometrare.</div>
+                </div>
+            </li>
+            
+            <li class="rule-item">
+                <div class="rule-number">10</div>
+                <div class="rule-emoji">🤔</div>
+                <div class="rule-text">
+                    <div class="rule-title">Întrebați când aveți nelămuriri</div>
+                    <div>Orice întrebare este binevenită în programare - ajută la prevenirea bug-urilor!</div>
+                </div>
+            </li>
+            
+        </ol>
+        
+        <div class="footer">
+            <p style="font-size: 18px; margin: 0;">Amintește-ți: Un robot fericit este un robot care funcționează într-un mediu sigur și curat! 🚀</p>
+        </div>
+    </div>
+</body>
+</html>
