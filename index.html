@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/popup.css">
-    
-    <!-- Page specific CSS - CSS_PLACEHOLDER -->
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
    <!-- Navigation -->
@@ -52,32 +53,79 @@
     </div>
 </nav>
 
-    
-
 <main>
     <!-- Hero Section -->
-<section class="hero-section">
-    <div class="particle-container" id="particles-js"></div>
-    
-    <!-- Tech decorations -->
-    <div class="tech-decoration"></div>
-    <div class="tech-decoration"></div>
-    
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1 class="tech-title">ȘCOALĂ DE ROBOTICĂ ȘI PROGRAMARE</h1>
-            <p class="tech-description">Într-o eră marcată de avansuri tehnologice rapide și constante, TechMinds Academy este locul unde imaginația prinde viață prin tehnologie!</p>
-            <div class="cta-container">
-                <a href="inscriere.html" class="cta-button primary-cta">Înscrie-te chiar acum</a>
-                <a href="pachete.html" class="cta-button secondary-cta">Costuri</a>
+    <section class="hero-section">
+        <div class="particle-container" id="particles-js"></div>
+        
+        <!-- Tech decorations -->
+        <div class="tech-decoration"></div>
+        <div class="tech-decoration"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="tech-title">ȘCOALĂ DE ROBOTICĂ ȘI PROGRAMARE</h1>
+                <p class="tech-description">Într-o eră marcată de avansuri tehnologice rapide și constante, TechMinds Academy este locul unde imaginația prinde viață prin tehnologie!</p>
+                <div class="cta-container">
+                    <a href="inscriere.html" class="cta-button primary-cta">Înscrie-te chiar acum</a>
+                    <a href="pachete.html" class="cta-button secondary-cta">Costuri</a>
+                </div>
+            </div>
+            <div class="hero-logo">
+                <img src="./assets/images/logo-techminds-academy.webp" alt="TechMinds Academy Logo">
             </div>
         </div>
-        <div class="hero-logo">
-            <img src="./assets/images/logo-techminds-academy.png" alt="TechMinds Academy Logo">
+        
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track" id="mainCarousel">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/techminds_016.webp" alt="Imagine 1" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_020.webp" alt="Imagine 2" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_065.webp" alt="Imagine 3" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_098.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_002.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_061.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_102.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_134.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_148.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_070.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_113.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <!-- Poți adăuga mai multe imagini aici dacă dorești -->
+                </div>
+                
+                <button class="carousel-control carousel-prev" id="prevBtn">&lt;</button>
+                <button class="carousel-control carousel-next" id="nextBtn">&gt;</button>
+                
+                <div class="carousel-indicators">
+                    <!-- Indicatorii vor fi generați dinamic via JavaScript -->
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
+<body>
+    
    <!-- Courses Section -->
 <section class="courses-section">
     <div class="tech-grid">
@@ -94,7 +142,7 @@
             <!-- Programming Card -->
             <div class="course-card">
                 <div class="card-background">
-                    <img src="./assets/images/programare1.jpg" alt="Programare">
+                    <img src="./assets/images/programare2.webp" alt="Programare">
                 </div>
                 <div class="card-content">
                     <div class="card-icon">
@@ -119,7 +167,7 @@
             <!-- Robotics Card -->
             <div class="course-card">
                 <div class="card-background">
-                    <img src="./assets/images/robotica1.jpg" alt="Robotică">
+                    <img src="./assets/images/robotica2.webp" alt="Robotică">
                 </div>
                 <div class="card-content">
                     <div class="card-icon">
@@ -144,7 +192,7 @@
             <!-- Game Dev Card -->
             <div class="course-card">
                 <div class="card-background">
-                    <img src="./assets/images/gamedev1.jpg" alt="Game Development">
+                    <img src="./assets/images/gamedev2.webp" alt="Game Development">
                 </div>
                 <div class="card-content">
                     <div class="card-icon">
@@ -169,7 +217,7 @@
             <!-- Web Dev Card -->
             <div class="course-card">
                 <div class="card-background">
-                    <img src="./assets/images/frontend1.jpg" alt="Web Development">
+                    <img src="./assets/images/webdev2.webp" alt="Web Development">
                 </div>
                 <div class="card-content">
                     <div class="card-icon">
@@ -476,6 +524,8 @@
 <script src="./js/courses.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/maincarussel.js"></script>
+
 
 
 

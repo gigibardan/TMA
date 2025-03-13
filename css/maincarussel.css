@@ -1,0 +1,191 @@
+/* Carusel integrat cu hero */
+.carousel-section {
+    background: linear-gradient(135deg, #1a1a1a, #2E5A9C);
+    padding: 0 0 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container-ul caruselului */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Caruselul în sine */
+.carousel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Elementele individuale din carusel */
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Imaginile din carusel */
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+    filter: brightness(0.95);
+}
+
+.carousel-item.active .carousel-img {
+    transform: scale(1.03);
+}
+
+/* Butoanele de control - stilizate pentru integrare cu tema tech */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    background: rgba(74, 144, 226, 0.2);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control:hover {
+    background: rgba(74, 144, 226, 0.4);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+}
+
+.carousel-prev {
+    left: 15px;
+}
+
+.carousel-next {
+    right: 15px;
+}
+
+/* Indicatorii - stilizați pentru tema tech */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.indicator.active {
+    background-color: #4A90E2;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Adăugăm decorații tech ca în hero section */
+.carousel-section::before,
+.carousel-section::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(74, 144, 226, 0.3);
+    border-radius: 8px;
+    animation: rotateTech 10s linear infinite;
+    z-index: 1;
+}
+
+.carousel-section::before {
+    top: 10%;
+    left: 8%;
+}
+
+.carousel-section::after {
+    bottom: 15%;
+    right: 6%;
+    animation-delay: -5s;
+}
+
+/* Responsivitatea */
+@media (max-width: 992px) {
+    .carousel-container {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-section {
+        padding: 0 0 3rem 0;
+    }
+    
+    .carousel-container {
+        width: 95%;
+        height: 380px;
+    }
+    
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-section::before,
+    .carousel-section::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-section {
+        padding: 0 0 2rem 0;
+    }
+    
+    .carousel-container {
+        height: 280px;
+        border-radius: 6px;
+    }
+    
+    .carousel-control {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 15px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
