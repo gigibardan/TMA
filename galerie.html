@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Techminds Academy</title>
+    <link rel="stylesheet" href="./css/galerie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="programare.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                    <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                    <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                    <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                    <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                    <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                    <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                    <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                    <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                    <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                    <a href="courses/python.html">🐍 Python - Aplicații</a>
+                    <a href="courses/frontend.html">💻 Frontend - Web</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                    <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                    <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                    <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                </div>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Galeria Momentelor Inspiraționale</h1>
+            <p>Descoperă atmosfera Techminds Academy prin imagini care spun povestea noastră</p>
+        </div>
+    </section>
+
+    <section class="gallery-container">
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Toate</button>
+            <button class="filter-btn" data-filter="robotica">Robotică</button>
+            <button class="filter-btn" data-filter="programare">Programare</button>
+            <button class="filter-btn" data-filter="sediu">Sediu</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Robotica în acțiune -->
+            <div class="gallery-item" data-category="robotica">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_021.webp" alt="Robotica în acțiune"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Robotica în acțiune</h3>
+                        <p>Un robot LEGO inovator, construit de copii pasionați de tehnologie și inovație.</p>
+                        <div class="gallery-tags">
+                            <span>Robotică</span>
+                            <span>Educație</span>
+                            <span>Inovație</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership și viziune -->
+            <div class="gallery-item" data-category="leadership">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_210.webp" alt="Leadership și viziune" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Leadership și viziune</h3>
+                        <p>O echipă de lideri pasionați care ghidează generația viitoare spre succes.</p>
+                        <div class="gallery-tags">
+                            <span>Leadership</span>
+                            <span>Inovație</span>
+                            <span>Educație</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiență captivantă în codare -->
+            <div class="gallery-item" data-category="programare">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_206.webp" alt="Experiență captivantă în codare"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Experiență captivantă în codare</h3>
+                        <p>Copiii își ridică mâinile în semn de entuziasm după finalizarea unui proiect.</p>
+                        <div class="gallery-tags">
+                            <span>Programare</span>
+                            <span>Interactiv</span>
+                            <span>Educație</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Atelier de creație cu LEGO -->
+            <div class="gallery-item" data-category="sediu">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_027.webp" alt="Atelier de creație cu LEGO"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Atelier de creație cu LEGO</h3>
+                        <p>Copiii își pun imaginația la treabă, construind structuri uimitoare cu piese LEGO.</p>
+                        <div class="gallery-tags">
+                            <span>Robotică</span>
+                            <span>Inginerie</span>
+                            <span>Sediu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Laborator de programare -->
+            <div class="gallery-item" data-category="sediu">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_002.webp" alt="Laborator de programare">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Laborator de programare</h3>
+                        <p>Un spațiu modern unde tinerii descoperă lumea codării și dezvoltării software.</p>
+                        <div class="gallery-tags">
+                            <span>Programare</span>
+                            <span>Tehnologie</span>
+                            <span>Sediu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Explorarea programării -->
+            <div class="gallery-item" data-category="programare">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_020.webp" alt="Explorarea programării"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Explorarea programării</h3>
+                        <p>Primii pași în lumea codării, cu un mediu interactiv și ușor de învățat.</p>
+                        <div class="gallery-tags">
+                            <span>Programare</span>
+                            <span>Educație</span>
+                            <span>Interactiv</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Rezolvarea unui cub Rubik robotic -->
+            <div class="gallery-item" data-category="robotica">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_016.webp" alt="Rezolvarea unui cub Rubik robotic"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Rezolvarea unui cub Rubik robotic</h3>
+                        <p>Un robot inteligent care rezolvă cubul Rubik în câteva secunde.</p>
+                        <div class="gallery-tags">
+                            <span>Robotică</span>
+                            <span>Inteligență Artificială</span>
+                            <span>STEM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Construind idei noi -->
+            <div class="gallery-item" data-category="robotica">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_046.webp" alt="Construind idei noi"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Construind idei noi</h3>
+                        <p>Copiii transformă ideile în realitate, piesă cu piesă, cu ajutorul LEGO.</p>
+                        <div class="gallery-tags">
+                            <span>Creativitate</span>
+                            <span>Inginerie</span>
+                            <span>Robotica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Provocări și recompense în codare -->
+            <div class="gallery-item" data-category="programare">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_205.webp" alt="Provocări și recompense în codare"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Provocări și recompense în codare</h3>
+                        <p>Un moment de competiție și învățare, unde elevii descoperă succesul în programare.</p>
+                        <div class="gallery-tags">
+                            <span>Educație</span>
+                            <span>Programare</span>
+                            <span>STEM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Învățare prin colaborare -->
+            <div class="gallery-item" data-category="robotica">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_061.webp" alt="Învățare prin colaborare"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Învățare prin colaborare</h3>
+                        <p>Elevii și mentorii lucrează împreună pentru a construi proiecte inovatoare.</p>
+                        <div class="gallery-tags">
+                            <span>Suport</span>
+                            <span>Robotica</span>
+                            <span>Colaborare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Echipa TechMinds Academy -->
+            <div class="gallery-item" data-category="sediu">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_211.webp" alt="Echipa TechMinds Academy" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Echipa TechMinds Academy</h3>
+                        <p>O echipă dedicată care inspiră și pregătește viitorii inovatori.</p>
+                        <div class="gallery-tags">
+                            <span>TechMinds</span>
+                            <span>Echipă</span>
+                            <span>Educație</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Piese LEGO pentru inovație -->
+            <div class="gallery-item" data-category="robotica">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_065.webp" alt="Piese LEGO pentru inovație"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Piese LEGO pentru inovație</h3>
+                        <p>Un set plin de posibilități! Copiii explorează, creează și inovează.</p>
+                        <div class="gallery-tags">
+                            <span>Creativitate</span>
+                            <span>Design</span>
+                            <span>Robotica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Grafică digitală interactivă -->
+            <div class="gallery-item" data-category="programare">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_102.webp" alt="Grafică digitală interactivă"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Grafică digitală interactivă</h3>
+                        <p>Două fete descoperă magia designului digital printr-un program creativ.</p>
+                        <div class="gallery-tags">
+                            <span>Design</span>
+                            <span>Programare</span>
+                            <span>Interactiv</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Atelier educațional interactiv -->
+            <div class="gallery-item" data-category="sediu">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_209.webp" alt="Atelier educațional interactiv" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Ziua portilor deschise</h3>
+                        <p>Copiii descoperă lumea tehnologiei și a roboticii prin activități practice.</p>
+                        <div class="gallery-tags">
+                            <span>Educație</span>
+                            <span>Sediu</span>
+                            <span>Robotica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Primii pași în programare -->
+            <div class="gallery-item" data-category="programare">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_103.webp" alt="Primii pași în programare"  loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Primii pași în programare</h3>
+                        <p>Explorăm bazele programării într-un mod captivant și ușor de învățat.</p>
+                        <div class="gallery-tags">
+                            <span>Programare</span>
+                            <span>Educație</span>
+                            <span>Creativitate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Design grafic creativ -->
+                <div class="gallery-item" data-category="programare">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="./assets/images/techminds_208.webp" alt="Design grafic creativ"  loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Design grafic creativ</h3>
+                            <p>Un elev creează o ilustrație animată folosind un mediu interactiv de design.</p>
+                            <div class="gallery-tags">
+                                <span>Design</span>
+                                <span>Grafică</span>
+                                <span>Programare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Proiect LEGO interactiv -->
+                <div class="gallery-item" data-category="robotica">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="./assets/images/techminds_200.webp" alt="Proiect LEGO interactiv"  loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Proiect LEGO interactiv</h3>
+                            <p>Un copil creează o construcție LEGO conectată la un laptop pentru programare.</p>
+                            <div class="gallery-tags">
+                                <span>Robotică</span>
+                                <span>STEM</span>
+                                <span>Educație</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Curs interactiv de programare -->
+                <div class="gallery-item" data-category="programare">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="./assets/images/techminds_202.webp" alt="Curs interactiv de programare"  loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Curs interactiv de programare</h3>
+                            <p>Elevii învață bazele programării vizuale într-un mediu modern.</p>
+                            <div class="gallery-tags">
+                                <span>Programare</span>
+                                <span>Tehnologie</span>
+                                <span>Educație</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Entuziasm și programare -->
+                <div class="gallery-item" data-category="programare">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="./assets/images/techminds_204.webp" alt="Entuziasm și programare"  loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Entuziasm și programare</h3>
+                            <p>Elevii se bucură de experiența de învățare interactivă prin joc și cod.</p>
+                            <div class="gallery-tags">
+                                <span>Educație</span>
+                                <span>Interactiv</span>
+                                <span>Programare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Dezvoltarea gândirii logice
+                <div class="gallery-item" data-category="programare">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="./assets/images/techminds_207.webp" alt="Dezvoltarea gândirii logice"  loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Dezvoltarea gândirii logice</h3>
+                            <p>Elevii explorează concepte de programare prin proiecte vizuale.</p>
+                            <div class="gallery-tags">
+                                <span>Programare</span>
+                                <span>Logică</span>
+                                <span>Educație</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>            
+        </div>
+
+        <div class="gallery-lightbox">
+            <div class="lightbox-container">
+                <span class="close-lightbox">&times;</span>
+                <img class="lightbox-image" src="" alt="Imagine mărită">
+                <div class="lightbox-caption"></div>
+                <div class="lightbox-nav">
+                    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-feature">
+        <div class="feature-container">
+            <h2>Proiectul Lunii</h2>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="/api/placeholder/800/600" alt="Proiectul lunii">
+                </div>
+                <div class="feature-info">
+                    <h3>Realitate Augmentată pentru Educație</h3>
+                    <p>Un proiect inovator dezvoltat de studenții noștri care combină realitatea augmentată cu procesul educațional, creând experiențe interactive pentru diverse materii.</p>
+                    <p>Tehnologii utilizate: Unity, ARKit, ARCore, machine learning</p>
+                    <button class="feature-btn">Vezi detalii</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-360">
+        <div class="section-360-header">
+            <h2>Tur Virtual 360°</h2>
+            <p>Explorează campusul nostru prin experiența imersivă 360°</p>
+        </div>
+        <div class="tour-container">
+            <div class="tour-placeholder">
+                <img src="/api/placeholder/1200/800" alt="Tur virtual 360">
+                <div class="tour-overlay">
+                    <button class="tour-btn"><i class="fas fa-vr-cardboard"></i> Începe turul virtual</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>Ce Spun Studenții Noștri</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Experiența la Techminds Academy mi-a transformat cariera. Am învățat de la profesioniști pasionați și am avut acces la cele mai noi tehnologii."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Student">
+                        <div class="author-info">
+                            <h4>Maria Popescu</h4>
+                            <p>Absolventă, Data Science</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Proiectele practice și mentoratul personalizat sunt aspectele care fac Techminds Academy să iasă în evidență. Am crescut atât pe plan profesional, cât și personal."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Student">
+                        <div class="author-info">
+                            <h4>Andrei Ionescu</h4>
+                            <p>Student, Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Techminds Academy</h2>
+                <p>Educație inovatoare pentru viitorul tehnologic</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigare</h3>
+                    <ul>
+                        <li><a href="#">Acasă</a></li>
+                        <li><a href="#">Galerie</a></li>
+                        <li><a href="#">Cursuri</a></li>
+                        <li><a href="#">Despre noi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Str. Inovației 42, București</li>
+                        <li><i class="fas fa-phone"></i> +40 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> contact@techminds.ro</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Techminds Academy. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="./js/galerie.js"></script>
+    <script src="./js/courses.js"></script>
+</body>
+</html>
