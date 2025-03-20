@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Techminds Academy</title>
+    <link rel="stylesheet" href="./css/galerie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="programare.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                    <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                    <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                    <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                    <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                    <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                    <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                    <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                    <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                    <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                    <a href="courses/python.html">🐍 Python - Aplicații</a>
+                    <a href="courses/frontend.html">💻 Frontend - Web</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                    <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                    <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                    <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                </div>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Galeria Momentelor Inspiraționale</h1>
+            <p>Descoperă atmosfera Techminds Academy prin imagini care spun povestea noastră</p>
+        </div>
+    </section>
+
+    <section class="gallery-container">
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Toate</button>
+            <button class="filter-btn" data-filter="events">Evenimente</button>
+            <button class="filter-btn" data-filter="projects">Proiecte</button>
+            <button class="filter-btn" data-filter="campus">Campus</button>
+            <button class="filter-btn" data-filter="students">Studenți</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Eveniment -->
+            <div class="gallery-item" data-category="events">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_124.webp" alt="Imagine eveniment">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Deschidere Techminds Academy</h3>
+                        <p>Ziua portilor deschise</p>
+                        <div class="gallery-tags">
+                            <span>Eveniment</span>
+                            <span>Programare</span>
+                            <span>Robotica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proiect -->
+            <div class="gallery-item" data-category="projects">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="./assets/images/techminds_021.webp" alt="Imagine proiect">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Proiect: Rubics Cube Solver</h3>
+                        <p>Inventie LEGO Spike Prime care rezolva cubul rubic</p>
+                        <div class="gallery-tags">
+                            <span>Proiect</span>
+                            <span>IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus -->
+            <div class="gallery-item" data-category="campus">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine campus">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Laboratorul de Robotică</h3>
+                        <p>Spațiu dedicat inovației și experimentelor</p>
+                        <div class="gallery-tags">
+                            <span>Campus</span>
+                            <span>Tehnologie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Studenți -->
+            <div class="gallery-item" data-category="students">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine studenți">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Sesiune de Colaborare</h3>
+                        <p>Studenții lucrează la un proiect de grup</p>
+                        <div class="gallery-tags">
+                            <span>Studenți</span>
+                            <span>Teamwork</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eveniment -->
+            <div class="gallery-item" data-category="events">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine conferință">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Tech Conference 2024</h3>
+                        <p>Conferință cu speakeri internaționali din domeniul IT</p>
+                        <div class="gallery-tags">
+                            <span>Eveniment</span>
+                            <span>Conferință</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proiect -->
+            <div class="gallery-item" data-category="projects">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine AI">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Proiect: AI Vision</h3>
+                        <p>Dezvoltarea unui sistem de recunoaștere vizuală</p>
+                        <div class="gallery-tags">
+                            <span>Proiect</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus -->
+            <div class="gallery-item" data-category="campus">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine sală de curs">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Learning Hub</h3>
+                        <p>Spațiu modern dedicat învățării interactive</p>
+                        <div class="gallery-tags">
+                            <span>Campus</span>
+                            <span>Educație</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Studenți -->
+            <div class="gallery-item" data-category="students">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="/api/placeholder/800/600" alt="Imagine prezentare">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Demo Day</h3>
+                        <p>Studenții își prezintă proiectele finale</p>
+                        <div class="gallery-tags">
+                            <span>Studenți</span>
+                            <span>Prezentare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-lightbox">
+            <div class="lightbox-container">
+                <span class="close-lightbox">&times;</span>
+                <img class="lightbox-image" src="" alt="Imagine mărită">
+                <div class="lightbox-caption"></div>
+                <div class="lightbox-nav">
+                    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-feature">
+        <div class="feature-container">
+            <h2>Proiectul Lunii</h2>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="/api/placeholder/800/600" alt="Proiectul lunii">
+                </div>
+                <div class="feature-info">
+                    <h3>Realitate Augmentată pentru Educație</h3>
+                    <p>Un proiect inovator dezvoltat de studenții noștri care combină realitatea augmentată cu procesul educațional, creând experiențe interactive pentru diverse materii.</p>
+                    <p>Tehnologii utilizate: Unity, ARKit, ARCore, machine learning</p>
+                    <button class="feature-btn">Vezi detalii</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-360">
+        <div class="section-360-header">
+            <h2>Tur Virtual 360°</h2>
+            <p>Explorează campusul nostru prin experiența imersivă 360°</p>
+        </div>
+        <div class="tour-container">
+            <div class="tour-placeholder">
+                <img src="/api/placeholder/1200/800" alt="Tur virtual 360">
+                <div class="tour-overlay">
+                    <button class="tour-btn"><i class="fas fa-vr-cardboard"></i> Începe turul virtual</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>Ce Spun Studenții Noștri</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Experiența la Techminds Academy mi-a transformat cariera. Am învățat de la profesioniști pasionați și am avut acces la cele mai noi tehnologii."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Student">
+                        <div class="author-info">
+                            <h4>Maria Popescu</h4>
+                            <p>Absolventă, Data Science</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Proiectele practice și mentoratul personalizat sunt aspectele care fac Techminds Academy să iasă în evidență. Am crescut atât pe plan profesional, cât și personal."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Student">
+                        <div class="author-info">
+                            <h4>Andrei Ionescu</h4>
+                            <p>Student, Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Techminds Academy</h2>
+                <p>Educație inovatoare pentru viitorul tehnologic</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigare</h3>
+                    <ul>
+                        <li><a href="#">Acasă</a></li>
+                        <li><a href="#">Galerie</a></li>
+                        <li><a href="#">Cursuri</a></li>
+                        <li><a href="#">Despre noi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Str. Inovației 42, București</li>
+                        <li><i class="fas fa-phone"></i> +40 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> contact@techminds.ro</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Techminds Academy. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="./js/galerie.js"></script>
+    <script src="./js/courses.js"></script>
+</body>
+</html>
