@@ -326,6 +326,45 @@
     box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
 }
 
+.gallery-access {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-access:hover {
+    opacity: 1;
+}
+
+.gallery-link {
+    color: var(--accent-color, #ffffff);
+    font-weight: 400;
+    font-size: 0.9em;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.gallery-link:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+.gallery-link::after {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 1.1em;
+    transform: translateY(1px);
+}
+
 /* Responsivitatea */
 @media (max-width: 992px) {
     .carousel-item {
