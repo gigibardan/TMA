@@ -1,0 +1,1437 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMinds Academy - Săptămâna Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	   <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css?v=1.2">
+    <link rel="stylesheet" href="./css/popup.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Montserrat:wght@400;500;700;800&display=swap');
+        
+        :root {
+            --primary-color: #00A19A;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --dark-color: #2C3E50;
+            --light-color: #FAFAF2;
+            --white-color: #FFFFFF;
+            --gray-color: #F5F5F5;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+        position: relative;
+        padding: 0;
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        margin-bottom: 50px;
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        z-index: 0;
+        background: url('/assets/images/robosicopil.webp') no-repeat center right;
+        background-size: contain;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-title {
+        max-width: 1000px;
+        
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .teal-text {
+        color: #00A19A;
+    }
+    
+    .green-text {
+        color: #4CAF50;
+    }
+    
+    
+    
+    .cta-button {
+        display: inline-block;
+        background: #4CAF50;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 18px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 0;
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(76, 175, 80, 0.6);
+    }
+    
+    .cta-button i {
+        margin-left: 8px;
+    }
+    
+    .hero-text {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .hero p {
+        font-size: 22px;
+        color: var(--dark-color);
+        line-height: 1.5;
+    }
+    
+    .highlight {
+        font-weight: 700;
+        color: #4CAF50;
+        text-decoration: underline;
+    }
+    
+    .container-full {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Leaf decorations */
+    .leaf-decoration {
+        position: absolute;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 C20,20 0,60 20,100 C60,70 100,40 80,0 C60,20 40,10 50,0' fill='%234CAF50' fill-opacity='0.2'/></svg>");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    
+    .leaf-1 {
+        width: 120px;
+        height: 120px;
+        top: -20px;
+        left: -20px;
+        transform: rotate(45deg);
+    }
+    
+    .leaf-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: 30%;
+        transform: rotate(120deg);
+    }
+    
+    .leaf-3 {
+        width: 80px;
+        height: 80px;
+        top: 30%;
+        right: 10%;
+        transform: rotate(-30deg);
+    }
+    
+    /* Animated Robot */
+    .robot {
+        position: absolute;
+        width: 100px;
+        height: 150px;
+        z-index: 1;
+        /* Începem de la o poziție vizibilă */
+        top: 50px;
+        right: 70%;
+        animation: moveRobotHero 25s linear infinite;
+    }
+    
+    .robot-head {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        border: 3px solid #00A19A;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .robot-antenna {
+        position: absolute;
+        top: -15px;
+        left: 25px;
+        width: 10px;
+        height: 15px;
+        background-color: #FFC107;
+        border-radius: 5px;
+    }
+    
+    .robot-eye {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: #00A19A;
+        border-radius: 50%;
+    }
+    
+    .robot-eye.left {
+        top: 15px;
+        left: 12px;
+    }
+    
+    .robot-eye.right {
+        top: 15px;
+        right: 12px;
+    }
+    
+    .robot-mouth {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        width: 30px;
+        height: 5px;
+        background-color: #00A19A;
+        border-radius: 5px;
+    }
+    
+    .robot-body {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        width: 80px;
+        height: 50px;
+        background-color: white;
+        border: 3px solid #00A19A;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .robot-arm {
+        position: absolute;
+        width: 10px;
+        height: 40px;
+        background-color: #FFC107;
+        border-radius: 5px;
+    }
+    
+    .robot-arm.left {
+        top: 65px;
+        left: 0;
+        transform-origin: top;
+        animation: armWave 2s ease-in-out infinite alternate;
+    }
+    
+    .robot-arm.right {
+        top: 65px;
+        right: 0;
+        transform-origin: top;
+        animation: armWave 2s ease-in-out infinite alternate-reverse;
+    }
+    
+    .robot-leg {
+        position: absolute;
+        width: 15px;
+        height: 30px;
+        background-color: #00A19A;
+        border-radius: 5px;
+        top: 110px;
+    }
+    
+    .robot-leg.left {
+        left: 25px;
+        animation: legMove 1s linear infinite alternate;
+    }
+    
+    .robot-leg.right {
+        right: 25px;
+        animation: legMove 1s linear infinite alternate-reverse;
+    }
+    .robot-head, .robot-body, .robot-arm, .robot-leg {
+        opacity: 0.9;
+    }
+    
+    .recycling-symbol {
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        width: 30px;
+        height: 30px;
+        background-color: #4CAF50;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+    }
+    
+    @keyframes moveRobotHero {
+        0% {
+            top: 50px;
+            right: 10%;
+        }
+        15% {
+            top: 100px;
+            right: 30%;
+        }
+        30% {
+            top: 180px;
+            right: 50%; 
+        }
+        45% {
+            top: 220px; 
+            right: 25%;
+        }
+        60% {
+            top: 150px;
+            right: 15%;
+        }
+        75% {
+            top: 80px;
+            right: 40%;
+        }
+        90% {
+            top: 120px;
+            right: 60%;
+        }
+        100% {
+            top: 50px;
+            right: 10%;
+        }
+    }
+    
+    
+    @keyframes armWave {
+        0% {
+            transform: rotate(-15deg);
+        }
+        100% {
+            transform: rotate(15deg);
+        }
+    }
+    
+    @keyframes legMove {
+        0% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(5px);
+        }
+    }
+        
+        /* Course Section */
+        .courses {
+            padding: 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--dark-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .course-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .course-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 650px;
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 25px;
+            color: var(--white-color);
+        }
+        
+        .course-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .course-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--white-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+        
+        .course-title h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+        }
+        
+        .course-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .course-body {
+            padding: 25px;
+        }
+        
+        .course-description {
+            margin-bottom: 25px;
+        }
+        
+        .course-features {
+            list-style: none;
+        }
+        
+        .course-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .course-feature i {
+            color: var(--secondary-color);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .course-images {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .course-images img {
+            width: 100%;
+            border-radius: 8px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        /* Calendar Section */
+        .calendar-section {
+            padding: 50px 0;
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 50px;
+        }
+        
+            .calendar-container {
+        position: relative;
+        width: 100%;
+        height: 650px;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .calendar-iframe {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 120px);
+        border: none;
+    }
+        
+        /* Eco-Robot Section */
+        .eco-robot {
+            padding: 50px 0;
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        
+        .eco-robot-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            z-index: 2;
+        }
+        
+        .eco-robot-text {
+            flex: 1;
+            min-width: 300px;
+            z-index: 2;
+        }
+        
+        .eco-robot-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+        
+        .eco-robot-description {
+            margin-bottom: 25px;
+            z-index: 2;
+        }
+        
+        .eco-robot-features {
+            list-style: none;
+        }
+        
+        .eco-robot-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .eco-robot-feature i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .eco-robot-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .robot-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        
+        .eco-robot-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+        
+        /* Green Elements */
+        .green-element {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50% 5% 50% 50%;
+            transform: rotate(-45deg);
+            opacity: 0.1;
+        }
+        
+        .recycling {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234CAF50'><path d='M21.82 15.42l-2.59-2.59c-.2-.2-.51-.21-.71-.01l-1.39 1.39c-.2.2-.21.51-.01.71l2.58 2.58c.77.77.77 2.03 0 2.8-.77.77-2.03.77-2.8 0l-1.39-1.39c-.2-.2-.51-.21-.71-.01l-1.39 1.39c-.2.2-.21.51-.01.71l1.39 1.39c1.54 1.54 4.05 1.54 5.59 0 1.54-1.54 1.54-4.05 0-5.59zM5.59 8.42c-.77.77-.77 2.03 0 2.8l1.39 1.39c.2.2.51.21.71.01l1.39-1.39c.2-.2.21-.51.01-.71l-1.39-1.39c-.77-.77-.77-2.03 0-2.8.77-.77 2.03-.77 2.8 0l1.39 1.39c.2.2.51.21.71.01l1.39-1.39c.2-.2.21-.51.01-.71l-1.39-1.39c-1.54-1.54-4.05-1.54-5.59 0z'/></svg>");
+            background-repeat: no-repeat;
+            opacity: 0.1;
+        }
+        
+        /* Animated Robot */
+        .robot {
+            position: absolute;
+            width: 100px;
+            height: 150px;
+            animation: moveRobot 15s linear infinite;
+            z-index: 2;
+        }
+        
+        .robot-head {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--white-color);
+            border: 3px solid var(--primary-color);
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .robot-antenna {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            width: 10px;
+            height: 15px;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+        }
+        
+        .robot-eye {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .robot-eye.left {
+            top: 15px;
+            left: 12px;
+        }
+        
+        .robot-eye.right {
+            top: 15px;
+            right: 12px;
+        }
+        
+        .robot-mouth {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            width: 30px;
+            height: 5px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+        
+        .robot-body {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            width: 80px;
+            height: 50px;
+            background-color: var(--white-color);
+            border: 3px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .robot-arm {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+        }
+        
+        .robot-arm.left {
+            top: 65px;
+            left: 0;
+            transform-origin: top;
+            animation: armWave 2s ease-in-out infinite alternate;
+        }
+        
+        .robot-arm.right {
+            top: 65px;
+            right: 0;
+            transform-origin: top;
+            animation: armWave 2s ease-in-out infinite alternate-reverse;
+        }
+        
+        .robot-leg {
+            position: absolute;
+            width: 15px;
+            height: 30px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            top: 110px;
+        }
+        
+        .robot-leg.left {
+            left: 25px;
+            animation: legMove 1s linear infinite alternate;
+        }
+        
+        .robot-leg.right {
+            right: 25px;
+            animation: legMove 1s linear infinite alternate-reverse;
+        }
+        
+        .recycling-symbol {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white-color);
+            font-size: 16px;
+        }
+        
+        @keyframes moveRobot {
+            0% {
+                transform: translate(-100px, 50px);
+            }
+            25% {
+                transform: translate(calc(100% - 100px), 150px);
+            }
+            50% {
+                transform: translate(calc(100% - 200px), 250px);
+            }
+            75% {
+                transform: translate(100px, 100px);
+            }
+            100% {
+                transform: translate(-100px, 50px);
+            }
+        }
+        
+        @keyframes armWave {
+            0% {
+                transform: rotate(-15deg);
+            }
+            100% {
+                transform: rotate(15deg);
+            }
+        }
+        
+        @keyframes legMove {
+            0% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(5px);
+            }
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 50px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background-color: var(--gray-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+        
+        .benefit-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Modal styles */
+        .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal {
+        background-color: var(--white-color);
+        width: 95%; /* Lățime mărită ușor */
+        max-width: 1000px; /* Lățime maximă mărită */
+        height: 95vh; /* Înălțime mărită la 95% din viewport height */
+        max-height: 95vh; /* Înălțime maximă mărită */
+        overflow: hidden; /* Schimbat din overflow-y: auto pentru a evita scrollbar-ul dublu */
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: var(--white-color);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        flex-shrink: 0; /* Împiedică header-ul să se micșoreze */
+    }
+    
+    .modal-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        color: var(--white-color);
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1001; /* Asigură că butonul de închidere este deasupra conținutului */
+    }
+    
+    .modal-body {
+        padding: 0; /* Eliminăm padding-ul pentru a maximiza spațiul pentru PDF */
+        flex-grow: 1; /* Permite corpului să ocupe tot spațiul disponibil */
+        overflow: hidden; /* Eliminăm overflow pentru a evita scrollbar-ul dublu */
+    }
+    
+    .modal-content {
+        width: 100%;
+        height: 100%; /* Ocupă toată înălțimea disponibilă */
+        border: none;
+    }
+    
+      
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            
+            .hero h1 {
+            font-size: 32px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+        }
+        
+        .cta-button {
+            font-size: 16px;
+            padding: 15px 25px;
+            border: 0;
+        }
+    
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .course-images {
+                grid-template-columns: 1fr;
+            }
+            
+            .eco-robot-content {
+                flex-direction: column;
+            }
+            
+            .robot-container {
+                height: 300px;
+            }
+            
+            .calendar-container {
+                height: 500px;
+            }
+        }
+
+        #booking-iframe {
+  width: 100%;
+  border: none;
+  height: 800px; /* Pentru desktop */
+}
+
+/* Pentru tablete */
+@media (max-width: 992px) {
+  #booking-iframe {
+    height: 900px;
+  }
+}
+
+/* Pentru telefoane landscape */
+@media (max-width: 768px) {
+  #booking-iframe {
+    height: 2000px;
+  }
+}
+
+/* Pentru telefoane portrait */
+@media (max-width: 576px) {
+  #booking-iframe {
+    height: 2200px;
+  }
+}
+    </style>
+</head>
+<body>
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="programare.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                    <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                    <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                    <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                    <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                    <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                    <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                    <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                    <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                    <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                    <a href="courses/python.html">🐍 Python - Aplicații</a>
+                    <a href="courses/frontend.html">💻 Frontend - Web</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                    <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                    <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                    <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="about.html">Despre Noi</a>
+                <div class="dropdown-content">
+                    <a href="contact.html">📞 Contactează-ne</a>
+                    <a href="about.html">👥 Traineri</a>
+                    <a href="galerie.html">📸 Galerie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="container-full">
+        <div class="hero">
+            <!-- Background decorations -->
+            <div class="hero-bg"></div>
+            <div class="leaf-decoration leaf-1"></div>
+            <div class="leaf-decoration leaf-2"></div>
+            <div class="leaf-decoration leaf-3"></div>
+            
+            <!-- Animated Robot -->
+            <div class="robot">
+                <div class="robot-head">
+                    <div class="robot-antenna"></div>
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-body">
+                    <div class="recycling-symbol">♻️</div>
+                </div>
+                <div class="robot-arm left"></div>
+                <div class="robot-arm right"></div>
+                <div class="robot-leg left"></div>
+                <div class="robot-leg right"></div>
+            </div>
+            
+            <!-- Hero content -->
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-title">
+                        <h1>
+                            <span class="teal-text">Descoperă lumea</span> 
+                            <span class="green-text">roboticii și programării</span> 
+                            <span class="teal-text">în Săptămâna Verde!</span>
+                        </h1>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#calendar" class="cta-button">Rezervă acum <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="hero-text">
+                        <p>O experiență educațională unică în care copiii învață cum tehnologia poate proteja mediul înconjurător prin activități distractive și interactive. Programul este <span class="highlight">GRATUIT</span> în cadrul Săptămânii Verzi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cursurile noastre pentru Săptămâna Verde</h2>
+            </div>
+            
+            <div class="course-cards">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-title">
+                            <div class="course-icon">1</div>
+                            <h3>Programare în Scratch</h3>
+                        </div>
+                        <div class="course-subtitle">Pentru copii 7-12 ani • Durată: ~90 minute</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-description">
+                            <p>Scratch este un limbaj de programare vizual dezvoltat de MIT, perfect pentru copii. Acest mediu de programare pe bază de blocuri colorate permite copiilor să învețe logica programării într-un mod intuitiv și distractiv.</p>
+                        </div>
+                        <ul class="course-features">
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Creăm jocuri interactive originale cu tematică ecologică</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Învățăm concepte fundamentale de programare (bucle, condiții, evenimente)</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Dezvoltăm gândirea logică și abilitățile de rezolvare a problemelor</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Încurajăm creativitatea prin personalizarea proiectelor</div>
+                            </li>
+                        </ul>
+                        <div class="course-images">
+                            <img src="/assets/images/techminds_206.webp" alt="Copii programând în Scratch">
+                            <img src="/assets/images/techminds_020.webp" alt="Proiect Scratch">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-title">
+                            <div class="course-icon">2</div>
+                            <h3>Robotică LEGO Essential</h3>
+                        </div>
+                        <div class="course-subtitle">Pentru copii 7-12 ani • Durată: ~90 minute</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-description">
+                            <p>LEGO Education Essential este un kit educațional special conceput pentru introducerea copiilor în lumea roboticii. Aceste kituri oficiale LEGO combină piesele clasice cu motoare, senzori și un hub programabil.</p>
+                        </div>
+                        <ul class="course-features">
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Construim roboți funcționali folosind piesele LEGO Essential</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Programăm roboții pentru a executa diverse acțiuni și misiuni eco</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Învățăm despre concepte de bază din inginerie și fizică</div>
+                            </li>
+                            <li class="course-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Dezvoltăm abilitățile de lucru în echipă prin proiecte colaborative</div>
+                            </li>
+                        </ul>
+                        <div class="course-images">
+                            <img src="/assets/images/techminds_046.webp" alt="Copii construind roboți LEGO">
+                            <img src="/assets/images/techminds_061.webp" alt="Proiect robotică LEGO">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="calendar-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Rezervă acum locul pentru clasa ta</h2>
+                <p>Capacitate: 45 de locuri, împărțite în 3 săli (2 de programare/game development și una de robotică)</p>
+            </div>
+            
+            <iframe id="booking-iframe" src="https://tmabooking.netlify.app/?embed=true" frameborder="0"></iframe>
+
+    </section>
+
+    <!-- Eco-Robot Section -->
+    <section class="eco-robot">
+        <div class="container">
+            <div class="robot">
+                <div class="robot-head">
+                    <div class="robot-antenna"></div>
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-body">
+                    <div class="recycling-symbol">♻️</div>
+                </div>
+                <div class="robot-arm left"></div>
+                <div class="robot-arm right"></div>
+                <div class="robot-leg left"></div>
+                <div class="robot-leg right"></div>
+            </div>
+            <div class="eco-robot-content">
+                <div class="eco-robot-text">
+                    <h2 class="eco-robot-title">Robotul Verde - Concurs Special</h2>
+                    <p class="eco-robot-description">În cadrul Săptămânii Verzi, organizăm un concurs special în care copiii sunt provocați să creeze un "Robot Verde" - un concept de robot care să ajute la protejarea mediului înconjurător.</p>
+                    
+                    <ul class="eco-robot-features">
+                        <li class="eco-robot-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>Creează un robot care să facă lumea mai curată și verde</div>
+                        </li>
+                        <li class="eco-robot-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>Folosim materiale reciclabile pentru componente</div>
+                        </li>
+                        <li class="eco-robot-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>Învățăm despre sustenabilitate și protecția mediului</div>
+                        </li>
+                        <li class="eco-robot-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>Premii surpriză pentru cei mai creativi participanți</div>
+                        </li>
+                    </ul>
+                    
+                    <button id="showPresentation" class="cta-button" style="margin-top: 20px;">
+                        Vezi prezentarea completă <i class="fas fa-presentation"></i>
+                    </button>
+                </div>
+                
+                <div class="eco-robot-image">
+                    <div class="robot-container">
+                        <!-- Animated Robot -->
+                        
+                        
+                        <img src="/assets/images/robosicopil.webp" alt="Robot și copil" class="eco-robot-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Green Elements -->
+        <div class="green-element leaf" style="top: 10%; left: 5%;"></div>
+        <div class="green-element leaf" style="top: 20%; right: 10%;"></div>
+        <div class="green-element leaf" style="bottom: 15%; left: 15%;"></div>
+        <div class="green-element recycling" style="top: 30%; right: 20%;"></div>
+        <div class="green-element recycling" style="bottom: 25%; left: 25%;"></div>
+    </section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+    <div class="container">
+        <div class="section-title">
+            <h2>De ce să participi la Săptămâna Verde?</h2>
+            <p>Descoperă toate beneficiile participării la programul nostru educațional</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="benefit-title">Educație ecologică</h3>
+                <p>Descoperim cum să fim prietenoși cu natura și cum tehnologia poate contribui la un viitor sustenabil</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="benefit-title">Competențe digitale</h3>
+                <p>Dezvoltăm abilități esențiale pentru viitor: programare, gândire algoritmică și rezolvarea problemelor</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="benefit-title">Lucru în echipă</h3>
+                <p>Cunoaștem prieteni noi care iubesc tehnologia și învățăm să colaborăm pentru a crea proiecte impresionante</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="benefit-title">Premii și surprize</h3>
+                <p>Cadouri și surprize speciale pentru cei mai activi participanți la activitățile noastre</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Presentation -->
+<div id="presentationModal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 class="modal-title">Prezentare Săptămâna Verde la TechMinds Academy</h3>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <iframe class="modal-content" src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+
+
+    // Modal functionality
+    const showPresentationBtn = document.getElementById('showPresentation');
+    const modal = document.getElementById('presentationModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalContent = document.querySelector('.modal-content');
+    
+    // PDF URL (replace with actual URL)
+    const pdfUrl = '/assets/images/Saptamana-Verde-TechMinds-Academy.pdf';
+    
+    showPresentationBtn.addEventListener('click', function() {
+        modalContent.src = pdfUrl;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+    
+    closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        modalContent.src = 'about:blank';
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            modalContent.src = 'about:blank';
+        }
+    });
+    
+    // Add green elements randomly
+    function addGreenElements() {
+        const container = document.body;
+        const numberOfElements = 20;
+        
+        for (let i = 0; i < numberOfElements; i++) {
+            const leaf = document.createElement('div');
+            leaf.className = 'green-element leaf';
+            leaf.style.top = Math.random() * 100 + '%';
+            leaf.style.left = Math.random() * 100 + '%';
+            leaf.style.transform = `rotate(${Math.random() * 360}deg) scale(${0.5 + Math.random()})`;
+            leaf.style.opacity = 0.05 + Math.random() * 0.1;
+            container.appendChild(leaf);
+            
+            const recycling = document.createElement('div');
+            recycling.className = 'green-element recycling';
+            recycling.style.top = Math.random() * 100 + '%';
+            recycling.style.left = Math.random() * 100 + '%';
+            recycling.style.transform = `rotate(${Math.random() * 360}deg) scale(${0.5 + Math.random()})`;
+            recycling.style.opacity = 0.05 + Math.random() * 0.1;
+            container.appendChild(recycling);
+        }
+    }
+    
+    // Call the function when the page loads
+    window.addEventListener('load', addGreenElements);
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section company-info">
+            <div class="footer-logo">
+                <img src="./assets/images/logo-techminds-sigla.png" alt="TechMinds Academy Logo">
+            </div>
+            <p>Dezvoltăm competențele digitale ale generației de mâine prin cursuri interactive de programare și robotică.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61572403241620" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/official.techminds.academy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/official-techminds-academy/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Cursuri Populare</h3>
+            <ul>
+                <li><a href="courses/scratch.html">🎮 Scratch - Jocuri</a></li>
+                <li><a href="courses/minecraft.html">⛏️ Minecraft - Modding</a></li>
+                <li><a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a></li>
+                <li><a href="courses/python.html">🐍 Python - Aplicații</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Navigare Rapidă</h3>
+            <ul>
+                <li><a href="programare.html">Programare</a></li>
+                <li><a href="robotics.html">Robotică</a></li>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact-info">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center Sector 1, București</span></li>
+                <li><i class="fas fa-phone"></i> <span>+40 758 707 448</span></li>
+                <li><i class="fas fa-envelope"></i> <span>office@techminds-academy.ro</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-legal-links">
+                <a href="politicadeconfidentialitate.html">Politică de Confidențialitate</a>
+                <span class="separator">|</span>
+                <a href="politicadecookies.html">Politică de Cookie-uri</a>
+                <span class="separator">|</span>
+                <a href="termenisiconditii.html">Termeni și Condiții</a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechMinds Academy. Toate drepturile rezervate.</p>
+            </div>
+            
+            <div class="footer-anpc-links">
+                <a href="https://reclamatiisal.anpc.ro/" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sal.png" alt="ANPC - Soluționarea Alternativă a Litigiilor">
+                </a>
+                <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sol.png" alt="ANPC - Soluționarea Online a Litigiilor">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+   
+
+<script src="./js/courses.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/maincarussel.js"></script>
+
+
+
+
+</body>
+</html>
