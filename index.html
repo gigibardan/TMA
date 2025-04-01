@@ -435,38 +435,151 @@
 </footer>
 
 
-<!-- Sub footer popup 
-<div id="popup-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center; padding: 20px;">
-    <div style="background: white; max-width: 500px; width: 100%; border-radius: 12px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <button id="close-popup-btn" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; justify-content: center; align-items: center;">&times;</button>
+<!-- Sub footer popup -->
+<div id="popup-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center; padding: 15px; backdrop-filter: blur(3px);">
+    <div style="background: white; max-width: 520px; width: 100%; border-radius: 16px; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.3); overflow: hidden; animation: popupFadeIn 0.5s ease-out; max-height: 90vh; display: flex; flex-direction: column;">
+        <button id="close-popup-btn" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; justify-content: center; align-items: center; z-index: 10; transition: all 0.2s ease;">&times;</button>
         
-        <div style="width: 100%;">
-            <img src="./assets/images/ziua-portilor-deschise.jpeg" alt="Ziua Porților Deschise" style="width: 100%; height: auto; display: block; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
-        
-        <div style="padding: 20px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
-                <span style="background-color: #FFD500; color: #333; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 14px;">28 februarie - 1 martie</span>
-                <span style="background-color: #FFD500; color: #333; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 14px;">10:00 - 16:00</span>
+        <div style="position: relative; flex-shrink: 0;">
+            <div style="background: linear-gradient(135deg, #4CAF50, #00A19A); height: 8px; width: 100%;"></div>
+            
+            <!-- Background cu elemente verzi -->
+            <div style="position: absolute; top: 8px; left: 0; width: 100%; height: calc(100% - 8px); background-color: #FAFAF2; opacity: 0.3; z-index: 0; overflow: hidden;">
+                <div style="position: absolute; top: 10%; left: 5%; width: 30px; height: 30px; background-color: #4CAF50; border-radius: 50% 5% 50% 50%; transform: rotate(-45deg); opacity: 0.2;"></div>
+                <div style="position: absolute; bottom: 20%; right: 10%; width: 25px; height: 25px; background-color: #4CAF50; border-radius: 50% 5% 50% 50%; transform: rotate(120deg); opacity: 0.2;"></div>
             </div>
             
-            <p style="margin-bottom: 15px; line-height: 1.5; color: #333;">La Ziua Porților Deschise TechMinds Academy, vei descoperi școala noastră prin demonstrații live de programare și roboți interactivi. Oferă-i copilului tău o experiență tech care îi poate modela viitorul!</p>
-            
-            <div style="margin-bottom: 20px; color: #555; font-size: 14px;">
-                <i class="fas fa-map-marker-alt"></i> Vino la sediul nostru:<br>
-                <span style="padding-left: 20px;">Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center Sector 1, București</span>
+            <!-- Imaginea cu overlay gradient - înălțime redusă pe mobil -->
+            <div style="position: relative; width: 100%; height: 140px; overflow: hidden;">
+                <img id="popup-image" src="./assets/images/robosicopil.webp" alt="Săptămâna Verde la TechMinds Academy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to bottom, rgba(255,255,255,0), #FAFAF2); z-index: 1;"></div>
             </div>
-            
-            <a href="./contact.html" style="display: block; background-color: #0055BF; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; text-align: center;">Contactează-ne acum</a>
         </div>
         
-        <div style="padding: 15px; border-top: 1px solid #eee; display: flex; justify-content: flex-end;">
-            <label style="display: flex; align-items: center; gap: 5px; font-size: 14px; color: #777; cursor: pointer;">
+        <div style="padding: 15px; position: relative; z-index: 2; background-color: #FAFAF2; overflow-y: auto; flex-grow: 1;">
+            <!-- Titlu - Font mai mic pe mobil -->
+            <h2 style="margin: 0 0 12px; font-size: 20px; line-height: 1.3; color: #00A19A; text-align: center;">
+                Descoperă lumea <span style="color: #4CAF50;">roboticii și programării</span><br>în Săptămâna Verde!
+            </h2>
+            
+            <!-- Badge-uri noi - reduse ca dimensiune -->
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                <span style="background-color: #FF9800; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                    </svg>
+                    <strong>GRATUIT</strong>
+                </span>
+                <span style="background-color: #00A19A; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    45 de locuri disponibile
+                </span>
+            </div>
+            
+            <!-- Descriere - Font mai mic, mai condensat -->
+            <p style="margin-bottom: 15px; line-height: 1.5; color: #333; text-align: center; font-size: 14px;">
+                O experiență educațională unică în care copiii învață cum tehnologia poate proteja mediul înconjurător prin activități distractive și interactive.
+            </p>
+            
+            <!-- Locație - Mai condensată -->
+            <div style="margin-bottom: 15px; color: #555; font-size: 13px; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <div style="display: flex; align-items: center; margin-bottom: 3px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <strong>Sediul TechMinds Academy:</strong>
+                </div>
+                <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3,<br>Union Business Center Sector 1, București</span>
+            </div>
+            
+            <!-- Butoane CTA -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+                <a href="https://techminds-academy.ro/saptamanaverde" style="flex: 1; min-width: 120px; background-color: #4CAF50; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(76,175,80,0.3); font-size: 14px;">Află mai multe</a>
+                <a href="https://techminds-academy.ro/contact" style="flex: 1; min-width: 120px; background-color: #00A19A; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(0,161,154,0.3); font-size: 14px;">Contactează-ne</a>
+            </div>
+        </div>
+        
+        <div style="padding: 10px; border-top: 1px solid #eee; display: flex; justify-content: flex-end; background-color: #FAFAF2; flex-shrink: 0;">
+            <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #777; cursor: pointer;">
                 <input type="checkbox" id="no-show-again"> Nu mai arăta acest mesaj
             </label>
         </div>
     </div>
 </div> 
+
+<style>
+    @keyframes popupFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    #close-popup-btn:hover {
+        background: rgba(0,0,0,0.5);
+        transform: rotate(90deg);
+    }
+    
+    /* Stiluri specifice pentru mobil */
+    @media (max-width: 480px) {
+        /* Asigurăm că popupul nu depășește înălțimea ecranului */
+        #popup-overlay {
+            align-items: center;
+            padding: 10px;
+        }
+        
+        #popup-overlay > div {
+            max-height: 85vh;
+            width: 92%;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+        
+        /* Reducem înălțimea imaginii */
+        #popup-overlay > div > div:first-of-type > div:last-child {
+            height: 120px;
+        }
+        
+        /* Asigurăm că butonul X este vizibil */
+        #close-popup-btn {
+            top: 5px;
+            right: 5px;
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        /* Reducem padding-ul conținutului */
+        #popup-overlay > div > div:nth-child(2) {
+            padding: 12px 10px;
+        }
+        
+        /* Reducem padding-ul footer-ului */
+        #popup-overlay > div > div:last-child {
+            padding: 8px 10px;
+        }
+        
+        /* Reducem dimensiunea fontului */
+        #popup-overlay h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        #popup-overlay p {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+    }
+</style>
 
 <script>
     // Așteptăm încărcarea completă a documentului
@@ -477,12 +590,22 @@
         const noShowAgain = document.getElementById('no-show-again');
         
         // Verificăm dacă utilizatorul a optat să nu mai vadă popup-ul
-        const dontShow = localStorage.getItem('dontShowOpenDayPopup');
+        const dontShow = localStorage.getItem('dontShowGreenWeekPopup');
         
-        if (dontShow !== 'true') {
+        // Verificăm dacă popup-ul a fost deja închis în această sesiune
+        const popupClosedThisSession = sessionStorage.getItem('greenWeekPopupClosed');
+        
+        if (dontShow !== 'true' && popupClosedThisSession !== 'true') {
             // Arătăm popup-ul după 3 secunde
             setTimeout(function() {
                 popupOverlay.style.display = 'flex';
+                
+                // Asigurăm că popup-ul este încadrat în viewport
+                const popupContainer = popupOverlay.querySelector('div');
+                if (popupContainer.offsetHeight > window.innerHeight) {
+                    // Dacă popup-ul este mai înalt decât ecranul, îl facem să se încadreze
+                    popupContainer.style.height = (window.innerHeight * 0.85) + 'px';
+                }
             }, 3000);
         }
         
@@ -490,9 +613,17 @@
         function closePopup() {
             popupOverlay.style.display = 'none';
             
+            // Salvăm în sessionStorage că popup-ul a fost închis în această sesiune
+            sessionStorage.setItem('greenWeekPopupClosed', 'true');
+            
             // Salvăm preferința utilizatorului dacă a bifat checkbox-ul
             if (noShowAgain.checked) {
-                localStorage.setItem('dontShowOpenDayPopup', 'true');
+                localStorage.setItem('dontShowGreenWeekPopup', 'true');
+            } else {
+                // Dacă nu s-a bifat checkbox-ul, setăm un timer pentru a afișa din nou după 1 minut
+                setTimeout(function() {
+                    sessionStorage.removeItem('greenWeekPopupClosed');
+                }, 60000); // 60000 ms = 1 minut
             }
         }
         
@@ -505,8 +636,9 @@
                 closePopup();
             }
         });
-         // Adăugăm event listener pentru tasta Escape
-         document.addEventListener('keydown', function(event) {
+        
+        // Adăugăm event listener pentru tasta Escape
+        document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' || event.keyCode === 27) {
                 if (popupOverlay.style.display === 'flex') {
                     closePopup();
@@ -514,9 +646,9 @@
             }
         });
         
-        console.log('Popup script loaded successfully');
+        console.log('Săptămâna Verde popup loaded successfully');
     });
-</script> -->
+</script>
 
    
 
