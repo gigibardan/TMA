@@ -441,53 +441,68 @@
         <button id="close-popup-btn" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; justify-content: center; align-items: center; z-index: 10; transition: all 0.2s ease;">&times;</button>
         
         <div style="position: relative; flex-shrink: 0;">
-            <div style="background: linear-gradient(135deg, #4CAF50, #00A19A); height: 8px; width: 100%;"></div>
+            <div style="background: linear-gradient(135deg, #FF9E45, #FB6D4B); height: 8px; width: 100%;"></div>
             
-            <!-- Background cu elemente verzi -->
-            <div style="position: absolute; top: 8px; left: 0; width: 100%; height: calc(100% - 8px); background-color: #FAFAF2; opacity: 0.3; z-index: 0; overflow: hidden;">
-                <div style="position: absolute; top: 10%; left: 5%; width: 30px; height: 30px; background-color: #4CAF50; border-radius: 50% 5% 50% 50%; transform: rotate(-45deg); opacity: 0.2;"></div>
-                <div style="position: absolute; bottom: 20%; right: 10%; width: 25px; height: 25px; background-color: #4CAF50; border-radius: 50% 5% 50% 50%; transform: rotate(120deg); opacity: 0.2;"></div>
+            <!-- Background cu elemente pentru tema de Paște -->
+            <div style="position: absolute; top: 8px; left: 0; width: 100%; height: calc(100% - 8px); background-color: #FFFAF2; opacity: 0.3; z-index: 0; overflow: hidden;">
+                <div style="position: absolute; top: 10%; left: 5%; width: 30px; height: 30px; background-color: #FF9E45; border-radius: 50% 5% 50% 50%; transform: rotate(-45deg); opacity: 0.2;"></div>
+                <div style="position: absolute; bottom: 20%; right: 10%; width: 25px; height: 25px; background-color: #FB6D4B; border-radius: 50% 5% 50% 50%; transform: rotate(120deg); opacity: 0.2;"></div>
             </div>
             
             <!-- Imaginea cu overlay gradient - înălțime redusă pe mobil -->
             <div style="position: relative; width: 100%; height: 140px; overflow: hidden;">
-                <img id="popup-image" src="./assets/images/robosicopil.webp" alt="Săptămâna Verde la TechMinds Academy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to bottom, rgba(255,255,255,0), #FAFAF2); z-index: 1;"></div>
+                <img id="popup-image" src="./assets/images/atelierepaste.jpg" alt="TechMinds Magic Week - Ateliere de Paște" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to bottom, rgba(255,255,255,0), #FFFAF2); z-index: 1;"></div>
             </div>
         </div>
         
-        <div style="padding: 15px; position: relative; z-index: 2; background-color: #FAFAF2; overflow-y: auto; flex-grow: 1;">
+        <div style="padding: 15px; position: relative; z-index: 2; background-color: #FFFAF2; overflow-y: auto; flex-grow: 1;">
             <!-- Titlu - Font mai mic pe mobil -->
-            <h2 style="margin: 0 0 12px; font-size: 20px; line-height: 1.3; color: #00A19A; text-align: center;">
-                Descoperă lumea <span style="color: #4CAF50;">roboticii și programării</span><br>în Săptămâna Verde!
+            <h2 style="margin: 0 0 12px; font-size: 20px; line-height: 1.3; color: #FB6D4B; text-align: center;">
+                Descoperă magia tehnologiei prin <span style="color: #FF9E45;">atelierele de Paște!</span>
             </h2>
+            
+            <!-- Subtitlu -->
+            <h3 style="margin: 0 0 10px; font-size: 16px; line-height: 1.3; color: #333; text-align: center; font-weight: bold;">
+                TECHMINDS MAGIC WEEK – Robotică & Minecraft
+            </h3>
             
             <!-- Badge-uri noi - reduse ca dimensiune -->
             <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
-                <span style="background-color: #FF9800; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
+                <span style="background-color: #FB6D4B; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <strong>GRATUIT</strong>
+                    <strong>22-25 Aprilie</strong>
                 </span>
-                <span style="background-color: #00A19A; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
+                <span style="background-color: #FF9E45; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; display: flex; align-items: center;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    45 de locuri disponibile
+                    <strong>10:00 - 12:30</strong>
                 </span>
             </div>
             
             <!-- Descriere - Font mai mic, mai condensat -->
-            <p style="margin-bottom: 15px; line-height: 1.5; color: #333; text-align: center; font-size: 14px;">
-                O experiență educațională unică în care copiii învață cum tehnologia poate proteja mediul înconjurător prin activități distractive și interactive.
-            </p>
+            <div style="margin-bottom: 15px; padding: 10px; background-color: rgba(255,158,69,0.1); border-radius: 8px; border-left: 3px solid #FF9E45;">
+                <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #333; line-height: 1.4;">
+                    <li style="margin-bottom: 3px;"><span style="color: #FB6D4B; font-weight: bold;">🧠</span> Creativ • Educațional • Super FUN</li>
+                    <li style="margin-bottom: 3px;"><span style="color: #FB6D4B; font-weight: bold;">🔧</span> LEGO Robotică Prime Spike (min. 5 participanți)</li>
+                    <li style="margin-bottom: 3px;"><span style="color: #FB6D4B; font-weight: bold;">🧱</span> Minecraft Edu – logică și creație în lumi virtuale</li>
+                    <li style="margin-bottom: 3px;"><span style="color: #FB6D4B; font-weight: bold;">🎫</span> <strong>550 lei / copil</strong></li>
+                    <li style="margin-bottom: 3px;"><span style="color: #FB6D4B; font-weight: bold;">👫</span> <strong>10% reducere</strong> dacă vii cu un prieten!</li>
+                    <li><span style="color: #FB6D4B; font-weight: bold;">🎉</span> O aventură a cunoașterii pentru copiii curioși!</li>
+                </ul>
+            </div>
             
             <!-- Locație - Mai condensată -->
             <div style="margin-bottom: 15px; color: #555; font-size: 13px; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;">
                 <div style="display: flex; align-items: center; margin-bottom: 3px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB6D4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
@@ -496,14 +511,26 @@
                 <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3,<br>Union Business Center Sector 1, București</span>
             </div>
             
+            <!-- Mesaj urgență -->
+            <div style="text-align: center; margin-bottom: 15px; font-size: 13px; color: #FB6D4B; font-weight: bold;">
+                <span style="display: inline-flex; align-items: center; gap: 3px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    Locuri limitate – înscrie-te acum!
+                </span>
+            </div>
+            
             <!-- Butoane CTA -->
             <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
-                <a href="https://techminds-academy.ro/saptamanaverde" style="flex: 1; min-width: 120px; background-color: #4CAF50; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(76,175,80,0.3); font-size: 14px;">Află mai multe</a>
-                <a href="https://techminds-academy.ro/contact" style="flex: 1; min-width: 120px; background-color: #00A19A; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(0,161,154,0.3); font-size: 14px;">Contactează-ne</a>
+                <a href="http://127.0.0.1:5501/pachete.html" style="flex: 1; min-width: 120px; background-color: #FB6D4B; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(251,109,75,0.3); font-size: 14px;">Rezervă acum</a>
+                <a href="http://127.0.0.1:5501/contact.html" style="flex: 1; min-width: 120px; background-color: #FF9E45; color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 6px rgba(255,158,69,0.3); font-size: 14px;">Contactează-ne</a>
             </div>
         </div>
         
-        <div style="padding: 10px; border-top: 1px solid #eee; display: flex; justify-content: flex-end; background-color: #FAFAF2; flex-shrink: 0;">
+        <div style="padding: 10px; border-top: 1px solid #f5e5d5; display: flex; justify-content: flex-end; background-color: #FFFAF2; flex-shrink: 0;">
             <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #777; cursor: pointer;">
                 <input type="checkbox" id="no-show-again"> Nu mai arăta acest mesaj
             </label>
@@ -574,9 +601,21 @@
             margin-bottom: 10px;
         }
         
-        #popup-overlay p {
-            font-size: 13px;
-            margin-bottom: 12px;
+        #popup-overlay h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        /* Asigurăm că lista e mai compactă pe mobil */
+        #popup-overlay ul {
+            padding-left: 15px;
+            font-size: 12px;
+        }
+        
+        /* Butoane mai mari pentru touch */
+        #popup-overlay a {
+            padding: 12px 10px;
+            font-size: 14px;
         }
     }
 </style>
