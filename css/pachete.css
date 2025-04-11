@@ -521,6 +521,101 @@ stripe-buy-button {
     margin: 0;
 }
 
+/* Stiluri specifice pentru atelierele de Paște */
+.package-card[data-category="atelierpaste"] {
+    border-top: 4px solid #FB6D4B;
+    position: relative;
+}
+
+/* Adăugăm o etichetă specială pentru atelierele de Paște */
+.package-card[data-category="atelierpaste"]::before {
+    content: 'Vacanța de Paște 2025';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #FB6D4B, #FF9E45);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(251, 109, 75, 0.3);
+}
+
+/* Stiluri pentru conținutul cardurilor de Paște */
+.package-card[data-category="atelierpaste"] .card-icon {
+    background: linear-gradient(135deg, #FB6D4B, #FF9E45);
+}
+
+.package-card[data-category="atelierpaste"] .icon-glow {
+    background: #FB6D4B;
+}
+
+.package-card[data-category="atelierpaste"] .card-header h3::after {
+    background: #FB6D4B;
+}
+
+.package-card[data-category="atelierpaste"] .card-badge {
+    background: linear-gradient(135deg, #FB6D4B, #FF9E45);
+}
+
+.package-card[data-category="atelierpaste"] .feature-item i {
+    color: #FB6D4B;
+}
+
+/* Stiluri pentru butonul Stripe de cumpărare */
+.package-card[data-category="atelierpaste"] stripe-buy-button {
+    --button-color: #FB6D4B !important;
+    --button-hover-color: #f55c39 !important;
+}
+
+/* Efect special de hover pentru atelierele de Paște */
+.package-card[data-category="atelierpaste"]:hover {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 40px rgba(251, 109, 75, 0.25);
+}
+
+.package-card[data-category="atelierpaste"]:hover .card-background img {
+    opacity: 0.3;
+}
+
+/* Animația unui ou de Paște care plutește în background */
+.package-card[data-category="atelierpaste"] .card-background::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(ellipse at center, rgba(255, 158, 69, 0.3) 0%, rgba(251, 109, 75, 0.1) 70%, transparent 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 2;
+    opacity: 0;
+    animation: floatingEgg 6s ease-in-out infinite;
+    filter: blur(5px);
+    bottom: -100px;
+    right: 30px;
+}
+
+.package-card[data-category="atelierpaste"]:hover .card-background::before {
+    opacity: 1;
+}
+
+@keyframes floatingEgg {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Responsive pentru mobile */
+@media (max-width: 768px) {
+    .package-card[data-category="atelierpaste"]::before {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+        right: 10px;
+    }
+}
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .packages-grid {
