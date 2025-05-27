@@ -1,0 +1,1107 @@
+/* ===== STILURI GENERALE OFERTA PARTENER ===== */
+.ofertapartener-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.ofertapartener-section {
+    padding: 40px 0;
+}
+
+.ofertapartener-hero {
+    background: linear-gradient(135deg, #ff6b00 0%, #ff8533 30%, #ffaa66 70%, #ff6b00 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    max-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.ofertapartener-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.03) 50%, transparent 52%);
+    animation: heroPatternGentle 15s ease-in-out infinite;
+}
+
+@keyframes heroPatternGentle {
+    0%, 100% { opacity: 0.6; transform: translateX(0) scale(1); }
+    50% { opacity: 0.8; transform: translateX(10px) scale(1.02); }
+}
+
+.ofertapartener-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.05) 70%),
+        linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.02) 50%, transparent 100%);
+    animation: heroBreath 8s ease-in-out infinite;
+}
+
+@keyframes heroBreath {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.01); }
+}
+
+.ofertapartener-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.ofertapartener-logo {
+    height: 70px;
+    width: auto;
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+.ofertapartener-logo:first-child {
+    animation-delay: 0s;
+}
+
+.ofertapartener-logo:last-child {
+    animation-delay: 2s;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.ofertapartener-logo:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.ofertapartener-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
+    color: white;
+    animation: titleGlow 6s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% { filter: drop-shadow(0 0 8px rgba(255,255,255,0.3)); }
+    50% { filter: drop-shadow(0 0 15px rgba(255,255,255,0.5)); }
+}
+
+.ofertapartener-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.ofertapartener-discount-badge {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 40px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+    animation: badgePulse 3s ease-in-out infinite;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+.ofertapartener-orange-requirement {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-orange-requirement h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.ofertapartener-orange-requirement p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ===== SECȚIUNEA DE BENEFICII (MUTATĂ SUS) ===== */
+.ofertapartener-benefits {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="hexagons" width="60" height="60" patternUnits="userSpaceOnUse"><polygon points="30,2 50,17 50,43 30,58 10,43 10,17" fill="none" stroke="rgba(255,107,0,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexagons)"/></svg>');
+}
+
+.ofertapartener-benefits-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-benefit-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,107,0,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.ofertapartener-benefit-card:hover::before {
+    left: 100%;
+}
+
+.ofertapartener-benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #ff6b00;
+}
+
+.ofertapartener-benefit-icon {
+    font-size: 3.5rem;
+    color: #ff6b00;
+    margin-bottom: 25px;
+    display: block;
+    animation: iconBounce 3s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.ofertapartener-benefit-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.ofertapartener-benefit-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== TABURI NAVIGARE ===== */
+.ofertapartener-tabs {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 50px 0;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.ofertapartener-tab {
+    flex: 1;
+    min-width: 250px;
+    background: transparent;
+    border: 2px solid transparent;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,107,0,0.1), transparent);
+    transition: left 0.3s ease;
+}
+
+.ofertapartener-tab:hover::before {
+    left: 100%;
+}
+
+.ofertapartener-tab.active {
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+    border-color: #ff5500;
+}
+
+.ofertapartener-tab:hover {
+    background: linear-gradient(135deg, #ff8533, #ffaa66);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== CONȚINUT TABURI ===== */
+.ofertapartener-tab-content {
+    display: none;
+}
+
+.ofertapartener-tab-content.active {
+    display: block;
+    animation: contentFadeIn 0.6s ease;
+}
+
+@keyframes contentFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== CARDURI PACHETE ===== */
+.ofertapartener-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.ofertapartener-package-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.ofertapartener-package-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #ff6b00, #ff8533, #ffaa66);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ofertapartener-package-card:hover::before {
+    opacity: 1;
+}
+
+.ofertapartener-package-card:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.ofertapartener-package-card:hover .ofertapartener-price-discounted {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.ofertapartener-card-header {
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: white;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-card-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+    );
+    animation: headerPatternSlow 20s linear infinite;
+}
+
+@keyframes headerPatternSlow {
+    0% { transform: translateX(-30px); }
+    100% { transform: translateX(30px); }
+}
+
+.ofertapartener-card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    animation: iconPulse 4s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.ofertapartener-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-card-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-card-body {
+    padding: 35px 25px;
+    position: relative;
+}
+
+.ofertapartener-price-section {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.ofertapartener-price-original {
+    font-size: 1.1rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.ofertapartener-price-discounted {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ff6b00;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(255,107,0,0.2);
+    animation: priceGlow 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes priceGlow {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(255,107,0,0.3)); }
+    50% { filter: drop-shadow(0 0 12px rgba(255,107,0,0.5)); }
+}
+
+.ofertapartener-price-period {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ofertapartener-discount-label {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+    animation: labelShine 3s ease-in-out infinite;
+}
+
+@keyframes labelShine {
+    0%, 100% { box-shadow: 0 0 10px rgba(40,167,69,0.3); }
+    50% { box-shadow: 0 0 20px rgba(40,167,69,0.5); }
+}
+
+.ofertapartener-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.ofertapartener-features li {
+    padding: 12px 0;
+    position: relative;
+    padding-left: 35px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.ofertapartener-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #ff6b00;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(255,107,0,0.1);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: checkMark 0.5s ease;
+}
+
+@keyframes checkMark {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.ofertapartener-features li:hover {
+    color: #333;
+}
+
+/* ===== STRIPE BUTTONS STYLING ===== */
+.ofertapartener-stripe-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+stripe-buy-button {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.ofertapartener-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: white;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(255,107,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.ofertapartener-btn:hover::before {
+    left: 100%;
+}
+
+.ofertapartener-btn:hover {
+    background: linear-gradient(135deg, #ff5500, #ff7722);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,107,0,0.4);
+}
+
+.ofertapartener-discount-code {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border: 2px dashed #ff6b00;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-discount-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,107,0,0.05), transparent);
+    transition: left 2s ease;
+}
+
+.ofertapartener-discount-code:hover::before {
+    left: 100%;
+}
+
+.ofertapartener-code {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #ff6b00;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ff6b00;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ofertapartener-code:hover {
+    background: #ff6b00;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== AFTERSCHOOL SECTION ===== */
+.ofertapartener-afterschool {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #ffffff 100%);
+    border-radius: 25px;
+    padding: 50px 40px;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.ofertapartener-afterschool::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,107,0,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+}
+
+.ofertapartener-afterschool-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-program-structure {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-structure-title {
+    font-size: 1.8rem;
+    color: #ff6b00;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ofertapartener-program-type {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 15px;
+    border-left: 5px solid #ff6b00;
+}
+
+.ofertapartener-program-type h4 {
+    color: #ff6b00;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ofertapartener-schedule {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ofertapartener-schedule li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255,107,0,0.1);
+}
+
+.ofertapartener-schedule li:last-child {
+    border-bottom: none;
+}
+
+.ofertapartener-program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-program-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertapartener-program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,107,0,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.ofertapartener-program-card:hover::before {
+    left: 100%;
+}
+
+.ofertapartener-program-card:hover {
+    border-color: #ff6b00;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.ofertapartener-program-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff6b00;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-contact-info {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.ofertapartener-contact-title {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.ofertapartener-contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.ofertapartener-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.ofertapartener-contact-icon {
+    color: #ff6b00;
+    font-size: 1.4rem;
+}
+
+/* ===== PAYMENT METHODS ===== */
+.ofertapartener-payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.ofertapartener-payment-methods:hover {
+    opacity: 1;
+}
+
+.ofertapartener-payment-methods i {
+    font-size: 1.8rem;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.ofertapartener-payment-methods i:hover {
+    color: #ff6b00;
+    transform: scale(1.2);
+}
+
+/* ===== SPECIAL BADGES ===== */
+.ofertapartener-popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transform: rotate(12deg);
+    box-shadow: 0 5px 15px rgba(255,107,0,0.3);
+    animation: badgeWiggle 4s ease-in-out infinite;
+}
+
+@keyframes badgeWiggle {
+    0%, 100% { transform: rotate(12deg); }
+    25% { transform: rotate(8deg); }
+    75% { transform: rotate(16deg); }
+}
+
+.ofertapartener-savings-highlight {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+    animation: savingsGlow 3s ease-in-out infinite;
+}
+
+@keyframes savingsGlow {
+    0%, 100% { box-shadow: 0 5px 15px rgba(40,167,69,0.3); }
+    50% { box-shadow: 0 8px 25px rgba(40,167,69,0.5); }
+}
+
+/* ===== EXPLORE LINKS GRID ===== */
+.ofertapartener-explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+   .ofertapartener-benefits-grid {
+       grid-template-columns: 1fr;
+       gap: 25px;
+   }
+   
+   .ofertapartener-packages-grid {
+       grid-template-columns: 1fr;
+       gap: 25px;
+   }
+   
+   .ofertapartener-program-grid {
+       grid-template-columns: 1fr;
+       gap: 20px;
+   }
+   
+   .ofertapartener-explore-grid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .ofertapartener-container {
+       padding: 0 10px;
+   }
+   
+   .ofertapartener-hero {
+       min-height: 50vh;
+       max-height: 50vh;
+       padding: 30px 0;
+   }
+   
+   .ofertapartener-title {
+       font-size: 2.2rem;
+   }
+   
+   .ofertapartener-subtitle {
+       font-size: 1.1rem;
+   }
+   
+   .ofertapartener-logos {
+       gap: 25px;
+   }
+   
+   .ofertapartener-logo {
+       height: 50px;
+       padding: 8px;
+   }
+   
+   .ofertapartener-tabs {
+       flex-direction: column;
+       padding: 10px;
+   }
+   
+   .ofertapartener-tab {
+       min-width: auto;
+       margin-bottom: 10px;
+   }
+   
+   .ofertapartener-afterschool {
+       padding: 30px 20px;
+   }
+   
+   .ofertapartener-contact-details {
+       flex-direction: column;
+       align-items: center;
+   }
+   
+   .ofertapartener-card-header,
+   .ofertapartener-card-body {
+       padding: 25px 20px;
+   }
+   
+   .ofertapartener-explore-grid {
+       grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 480px) {
+   .ofertapartener-section {
+       padding: 25px 0;
+   }
+   
+   .ofertapartener-hero {
+       min-height: 45vh;
+       max-height: 45vh;
+       padding: 25px 0;
+   }
+   
+   .ofertapartener-title {
+       font-size: 1.8rem;
+   }
+   
+   .ofertapartener-subtitle {
+       font-size: 1rem;
+   }
+   
+   .ofertapartener-benefits-title {
+       font-size: 2rem;
+   }
+   
+   .ofertapartener-afterschool-title {
+       font-size: 2rem;
+   }
+   
+   .ofertapartener-discount-badge {
+       padding: 12px 20px;
+       font-size: 1rem;
+   }
+   
+   .ofertapartener-logos {
+       gap: 15px;
+   }
+   
+   .ofertapartener-logo {
+       height: 40px;
+       padding: 6px;
+   }
+}
+
+/* ===== ANIMAȚII AVANSATE ===== */
+.ofertapartener-package-card {
+   animation: slideUpCard 0.8s ease forwards;
+   opacity: 0;
+   transform: translateY(50px);
+}
+
+.ofertapartener-package-card:nth-child(1) { animation-delay: 0.1s; }
+.ofertapartener-package-card:nth-child(2) { animation-delay: 0.3s; }
+.ofertapartener-package-card:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes slideUpCard {
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+.ofertapartener-benefit-card {
+   animation: slideUpBenefit 0.6s ease forwards;
+   opacity: 0;
+   transform: translateY(30px);
+}
+
+.ofertapartener-benefit-card:nth-child(1) { animation-delay: 0.2s; }
+.ofertapartener-benefit-card:nth-child(2) { animation-delay: 0.4s; }
+.ofertapartener-benefit-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes slideUpBenefit {
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+/* ===== ACCESSIBILITY ===== */
+.keyboard-navigation .ofertapartener-tab:focus,
+.keyboard-navigation .ofertapartener-btn:focus,
+.keyboard-navigation .ofertapartener-code:focus {
+   outline: 3px solid #ff6b00;
+   outline-offset: 3px;
+}
+
+/* ===== LOADING STATES ===== */
+.ofertapartener-loading {
+   opacity: 0.7;
+   pointer-events: none;
+   position: relative;
+}
+
+.ofertapartener-loading::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 30px;
+   height: 30px;
+   margin: -15px 0 0 -15px;
+   border: 3px solid #f3f3f3;
+   border-top: 3px solid #ff6b00;
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
+/* ===== NOTIFICĂRI ===== */
+.ofertapartener-notification {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background: linear-gradient(135deg, #28a745, #20c997);
+   color: white;
+   padding: 15px 25px;
+   border-radius: 15px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+   z-index: 10000;
+   transform: translateX(400px);
+   transition: transform 0.4s ease;
+   font-weight: 600;
+}
+
+.ofertapartener-notification.show {
+   transform: translateX(0);
+}
+
+.ofertapartener-notification.error {
+   background: linear-gradient(135deg, #dc3545, #c82333);
+}
