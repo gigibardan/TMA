@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertă Specială Payten - TechMinds Academy</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/partner-base.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stripe JS -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</head>
+
+<body class="theme-payten">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+            </a>
+            <button class="menu-button">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li class="dropdown">
+                    <a href="programare.html">Programare</a>
+                    <div class="dropdown-content">
+                        <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                        <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                        <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                        <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                        <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                        <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                        <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                        <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                        <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                        <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                        <a href="courses/python.html">🐍 Python - Aplicații</a>
+                        <a href="courses/frontend.html">💻 Frontend - Web</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="robotics.html">Robotică</a>
+                    <div class="dropdown-content">
+                        <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                        <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                        <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                        <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">Despre Noi</a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">📞 Contactează-ne</a>
+                        <a href="about.html">👥 Traineri</a>
+                        <a href="galerie.html">📸 Galerie</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="ofertapartener-hero">
+            <div class="ofertapartener-container">
+                <div class="ofertapartener-logos">
+                    <img src="https://techminds-academy.ro/assets/images/logo-techminds-academy.webp"
+                        alt="TechMinds Academy" class="ofertapartener-logo">
+                    <i class="fas fa-handshake"
+                        style="font-size: 2.5rem; color: white; animation: logoFloat 3s ease-in-out infinite;"></i>
+                    <img src="https://www.payten.com/static/images/logo.png" alt="Payten" class="ofertapartener-logo"
+                        style="background: black;">
+                </div>
+                <h1 class="ofertapartener-title">PARTENERIAT EDUCAȚIONAL PAYTEN</h1>
+                <p class="ofertapartener-subtitle">Cursuri de robotică și programare cu discount special pentru
+                    angajații Payten</p>
+                <a href="https://techminds-academy.ro/inscriere" class="ofertapartener-discount-badge"
+                    style="text-decoration: none; display: inline-block; transition: all 0.3s ease; cursor: pointer; color: white !important;"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.2)'">
+                    <i class="fas fa-graduation-cap"></i> Educație premium la prețuri preferențiale
+                </a>
+            </div>
+        </section>
+
+        <!-- Secțiunea cu condiții de eligibilitate -->
+        <section class="ofertapartener-section"
+            style="background: linear-gradient(135deg, #f8f9fa, #ffffff); padding: 30px 0;">
+            <div class="ofertapartener-container">
+                <div class="ofertapartener-orange-requirement"
+                    style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3><i class="fas fa-exclamation-triangle"></i> IMPORTANT - Condiții de eligibilitate</h3>
+                    <p>✔ Reducere aplicabilă exclusiv angajaților Payten<br>
+                        ✔ Pentru a beneficia de această ofertă, înscrierea trebuie realizată cu adresa de email de
+                        companie Payten</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea de Beneficii -->
+        <section class="ofertapartener-benefits">
+            <div class="ofertapartener-container">
+                <h2 class="ofertapartener-benefits-title">
+                    <i class="fas fa-star"></i> Avantajele parteneriatului educațional
+                </h2>
+                <div class="ofertapartener-benefits-grid">
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-percentage ofertapartener-benefit-icon"></i>
+                        <h3>Reduceri substanțiale</h3>
+                        <p>Până la 42% reducere la cursuri și până la 50% reducere la After School pentru angajații
+                            Payten</p>
+                    </div>
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-certificate ofertapartener-benefit-icon"></i>
+                        <h3>Calitate premium garantată</h3>
+                        <p>Traineri certificați și curriculum modern adaptat vârstei și nivelului de experiență</p>
+                    </div>
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-clock ofertapartener-benefit-icon"></i>
+                        <h3>Flexibilitate maximă</h3>
+                        <p>Programe adaptate programului dumneavoastră de lucru și nevoilor familiei</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Taburi de navigare -->
+        <section class="ofertapartener-section">
+            <div class="ofertapartener-container">
+                <div class="ofertapartener-tabs">
+                    <button class="ofertapartener-tab active" data-tab="cursuri">
+                        <i class="fas fa-laptop-code"></i> Cursuri Lunare
+                        <br><small>Până la 42% reducere</small>
+                    </button>
+                    <button class="ofertapartener-tab" data-tab="afterschool">
+                        <i class="fas fa-school"></i> After School Program
+                        <br><small>Până la 50% reducere</small>
+                    </button>
+                </div>
+
+                <!-- Tab Cursuri Lunare -->
+                <div id="cursuri" class="ofertapartener-tab-content active">
+                    <div class="ofertapartener-packages-grid">
+                        <!-- Pachet Programare -->
+                        <div class="ofertapartener-package-card">
+                            <div class="ofertapartener-popular-badge">Popular</div>
+                            <div class="ofertapartener-card-header">
+                                <div class="ofertapartener-card-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="ofertapartener-card-title">Pachet Programare</h3>
+                                <p class="ofertapartener-card-subtitle">Pachet Standard</p>
+                            </div>
+                            <div class="ofertapartener-card-body">
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">640 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">420 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> Economisești 220 RON/lună
+                                    </div>
+                                </div>
+
+                                <ul class="ofertapartener-features">
+                                    <li>4 ședințe de programare pentru dezvoltarea abilităților digitale</li>
+                                    <li>Cursurile sunt adaptate pentru toate nivelurile de experiență</li>
+                                    <li>4 ședințe de curs</li>
+                                    <li>Materiale didactice incluse</li>
+                                    <li>Proiecte practice interactive</li>
+                                    <li>Certificate de participare</li>
+                                </ul>
+
+                                <div class="ofertapartener-discount-code">
+                                    <small>Cod reducere:</small><br>
+                                    <span class="ofertapartener-code">PartenerPayten1</span>
+                                </div>
+
+                                <div class="ofertapartener-stripe-container">
+                                    <stripe-buy-button buy-button-id="buy_btn_1QzKIoL5EMW6XT767pw9mP97"
+                                        publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                        locale="ro">
+                                    </stripe-buy-button>
+                                </div>
+
+                                <div class="ofertapartener-payment-methods">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <i class="fab fa-apple-pay"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pachet Robotică -->
+                        <div class="ofertapartener-package-card">
+                            <div class="ofertapartener-popular-badge">Popular</div>
+                            <div class="ofertapartener-card-header">
+                                <div class="ofertapartener-card-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3 class="ofertapartener-card-title">Pachet Robotică</h3>
+                                <p class="ofertapartener-card-subtitle">Pachet Standard</p>
+                            </div>
+                            <div class="ofertapartener-card-body">
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">640 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">420 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> Economisești 220 RON/lună
+                                    </div>
+                                </div>
+
+                                <ul class="ofertapartener-features">
+                                    <li>4 ședințe de robotică pentru a învăța principiile de bază ale roboticii și
+                                        automatizării</li>
+                                    <li>Cursuri practice cu kit-uri profesionale</li>
+                                    <li>4 ședințe de curs</li>
+                                    <li>Acces la kit-uri robotice</li>
+                                    <li>Dezvoltarea gândirii algoritmice</li>
+                                    <li>Competiții și provocări STEM</li>
+                                </ul>
+
+                                <div class="ofertapartener-discount-code">
+                                    <small>Cod reducere:</small><br>
+                                    <span class="ofertapartener-code">PartenerPayten1</span>
+                                </div>
+
+                                <div class="ofertapartener-stripe-container">
+                                    <stripe-buy-button buy-button-id="buy_btn_1QzKLCL5EMW6XT76ljxQ2JUg"
+                                        publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                        locale="ro">
+                                    </stripe-buy-button>
+                                </div>
+
+                                <div class="ofertapartener-payment-methods">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <i class="fab fa-apple-pay"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pachet Combinat -->
+                        <div class="ofertapartener-package-card">
+                            <div class="ofertapartener-popular-badge"
+                                style="background: linear-gradient(135deg, #28a745, #20c997);">Cel mai avantajos</div>
+                            <div class="ofertapartener-card-header"
+                                style="background: linear-gradient(135deg, #28a745, #20c997);">
+                                <div class="ofertapartener-card-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="ofertapartener-card-title">Pachet Combinat</h3>
+                                <p class="ofertapartener-card-subtitle">Programare + Robotică</p>
+                            </div>
+                            <div class="ofertapartener-card-body">
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">1280 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">750 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> Economisești 530 RON/lună
+                                    </div>
+                                </div>
+
+                                <ul class="ofertapartener-features">
+                                    <li>8 ședințe pe lună (4 programare + 4 robotică)</li>
+                                    <li>Programare ȘI Robotică combinate</li>
+                                    <li>16 ore de educație STEM pe lună</li>
+                                    <li>Proiecte interdisciplinare complexe</li>
+                                    <li>Dezvoltare completă a competențelor digitale</li>
+                                    <li>Cel mai bun preț per oră de învățare</li>
+                                </ul>
+
+                                <div class="ofertapartener-discount-code">
+                                    <small>Cod reducere:</small><br>
+                                    <span class="ofertapartener-code">PartenerPayten2</span>
+                                </div>
+
+                                <div class="ofertapartener-stripe-container">
+                                    <stripe-buy-button buy-button-id="buy_btn_1RTKTbL5EMW6XT76nvQ5VJkt"
+                                        publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                        locale="ro">
+                                    </stripe-buy-button>
+                                </div>
+
+                                <div class="ofertapartener-payment-methods">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <i class="fab fa-apple-pay"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab After School -->
+                <div id="afterschool" class="ofertapartener-tab-content">
+                    <div class="ofertapartener-afterschool">
+                        <h2 class="ofertapartener-afterschool-title">
+                            <i class="fas fa-school"></i> Program Before & After School
+                        </h2>
+
+                        <!-- Structura completă a programului -->
+                        <div class="ofertapartener-program-structure">
+                            <h3 class="ofertapartener-structure-title">Structura Programului</h3>
+
+                            <div class="ofertapartener-program-type">
+                                <h4><i class="fas fa-sun"></i> Before School</h4>
+                                <ul class="ofertapartener-schedule">
+                                    <li><strong>08:00 – 08:30</strong> ~ Preluarea copiilor</li>
+                                    <li><strong>08:30 – 10:30</strong> ~ Recapitularea lecțiilor și efectuarea temelor
+                                    </li>
+                                    <li><strong>10:30 – 11:30</strong> ~ Masă de prânz (regim catering)</li>
+                                </ul>
+                            </div>
+
+                            <div class="ofertapartener-program-type">
+                                <h4><i class="fas fa-moon"></i> After School</h4>
+                                <ul class="ofertapartener-schedule">
+                                    <li><strong>11:00 – 12:00</strong> ~ Preluarea copiilor de la școală + timp
+                                        recreativ</li>
+                                    <li><strong>12:30 – 13:00</strong> ~ Masă de prânz (regim catering)</li>
+                                    <li><strong>13:15 – 15:15</strong> ~ Recapitulare, lecții și teme</li>
+                                    <li><strong>15:30 – 16:00</strong> ~ Gustare</li>
+                                    <li><strong>16:00 – 18:00</strong> ~ Ateliere de robotică & programare, cursuri
+                                        interactive</li>
+                                </ul>
+                            </div>
+
+                            <div class="ofertapartener-program-type">
+                                <h4><i class="fas fa-star"></i> After School Plus (Pentru copiii care termină școala la
+                                    ora 16:00)</h4>
+                                <ul class="ofertapartener-schedule">
+                                    <li><strong>16:00 – 17:00</strong> ~ Preluarea copiilor & activități de relaxare
+                                    </li>
+                                    <li><strong>17:00 – 17:30</strong> ~ Gustare</li>
+                                    <li><strong>17:30 – 18:30</strong> ~ Ateliere educative STEM (robotică, programare)*
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="ofertapartener-program-grid">
+                            <!-- Before School -->
+                            <div class="ofertapartener-program-card">
+                                <h3 class="ofertapartener-program-title">
+                                    <i class="fas fa-sun"></i> Before School
+                                </h3>
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">2200 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">1100 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> 50% reducere
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- After School -->
+                            <div class="ofertapartener-program-card">
+                                <h3 class="ofertapartener-program-title">
+                                    <i class="fas fa-moon"></i> After School
+                                </h3>
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">2750 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">1400 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> 50% reducere
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- After School Plus -->
+                            <div class="ofertapartener-program-card">
+                                <h3 class="ofertapartener-program-title">
+                                    <i class="fas fa-star"></i> Pachet Complet
+                                </h3>
+                                <div class="ofertapartener-price-section">
+                                    <div class="ofertapartener-price-original">3300 RON/lună</div>
+                                    <div class="ofertapartener-price-discounted">2200 RON</div>
+                                    <div class="ofertapartener-price-period">per lună</div>
+                                    <div class="ofertapartener-savings-highlight">
+                                        <i class="fas fa-piggy-bank"></i> 33% reducere
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buton rezervare -->
+                        <div style="text-align: center; margin: 40px 0; position: relative; z-index: 100;">
+                            <div class="ofertapartener-stripe-container" style="position: relative; z-index: 100;">
+                                <stripe-buy-button buy-button-id="buy_btn_1RTKZtL5EMW6XT76CEnZZ3wd"
+                                    publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                                    locale="ro" style="position: relative !important; z-index: 100 !important;">
+                                </stripe-buy-button>
+                            </div>
+                            <p
+                                style="margin-top: 15px; color: #666; font-size: 0.95rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+                                <i class="fas fa-info-circle"></i> Taxa de rezervare 500 de Lei. Taxa de rezervare se
+                                scade din prima rată. Rezervarea
+                                garantează locul pentru copilul dumneavoastră.
+                            </p>
+                        </div>
+
+                        <!-- Informații contact -->
+                        <div class="ofertapartener-contact-info">
+                            <h3 class="ofertapartener-contact-title">
+                                <i class="fas fa-phone-alt"></i> Informații & Înscrieri After School
+                            </h3>
+                            <div class="ofertapartener-contact-details">
+                                <div class="ofertapartener-contact-item">
+                                    <i class="fas fa-envelope ofertapartener-contact-icon"></i>
+                                    <span>office@techminds-academy.ro</span>
+                                </div>
+                                <div class="ofertapartener-contact-item">
+                                    <i class="fas fa-phone ofertapartener-contact-icon"></i>
+                                    <span>+40 758 707 448</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea cu informații despre program -->
+        <section class="ofertapartener-section" style="background: linear-gradient(135deg, #ffffff, #f8f9fa);">
+            <div class="ofertapartener-container">
+                <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: #333; font-weight: 700;">
+                    <i class="fas fa-calendar-alt"></i> Informații importante despre program
+                </h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; position: relative; z-index: 2;">
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-calendar-check ofertapartener-benefit-icon"></i>
+                        <h3>Perioada de preînscriere</h3>
+                        <p>Înscrierile sunt deschise în perioada <strong>01.06.2025 – 30.06.2025</strong>, oferind acces
+                            la pachetele speciale și discounturile pentru participanți.</p>
+                    </div>
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-graduation-cap ofertapartener-benefit-icon"></i>
+                        <h3>Perioada de desfășurare</h3>
+                        <p>Cursurile se vor desfășura în perioada <strong>01.09.2025 – 19.06.2026</strong>, cu sesiuni
+                            organizate săptămânal pentru o progresie eficientă.</p>
+                    </div>
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-sync-alt ofertapartener-benefit-icon"></i>
+                        <h3>Frecvența cursurilor</h3>
+                        <p><strong>1 sesiune/săptămână</strong>, fiecare sesiune având o structură interactivă care
+                            combină teoria cu practica.</p>
+                    </div>
+                    <div class="ofertapartener-benefit-card">
+                        <i class="fas fa-clock ofertapartener-benefit-icon"></i>
+                        <h3>Durata fiecărei sesiuni</h3>
+                        <p>Fiecare sesiune are <strong>90 minute</strong>, timp în care participanții vor lucra la
+                            proiecte inovatoare, dezvoltând gândirea algoritmică și creativă.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links utile -->
+        <section class="ofertapartener-section" style="background: linear-gradient(135deg, #f8f9fa, #ffffff);">
+            <div class="ofertapartener-container">
+                <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: #333; font-weight: 700;">
+                    <i class="fas fa-compass"></i> Explorează mai mult despre TechMinds Academy
+                </h2>
+                <div class="ofertapartener-explore-grid">
+                    <a href="https://techminds-academy.ro/programare"
+                        style="display: block; background: white; padding: 30px; border-radius: 20px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 2px solid transparent;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='var(--brand-primary)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
+                        <i class="fas fa-code"
+                            style="font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; display: block;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem; font-weight: 600;">Cursuri Programare</h3>
+                        <p style="color: #666; margin: 0; line-height: 1.6;">Descoperă gama completă de cursuri de
+                            programare pentru toate vârstele</p>
+                    </a>
+                    <a href="https://techminds-academy.ro/robotics"
+                        style="display: block; background: white; padding: 30px; border-radius: 20px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 2px solid transparent;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='var(--brand-primary)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
+                        <i class="fas fa-robot"
+                            style="font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; display: block;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem; font-weight: 600;">Cursuri Robotică</h3>
+                        <p style="color: #666; margin: 0; line-height: 1.6;">Explorează lumea fascinantă a roboticii și
+                            automatizării</p>
+                    </a>
+                    <a href="https://techminds-academy.ro/galerie"
+                        style="display: block; background: white; padding: 30px; border-radius: 20px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 2px solid transparent;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='var(--brand-primary)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
+                        <i class="fas fa-images"
+                            style="font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; display: block;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem; font-weight: 600;">Galerie Foto</h3>
+                        <p style="color: #666; margin: 0; line-height: 1.6;">Vezi elevii noștri în acțiune și proiectele
+                            realizate</p>
+                    </a>
+                    <a href="https://techminds-academy.ro/inscriere"
+                        style="display: block; background: white; padding: 30px; border-radius: 20px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 2px solid transparent;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='var(--brand-primary)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
+                        <i class="fas fa-user-plus"
+                            style="font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; display: block;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem; font-weight: 600;">Înscriere Online</h3>
+                        <p style="color: #666; margin: 0; line-height: 1.6;">Completează formularul de înscriere în doar
+                            câteva minute</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo-techminds-sigla.png" alt="TechMinds Academy Logo">
+                </div>
+                <p>Dezvoltăm competențele digitale ale generației de mâine prin cursuri interactive de programare și
+                    robotică.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61572403241620" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/official.techminds.academy" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/official-techminds-academy/" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Cursuri Populare</h3>
+                <ul>
+                    <li><a href="courses/scratch.html">🎮 Scratch - Jocuri</a></li>
+                    <li><a href="courses/minecraft.html">⛏️ Minecraft - Modding</a></li>
+                    <li><a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a></li>
+                    <li><a href="courses/python.html">🐍 Python - Aplicații</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navigare Rapidă</h3>
+                <ul>
+                    <li><a href="programare.html">Programare</a></li>
+                    <li><a href="robotics.html">Robotică</a></li>
+                    <li><a href="about.html">Despre noi</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union
+                            Business Center Sector 1, București</span></li>
+                    <li><i class="fas fa-phone"></i> <span>+40 758 707 448</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>office@techminds-academy.ro</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-legal-links">
+                    <a href="politicadeconfidentialitate.html">Politică de Confidențialitate</a>
+                    <span class="separator">|</span>
+                    <a href="politicadecookies.html">Politică de Cookie-uri</a>
+                    <span class="separator">|</span>
+                    <a href="termenisiconditii.html">Termeni și Condiții</a>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy; 2025 TechMinds Academy. Toate drepturile rezervate.</p>
+                </div>
+
+                <div class="footer-anpc-links">
+                    <a href="https://reclamatiisal.anpc.ro/" target="_blank" rel="noopener">
+                        <img src="./assets/images/anpc-sal.png" alt="ANPC - Soluționarea Alternativă a Litigiilor">
+                    </a>
+                    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage"
+                        target="_blank" rel="noopener">
+                        <img src="./assets/images/anpc-sol.png" alt="ANPC - Soluționarea Online a Litigiilor">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="./js/ofertapartener.js"></script>
+</body>
+
+</html>
