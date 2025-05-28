@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Revert price color
             const priceElement = this.querySelector('.ofertapartener-price-discounted');
             if (priceElement) {
-                priceElement.style.color = '#ff6b00';
-                priceElement.style.textShadow = '2px 2px 4px rgba(255,107,0,0.2)';
+                priceElement.style.color = '';  // Șterge inline style
+                priceElement.style.textShadow = ''; // Șterge inline style
             }
             
             const cardContent = this.querySelector('.ofertapartener-card-body');

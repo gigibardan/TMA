@@ -38,18 +38,7 @@
 }
 
 /* ===== CLASE PENTRU COMPANII SPECIFICE ===== */
-/* Orange Theme (default) */
-.theme-orange {
-    --brand-primary: #ff6b00;
-    --brand-secondary: #ff8533;
-    --brand-tertiary: #ffaa66;
-    --brand-accent: #ff5500;
-    --shadow-brand: 0 8px 25px rgba(255, 107, 0, 0.3);
-    --shadow-brand-hover: 0 12px 30px rgba(255, 107, 0, 0.4);
-    --brand-overlay-light: rgba(255, 107, 0, 0.1);
-    --brand-overlay-medium: rgba(255, 107, 0, 0.2);
-    --brand-overlay-dark: rgba(255, 107, 0, 0.3);
-}
+
 
 /* Vodafone Theme */
 
