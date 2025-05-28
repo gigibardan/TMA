@@ -1263,6 +1263,15 @@ stripe-buy-button {
     }
 }
 
+@media (max-width: 370px) {
+    
+    .ofertapartener-hero {
+        min-height: 61vh;
+        max-height: 55vh;
+        padding: 25px 0;
+    }
+
+}
 /* ===== ANIMAȚII AVANSATE ===== */
 .ofertapartener-package-card {
    animation: slideUpCard 0.8s ease forwards;
