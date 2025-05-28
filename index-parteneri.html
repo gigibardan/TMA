@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parteneri TechMinds Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--brand-color);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .partner-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .partner-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--brand-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .partner-info h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .partner-info .industry {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .partner-features {
+            margin: 20px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .feature i {
+            color: var(--brand-color);
+            width: 20px;
+        }
+
+        .partner-link {
+            display: inline-block;
+            background: var(--brand-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .partner-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Culori specifice pentru fiecare companie */
+        .orange { --brand-color: #ff6b00; }
+        .vodafone { --brand-color: #e60000; }
+         .telekom { --brand-color: #e20074; }
+        .evalue { --brand-color: #006C28; }
+        .asee { --brand-color: #26A5DF; }
+        .bithat { --brand-color: #00AEE8; }
+        .payten { --brand-color: #F00E1D; }
+        .contentspeed { --brand-color: #EB262A; }
+        .unicredit { --brand-color: #E00A1E; }
+        .ericsson { --brand-color: #0082C9; }
+
+        .stats {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partner-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-handshake"></i> Parteneri TechMinds Academy</h1>
+            <p>Oferte exclusive pentru angajații companiilor partenere</p>
+        </div>
+
+        <div class="partners-grid">
+            <!-- Orange -->
+            <div class="partner-card orange">
+                <div class="partner-header">
+                    <div class="partner-logo">O</div>
+                    <div class="partner-info">
+                        <h3>Orange România</h3>
+                        <div class="industry">Telecomunicații</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>50% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <span>Programare + Robotică</span>
+                    </div>
+                </div>
+                <a href="oferta-orange.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- Vodafone -->
+            <div class="partner-card vodafone">
+                <div class="partner-header">
+                    <div class="partner-logo">V</div>
+                    <div class="partner-info">
+                        <h3>Vodafone România</h3>
+                        <div class="industry">Telecomunicații</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>50% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <span>Tehnologii moderne</span>
+                    </div>
+                </div>
+                <a href="oferta-vodafone.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+           
+
+            <!-- Telekom -->
+            <div class="partner-card telekom">
+                <div class="partner-header">
+                    <div class="partner-logo">T</div>
+                    <div class="partner-info">
+                        <h3>Telekom România</h3>
+                        <div class="industry">Telecomunicații</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-telekom.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- Evalue International -->
+            <div class="partner-card evalue">
+                <div class="partner-header">
+                    <div class="partner-logo">E</div>
+                    <div class="partner-info">
+                        <h3>Evalue International</h3>
+                        <div class="industry">Consultanță</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>50% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dezvoltare competențe</span>
+                    </div>
+                </div>
+                <a href="oferta-evalue-international.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- ASEE Solutions -->
+            <div class="partner-card asee">
+                <div class="partner-header">
+                    <div class="partner-logo">A</div>
+                    <div class="partner-info">
+                        <h3>ASEE Solutions</h3>
+                        <div class="industry">Software & IT</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-ASEESolutions.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- BitHat Solutions -->
+            <div class="partner-card bithat">
+                <div class="partner-header">
+                    <div class="partner-logo">B</div>
+                    <div class="partner-info">
+                        <h3>BitHat Solutions</h3>
+                        <div class="industry">Software & IT</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-bithat.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- Payten -->
+            <div class="partner-card payten">
+                <div class="partner-header">
+                    <div class="partner-logo">P</div>
+                    <div class="partner-info">
+                        <h3>Payten</h3>
+                        <div class="industry">FinTech & Plăți</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-payten.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- ContentSpeed -->
+            <div class="partner-card contentspeed">
+                <div class="partner-header">
+                    <div class="partner-logo">C</div>
+                    <div class="partner-info">
+                        <h3>ContentSpeed</h3>
+                        <div class="industry">Media & Content</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                  <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-ContentSpeed.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- UniCredit -->
+            <div class="partner-card unicredit">
+                <div class="partner-header">
+                    <div class="partner-logo">U</div>
+                    <div class="partner-info">
+                        <h3>UniCredit Bank</h3>
+                        <div class="industry">Banking & Finance</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-unicredit.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+
+            <!-- Ericsson -->
+            <div class="partner-card ericsson">
+                <div class="partner-header">
+                    <div class="partner-logo">Er</div>
+                    <div class="partner-info">
+                        <h3>Ericsson</h3>
+                        <div class="industry">Telecom & 5G</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-percentage"></i>
+                        <span>Până la 42% reducere cursuri</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>49% reducere After School</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Educație STEM</span>
+                    </div>
+                </div>
+                <a href="oferta-ericsson.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
+        </div>
+
+        <!-- Statistici -->
+        <div class="stats">
+            <h2><i class="fas fa-chart-bar"></i> Statistici Parteneriate</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Companii Partenere</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Reducere Maximă</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Angajați Beneficiari</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
