@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,7 @@
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -68,7 +69,7 @@
 
         .partner-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .partner-header {
@@ -133,20 +134,49 @@
 
         .partner-link:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Culori specifice pentru fiecare companie */
-        .orange { --brand-color: #ff6b00; }
-        .vodafone { --brand-color: #e60000; }
-         .telekom { --brand-color: #e20074; }
-        .evalue { --brand-color: #006C28; }
-        .asee { --brand-color: #26A5DF; }
-        .bithat { --brand-color: #00AEE8; }
-        .payten { --brand-color: #F00E1D; }
-        .contentspeed { --brand-color: #EB262A; }
-        .unicredit { --brand-color: #E00A1E; }
-        .ericsson { --brand-color: #0082C9; }
+        .orange {
+            --brand-color: #ff6b00;
+        }
+
+        .vodafone {
+            --brand-color: #e60000;
+        }
+
+        .telekom {
+            --brand-color: #e20074;
+        }
+
+        .evalue {
+            --brand-color: #006C28;
+        }
+
+        .asee {
+            --brand-color: #26A5DF;
+        }
+
+        .bithat {
+            --brand-color: #00AEE8;
+        }
+
+        .payten {
+            --brand-color: #F00E1D;
+        }
+
+        .contentspeed {
+            --brand-color: #EB262A;
+        }
+
+        .unicredit {
+            --brand-color: #E00A1E;
+        }
+
+        .ericsson {
+            --brand-color: #0082C9;
+        }
 
         .stats {
             text-align: center;
@@ -154,7 +184,7 @@
             padding: 30px;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .stats h2 {
@@ -189,11 +219,11 @@
             .header h1 {
                 font-size: 2rem;
             }
-            
+
             .partners-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .partner-header {
                 flex-direction: column;
                 text-align: center;
@@ -201,6 +231,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -265,7 +296,7 @@
                 </a>
             </div>
 
-           
+
 
             <!-- Telekom -->
             <div class="partner-card telekom">
@@ -417,7 +448,7 @@
                     </div>
                 </div>
                 <div class="partner-features">
-                  <div class="feature">
+                    <div class="feature">
                         <i class="fas fa-percentage"></i>
                         <span>Până la 42% reducere cursuri</span>
                     </div>
@@ -490,6 +521,39 @@
                     <i class="fas fa-arrow-right"></i> Vezi Oferta
                 </a>
             </div>
+
+
+            <!-- Școala Gimnazială "Vasile Alecsandri" -->
+            <div class="partner-card scoala-alecsandri">
+                <div class="partner-header">
+                    <div class="partner-logo">VA</div>
+                    <div class="partner-info">
+                        <h3>Școala Gimnazială "Vasile Alecsandri"</h3>
+                        <div class="industry">Educație & Învățământ</div>
+                    </div>
+                </div>
+                <div class="partner-features">
+                    <div class="feature">
+                        <i class="fas fa-school"></i>
+                        <span>Program After School complet</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <span>Robotică & Programare incluse</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Masă + gustare incluse</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Program 11:30 - 18:00</span>
+                    </div>
+                </div>
+                <a href="oferta-scoala-alecsandri.html" class="partner-link">
+                    <i class="fas fa-arrow-right"></i> Vezi Oferta
+                </a>
+            </div>
         </div>
 
         <!-- Statistici -->
@@ -508,9 +572,10 @@
                     <div class="stat-number">1000+</div>
                     <div class="stat-label">Angajați Beneficiari</div>
                 </div>
-                
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
