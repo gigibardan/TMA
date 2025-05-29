@@ -225,6 +225,25 @@
     --brand-overlay-dark: rgba(0, 130, 201, 0.3);
 }
 
+/* Școala Gimnazială "Vasile Alecsandri" Theme */
+.theme-scoala-alecsandri {
+    --brand-primary: #1E88E5;
+    --brand-secondary: #42A5F5;
+    --brand-tertiary: #64B5F6;
+    --brand-accent: #1565C0;
+    
+    /* Gradient-uri actualizate pentru Școala Alecsandri */
+    --gradient-primary: linear-gradient(135deg, #1E88E5 0%, #42A5F5 30%, #64B5F6 70%, #1E88E5 100%);
+    --gradient-secondary: linear-gradient(135deg, #1E88E5, #42A5F5);
+    --gradient-card: linear-gradient(135deg, #1E88E5, #42A5F5);
+    
+    --shadow-brand: 0 8px 25px rgba(30, 136, 229, 0.3);
+    --shadow-brand-hover: 0 12px 30px rgba(30, 136, 229, 0.4);
+    --brand-overlay-light: rgba(30, 136, 229, 0.1);
+    --brand-overlay-medium: rgba(30, 136, 229, 0.2);
+    --brand-overlay-dark: rgba(30, 136, 229, 0.3);
+}
+
 /* ===== STILURI GENERALE FOLOSIND VARIABILELE ===== */
 .ofertapartener-container {
     max-width: 1200px;
@@ -498,7 +517,7 @@
     line-height: 1.6;
 }
 
-/* ===== TABURI NAVIGARE ===== */
+/* ===== TABURI NAVIGARE - Subtle Fill ===== */
 .ofertapartener-tabs {
     display: flex;
     justify-content: center;
@@ -514,15 +533,15 @@
 .ofertapartener-tab {
     flex: 1;
     min-width: 250px;
-    background: transparent;
-    border: 2px solid transparent;
+    background: var(--brand-overlay-light); /* Fundal deschis 10% din culoarea brand-ului */
+    border: 2px solid var(--brand-overlay-medium); /* Bordură subtilă */
     padding: 20px 30px;
     border-radius: 15px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: var(--text-secondary);
+    color: var(--brand-primary); /* Text în culoarea brand-ului */
     position: relative;
     overflow: hidden;
 }
@@ -551,11 +570,16 @@
 }
 
 .ofertapartener-tab:hover {
-    background: var(--gradient-secondary);
-    color: var(--white);
+    background: var(--brand-overlay-medium); /* Hover cu 20% opacity */
+    color: var(--brand-primary);
     transform: translateY(-2px);
+    border-color: var(--brand-primary);
 }
 
+/* Asigură-te că iconurile sunt și ele în culoarea brand-ului */
+.ofertapartener-tab i {
+    color: inherit;
+}
 /* ===== CONȚINUT TABURI ===== */
 .ofertapartener-tab-content {
     display: none;

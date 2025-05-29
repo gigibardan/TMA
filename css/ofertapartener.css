@@ -382,7 +382,7 @@
     box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
-.ofertapartener-package-card:hover .ofertapartener-price-discounted {
+.ofertapartener-package-card:hover .ofertapartener-price-discounted-old {
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
@@ -466,7 +466,7 @@
     position: relative;
 }
 
-.ofertapartener-price-discounted {
+.ofertapartener-price-discounted-old {
     font-size: 2.3rem;
     font-weight: 800;
     color: #ff6b00;
