@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="facebook-domain-verification" content="satqso1bo59jranrci40lcyf0gakw0"/>
+
+    <!-- Google Tag Manager -->
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PK2RQLDG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMinds Academy | Educație și Inovație în Tehnologie</title>
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css?v=1.3">
+    <link rel="stylesheet" href="./css/popup.css">
+        <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1478793576433088');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1478793576433088&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+        <!-- Buton sticky VR + text -->
+        <div id="vrSticky">
+            <button id="vrButton" aria-label="Deschide turul virtual 360°">
+            <i class="fas fa-vr-cardboard"></i>
+            </button>
+            <div id="vrLabel">Explorează turul 360°</div>
+        </div>
+  
+
+        <!-- Modal cu iframe -->
+        <div id="vrModal" class="vr-modal">
+            <div class="vr-modal-content">
+                <button class="close-btn" onclick="document.getElementById('vrModal').style.display='none'">&times;</button>
+                <iframe src="https://360.fotografie-imobiliara.ro/oFzOcZ3" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen
+                mozallowfullscreen></iframe>
+            </div>
+        </div>
+
+        <script>
+            const vrButton = document.getElementById("vrButton");
+            const vrModal = document.getElementById("vrModal");
+            const vrContent = document.querySelector(".vr-modal-content");
+        
+            // Deschidere la click pe buton
+            vrButton.onclick = () => {
+                vrModal.style.display = "flex";
+            };
+        
+            // Închidere la ESC
+            window.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    vrModal.style.display = "none";
+                }
+            });
+        
+            // Închidere când se face click în afara iframe-ului
+            vrModal.addEventListener("click", (e) => {
+                if (!vrContent.contains(e.target)) {
+                    vrModal.style.display = "none";
+                }
+            });
+
+            vrButton.onclick = () => {
+            vrModal.style.display = "flex";
+            document.body.classList.add("vr-open");
+        };
+
+            window.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    vrModal.style.display = "none";
+                    document.body.classList.remove("vr-open");
+                }
+            });
+
+            vrModal.addEventListener("click", (e) => {
+                if (!vrContent.contains(e.target)) {
+                    vrModal.style.display = "none";
+                    document.body.classList.remove("vr-open");
+                }
+            });
+
+        </script>
+        
+
+</head>
+ 
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK2RQLDG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+        </a>  
+        <button class="menu-button">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a href="programare.html">Programare</a>
+                <div class="dropdown-content">
+                    <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                    <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                    <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                    <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                    <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                    <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                    <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                    <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                    <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                    <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                    <a href="courses/python.html">🐍 Python - Aplicații</a>
+                    <a href="courses/frontend.html">💻 Frontend - Web</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="robotics.html">Robotică</a>
+                <div class="dropdown-content">
+                    <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                    <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                    <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                    <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="about.html">Despre Noi</a>
+                <div class="dropdown-content">
+                    <a href="contact.html">📞 Contactează-ne</a>
+                    <a href="about.html">👥 Traineri</a>
+                    <a href="galerie.html">📸 Galerie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="particle-container" id="particles-js"></div>
+        
+        <!-- Tech decorations -->
+        <div class="tech-decoration"></div>
+        <div class="tech-decoration"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="tech-title">ȘCOALĂ DE ROBOTICĂ ȘI PROGRAMARE</h1>
+                <p class="tech-description">Într-o eră marcată de avansuri tehnologice rapide și constante, TechMinds Academy este locul unde imaginația prinde viață prin tehnologie!</p>
+                <div class="cta-container">
+                    <a href="inscriere.html" class="cta-button primary-cta">Înscrie-te chiar acum</a>
+                    <a href="pachete.html" class="cta-button secondary-cta">Costuri</a>
+                </div>
+            </div>
+            <div class="hero-logo">
+                <img src="./assets/images/logo-techminds-academy.webp" alt="TechMinds Academy Logo">
+            </div>
+        </div>
+        
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track" id="mainCarousel">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/techminds_016.webp" alt="Imagine 1" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_020.webp" alt="Imagine 2" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_065.webp" alt="Imagine 3" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_098.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_002.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_061.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_102.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_134.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_148.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_070.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/techminds_113.webp" alt="Imagine 4" class="carousel-img">
+                    </div>
+                    <!-- Poți adăuga mai multe imagini aici dacă dorești -->
+                </div>
+                
+                <button class="carousel-control carousel-prev" id="prevBtn">&lt;</button>
+                <button class="carousel-control carousel-next" id="nextBtn">&gt;</button>
+                
+                <div class="carousel-indicators">
+                    <!-- Indicatorii vor fi generați dinamic via JavaScript -->
+                </div>
+            </div>
+            <div class="gallery-access">
+                <a href="galerie.html" class="gallery-link">Vezi galeria completă <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+       
+    </section>
+<body>
+    
+   <!-- Courses Section -->
+<section class="courses-section">
+    <div class="tech-grid">
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+    </div>
+    
+    <div class="courses-container">
+        <h2 class="section-title">Descoperă Viitorul Tehnologiei</h2>
+        <p class="section-description">Alege drumul tău în lumea digitală și dezvoltă-ți abilitățile care vor modela viitorul</p>
+        
+        <div class="courses-grid">
+            <!-- Programming Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="./assets/images/programare2.webp" alt="Programare">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M8 16L4 12L8 8M16 8L20 12L16 16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Programare</h3>
+                        <p>Descoperă arta programării prin intermediul tehnologiilor moderne. De la primii pași în Scratch până la dezvoltarea aplicațiilor în Python, îți vom ghida călătoria în lumea codului. Dezvoltă gândirea algoritmică și creează propriile tale aplicații într-un mediu educațional interactiv și stimulant.</p>
+                        <a href="programare.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Robotics Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="./assets/images/robotica2.webp" alt="Robotică">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Robotică</h3>
+                        <p>Construiește, programează și dă viață roboților folosind tehnologii de ultimă generație. Cu LEGO Education, micro:bit și Arduino, vei explora fascinanta lume a roboticii într-un mod practic și captivant.</p>
+                        <a href="robotics.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Dev Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="./assets/images/gamedev2.webp" alt="Game Development">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Game Development</h3>
+                        <p>Transformă-ți pasiunea pentru jocuri într-o abilitate creativă. De la Minecraft și Roblox până la motoare de joc profesionale ca Godot, vei învăța să creezi propriile tale lumi virtuale și experiențe interactive.</p>
+                        <a href="programare.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Dev Card -->
+            <div class="course-card">
+                <div class="card-background">
+                    <img src="./assets/images/webdev2.webp" alt="Web Development">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <div class="icon-glow"></div>
+                        <svg viewBox="0 0 24 24" class="tech-icon">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Web Development</h3>
+                        <p>Pășește în lumea dezvoltării web moderne. De la bazele HTML și CSS până la JavaScript și framework-uri moderne, vei învăța să creezi site-uri web interactive și aplicații web captivante.</p>
+                        <a href="./courses/frontend.html" class="card-button">
+                            <span>Explorează cursurile</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="tech-particles"></div>
+    <div class="benefits-container">
+        <h2 class="benefits-title">De ce să alegi TechMinds Academy?</h2>
+        
+        <div class="benefits-grid">
+            <!-- Metodologie -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Metodologie Inovativă</h3>
+                    <p>Combinăm învățarea practică cu teoria într-un mod interactiv și antrenant. Copiii învață prin proiecte reale și experimente captivante.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Mentori -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Mentori Dedicați</h3>
+                    <p>Echipa noastră de instructori pasionați ghidează fiecare elev în parte, adaptând predarea la stilul individual de învățare.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Echipamente -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Tehnologie de Ultimă Oră</h3>
+                    <p>Utilizăm cele mai noi tehnologii și echipamente, oferind copiilor acces la instrumente profesionale de învățare.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+
+            <!-- Proiecte -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg class="tech-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M12 22V15.5" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <path d="M22 8.5L12 15.5L2 8.5" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="benefit-content">
+                    <h3>Proiecte Creative</h3>
+                    <p>Fiecare curs culminează cu proiecte practice spectaculoase, unde copiii își pot demonstra abilitățile dobândite.</p>
+                </div>
+                <div class="tech-circuit"></div>
+            </div>
+        </div>
+
+        <div class="methodology-showcase">
+            <div class="showcase-content">
+                <h3>Explorează, Creează, Inovează</h3>
+                <p>La TechMinds Academy, învățarea este o aventură tehnologică</p>
+                <div class="showcase-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Elevi Fericiți</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Proiecte Realizate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfacție</span>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-visuals">
+                <div class="tech-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section company-info">
+            <div class="footer-logo">
+                <img src="./assets/images/logo-techminds-sigla.png" alt="TechMinds Academy Logo">
+            </div>
+            <p>Dezvoltăm competențele digitale ale generației de mâine prin cursuri interactive de programare și robotică.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61572403241620" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/official.techminds.academy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/official-techminds-academy/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Cursuri Populare</h3>
+            <ul>
+                <li><a href="courses/scratch.html">🎮 Scratch - Jocuri</a></li>
+                <li><a href="courses/minecraft.html">⛏️ Minecraft - Modding</a></li>
+                <li><a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a></li>
+                <li><a href="courses/python.html">🐍 Python - Aplicații</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Navigare Rapidă</h3>
+            <ul>
+                <li><a href="programare.html">Programare</a></li>
+                <li><a href="robotics.html">Robotică</a></li>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact-info">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center Sector 1, București</span></li>
+                <li><i class="fas fa-phone"></i> <span>+40 758 707 448</span></li>
+                <li><i class="fas fa-envelope"></i> <span>office@techminds-academy.ro</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-legal-links">
+                <a href="politicadeconfidentialitate.html">Politică de Confidențialitate</a>
+                <span class="separator">|</span>
+                <a href="politicadecookies.html">Politică de Cookie-uri</a>
+                <span class="separator">|</span>
+                <a href="termenisiconditii.html">Termeni și Condiții</a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechMinds Academy. Toate drepturile rezervate.</p>
+            </div>
+            
+            <div class="footer-anpc-links">
+                <a href="https://reclamatiisal.anpc.ro/" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sal.png" alt="ANPC - Soluționarea Alternativă a Litigiilor">
+                </a>
+                <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank" rel="noopener">
+                    <img src="./assets/images/anpc-sol.png" alt="ANPC - Soluționarea Online a Litigiilor">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+   
+
+<script src="./js/courses.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/maincarussel.js"></script>
+
+
+
+
+</body>
+</html>
