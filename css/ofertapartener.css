@@ -266,8 +266,7 @@
     margin: 0;
     line-height: 1.6;
 }
-
-/* ===== TABURI NAVIGARE ===== */
+/* ===== TABURI NAVIGARE - Subtle Fill pentru Orange ===== */
 .ofertapartener-tabs {
     display: flex;
     justify-content: center;
@@ -283,15 +282,15 @@
 .ofertapartener-tab {
     flex: 1;
     min-width: 250px;
-    background: transparent;
-    border: 2px solid transparent;
+    background: rgba(255, 107, 0, 0.1); /* Fundal deschis 10% Orange */
+    border: 2px solid rgba(255, 107, 0, 0.2); /* Bordură subtilă Orange */
     padding: 20px 30px;
     border-radius: 15px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #666;
+    color: #ff6b00; /* Text în culoarea Orange */
     position: relative;
     overflow: hidden;
 }
@@ -320,11 +319,16 @@
 }
 
 .ofertapartener-tab:hover {
-    background: linear-gradient(135deg, #ff8533, #ffaa66);
-    color: white;
+    background: rgba(255, 107, 0, 0.2); /* Hover cu 20% opacity Orange */
+    color: #ff6b00;
     transform: translateY(-2px);
+    border-color: #ff6b00;
 }
 
+/* Asigură-te că iconurile sunt și ele în culoarea Orange */
+.ofertapartener-tab i {
+    color: inherit;
+}
 /* ===== CONȚINUT TABURI ===== */
 .ofertapartener-tab-content {
     display: none;
