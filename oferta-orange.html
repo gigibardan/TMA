@@ -626,6 +626,84 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="./js/ofertapartener.js"></script>
+
+    <!-- TRACKING PARTENERI - START -->
+<script>
+// Configurează tracking-ul pentru această pagină
+window.dataLayer = window.dataLayer || [];
+
+// Event când se încarcă pagina
+window.dataLayer.push({
+    'event': 'partner_page_loaded',
+    'partner_name': 'Orange',
+    'partner_theme': 'theme-orange',
+    'course_discount': '42',
+    'afterschool_discount': '50'
+});
+
+// Așteaptă să se încarce pagina complet
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Tracking partner: Orange'); // Pentru debug
+    
+    // 1. TRACK BUTONUL PRINCIPAL "ÎNSCRIE-TE ACUM"
+    var mainButton = document.querySelector('.ofertapartener-discount-badge');
+    if (mainButton) {
+        mainButton.addEventListener('click', function() {
+            window.dataLayer.push({
+                'event': 'partner_main_button_click',
+                'partner_name': 'Orange',
+                'button_text': 'Înscrie-te acum',
+                'action_type': 'enrollment_redirect'
+            });
+            console.log('Clicked main button for: Orange');
+        });
+    }
+    
+    // 2. TRACK TABURILE (Cursuri vs After School)
+    var tabs = document.querySelectorAll('.ofertapartener-tab');
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var tabName = this.getAttribute('data-tab');
+            window.dataLayer.push({
+                'event': 'partner_tab_click',
+                'partner_name': 'Orange',
+                'tab_name': tabName,
+                'tab_text': this.textContent.trim()
+            });
+            console.log('Clicked tab:', tabName, 'for partner:', 'Orange');
+        });
+    });
+    
+    // 3. TRACK BUTOANELE STRIPE (toate)
+    // Așteaptă puțin ca Stripe să încarce butoanele
+    setTimeout(function() {
+        var stripeButtons = document.querySelectorAll('stripe-buy-button');
+        stripeButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                // Încearcă să detecteze tipul de buton din context
+                var buttonType = 'unknown';
+                var parentCard = this.closest('.ofertapartener-package-card');
+                if (parentCard) {
+                    var cardTitle = parentCard.querySelector('.ofertapartener-card-title');
+                    if (cardTitle) {
+                        buttonType = cardTitle.textContent.trim();
+                    }
+                }
+                
+                window.dataLayer.push({
+                    'event': 'partner_stripe_click',
+                    'partner_name': 'Orange',
+                    'button_index': index,
+                    'button_type': buttonType,
+                    'stripe_button_id': this.getAttribute('buy-button-id')
+                });
+                console.log('Clicked Stripe button:', buttonType, 'for partner:', 'Orange');
+            });
+        });
+    }, 2000); // Așteaptă 2 secunde ca Stripe să încarce
+});
+</script>
+<!-- TRACKING PARTENERI - END -->
 </body>
 
 </html>

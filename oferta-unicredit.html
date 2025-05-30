@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertă Specială unicredit - TechMinds Academy</title>
+    <title>Ofertă Specială Unicredit - TechMinds Academy</title>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="./css/style.css">
@@ -75,11 +75,11 @@
                         alt="TechMinds Academy" class="ofertapartener-logo">
                     <i class="fas fa-handshake"
                         style="font-size: 2.5rem; color: white; animation: logoFloat 3s ease-in-out infinite;"></i>
-                    <img src="https://www.unicredit.ro/etc/designs/cee2020-pws-ro/img/logos/logo_ro.svg" alt="unicredit" class="ofertapartener-logo">
+                    <img src="https://www.unicredit.ro/etc/designs/cee2020-pws-ro/img/logos/logo_ro.svg" alt="Unicredit" class="ofertapartener-logo">
                 </div>
-                <h1 class="ofertapartener-title">PARTENERIAT EDUCAȚIONAL unicredit</h1>
+                <h1 class="ofertapartener-title">PARTENERIAT EDUCAȚIONAL UNICREDIT</h1>
                 <p class="ofertapartener-subtitle">Cursuri de robotică și programare cu discount special pentru
-                    angajații unicredit</p>
+                    angajații Unicredit</p>
                 <a href="https://techminds-academy.ro/inscriere" class="ofertapartener-discount-badge"
                     style="text-decoration: none; display: inline-block; transition: all 0.3s ease; cursor: pointer; color: white !important; text-align: center; line-height: 1.4;"
                     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)'"
@@ -100,9 +100,9 @@
                 <div class="ofertapartener-orange-requirement"
                     style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <h3><i class="fas fa-exclamation-triangle"></i> IMPORTANT - Condiții de eligibilitate</h3>
-                    <p>✔ Reducere aplicabilă exclusiv angajaților unicredit<br>
+                    <p>✔ Reducere aplicabilă exclusiv angajaților Unicredit<br>
                         ✔ Pentru a beneficia de această ofertă, înscrierea trebuie realizată cu adresa de email de
-                        companie unicredit</p>
+                        companie Unicredit</p>
                 </div>
             </div>
         </section>
@@ -117,9 +117,9 @@
                     <div class="ofertapartener-benefit-card">
                         <i class="fas fa-percentage ofertapartener-benefit-icon"></i>
                         <h3>Reduceri substanțiale</h3>
-                        <p>Până la 42% reducere la cursuri și până la 50%
+                        <p>Până la 42% reducere la cursuri și până la 49%
                             reducere la After School pentru angajații
-                            unicredit</p>
+                            Unicredit</p>
                     </div>
                     <div class="ofertapartener-benefit-card">
                         <i class="fas fa-certificate ofertapartener-benefit-icon"></i>
@@ -393,7 +393,7 @@
                                     </div>
                                     <div class="ofertapartener-price-period">per lună</div>
                                     <div class="ofertapartener-savings-highlight">
-                                        <i class="fas fa-piggy-bank"></i> 50% reducere
+                                        <i class="fas fa-piggy-bank"></i> 49% reducere
                                     </div>
                                 </div>
                             </div>
@@ -626,6 +626,84 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="./js/ofertapartener.js"></script>
+
+    <!-- TRACKING PARTENERI - START -->
+<script>
+// Configurează tracking-ul pentru această pagină
+window.dataLayer = window.dataLayer || [];
+
+// Event când se încarcă pagina
+window.dataLayer.push({
+    'event': 'partner_page_loaded',
+    'partner_name': 'Unicredit',
+    'partner_theme': 'theme-unicredit',
+    'course_discount': '42',
+    'afterschool_discount': '49'
+});
+
+// Așteaptă să se încarce pagina complet
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Tracking partner: Unicredit'); // Pentru debug
+    
+    // 1. TRACK BUTONUL PRINCIPAL "ÎNSCRIE-TE ACUM"
+    var mainButton = document.querySelector('.ofertapartener-discount-badge');
+    if (mainButton) {
+        mainButton.addEventListener('click', function() {
+            window.dataLayer.push({
+                'event': 'partner_main_button_click',
+                'partner_name': 'Unicredit',
+                'button_text': 'Înscrie-te acum',
+                'action_type': 'enrollment_redirect'
+            });
+            console.log('Clicked main button for: Unicredit');
+        });
+    }
+    
+    // 2. TRACK TABURILE (Cursuri vs After School)
+    var tabs = document.querySelectorAll('.ofertapartener-tab');
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var tabName = this.getAttribute('data-tab');
+            window.dataLayer.push({
+                'event': 'partner_tab_click',
+                'partner_name': 'Unicredit',
+                'tab_name': tabName,
+                'tab_text': this.textContent.trim()
+            });
+            console.log('Clicked tab:', tabName, 'for partner:', 'Unicredit');
+        });
+    });
+    
+    // 3. TRACK BUTOANELE STRIPE (toate)
+    // Așteaptă puțin ca Stripe să încarce butoanele
+    setTimeout(function() {
+        var stripeButtons = document.querySelectorAll('stripe-buy-button');
+        stripeButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                // Încearcă să detecteze tipul de buton din context
+                var buttonType = 'unknown';
+                var parentCard = this.closest('.ofertapartener-package-card');
+                if (parentCard) {
+                    var cardTitle = parentCard.querySelector('.ofertapartener-card-title');
+                    if (cardTitle) {
+                        buttonType = cardTitle.textContent.trim();
+                    }
+                }
+                
+                window.dataLayer.push({
+                    'event': 'partner_stripe_click',
+                    'partner_name': 'Unicredit',
+                    'button_index': index,
+                    'button_type': buttonType,
+                    'stripe_button_id': this.getAttribute('buy-button-id')
+                });
+                console.log('Clicked Stripe button:', buttonType, 'for partner:', 'Unicredit');
+            });
+        });
+    }, 2000); // Așteaptă 2 secunde ca Stripe să încarce
+});
+</script>
+<!-- TRACKING PARTENERI - END -->
 </body>
 
 </html>
