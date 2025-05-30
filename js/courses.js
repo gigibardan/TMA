@@ -245,8 +245,6 @@ function insertPacheteLinkInNavbar() {
     }
 }
 
-// Executăm funcția după ce DOM-ul a fost încărcat complet
-document.addEventListener('DOMContentLoaded', insertPacheteLinkInNavbar);
 
 // Script pentru înlocuirea automată a numărului de telefon
 function replacePhoneNumber() {
@@ -286,3 +284,7 @@ if (document.readyState === 'loading') {
 } else {
     replacePhoneNumber();
 }
+
+// Executăm funcția după ce DOM-ul a fost încărcat complet
+document.addEventListener('DOMContentLoaded', insertPacheteLinkInNavbar);
+
