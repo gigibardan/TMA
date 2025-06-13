@@ -11,7 +11,7 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechMinds Magic Week | Ateliere de Vară 2025 | TechMinds Academy</title>
+    <title>TechMinds Magic Week - Afterschool 2025 | TechMinds Academy</title>
     
     <!-- Common CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -37,14 +37,17 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        /* Magic Week Specific Styles */
+        /* Enhanced Magic Week Styles */
         .magic-week-container {
             overflow-x: hidden;
+            background: #000;
         }
 
         .magic-hero {
-            min-height: 80vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 70vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #667eea 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -52,6 +55,31 @@
             justify-content: center;
             padding: 0;
             margin: 0;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .magic-cosmic-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 1px, transparent 2px),
+                radial-gradient(circle at 40% 60%, rgba(138, 43, 226, 0.1) 1px, transparent 2px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            animation: cosmicDrift 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes cosmicDrift {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-100px) translateY(-100px); }
         }
 
         .magic-floating-particles {
@@ -66,29 +94,53 @@
 
         .magic-particle {
             position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.8);
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
-            animation: magicFloat 6s infinite ease-in-out;
+            animation: magicFloat 8s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .magic-particle:nth-child(2n) {
-            background: rgba(255, 215, 0, 0.8);
-            animation-duration: 8s;
+            background: rgba(255, 215, 0, 0.9);
+            animation-duration: 10s;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
         }
 
         .magic-particle:nth-child(3n) {
-            background: rgba(138, 43, 226, 0.8);
-            animation-duration: 10s;
+            background: rgba(138, 43, 226, 0.9);
+            animation-duration: 12s;
+            box-shadow: 0 0 12px rgba(138, 43, 226, 0.5);
+        }
+
+        .magic-particle:nth-child(4n) {
+            background: rgba(78, 205, 196, 0.9);
+            animation-duration: 14s;
+            box-shadow: 0 0 18px rgba(78, 205, 196, 0.5);
         }
 
         @keyframes magicFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            50% { transform: translateY(-80vh) rotate(180deg); opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg) scale(0); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+            50% { 
+                transform: translateY(-100vh) rotate(180deg) scale(1.5); 
+                opacity: 1; 
+            }
+            90% { 
+                opacity: 1; 
+                transform: scale(0.5);
+            }
+            100% { 
+                transform: translateY(-120vh) rotate(360deg) scale(0); 
+                opacity: 0; 
+            }
         }
 
         .magic-hero-content {
@@ -97,107 +149,160 @@
             z-index: 2;
             position: relative;
             max-width: 90%;
-            animation: magicFadeInUp 1s ease-out;
+            animation: magicFadeInUp 1.5s ease-out;
         }
 
         @keyframes magicFadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(80px) scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
 
         .magic-title {
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 6rem);
             font-weight: 900;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #ffdd59, #ff6b6b, #4ecdc4);
-            background-size: 300% 300%;
+            background: linear-gradient(45deg, #fff, #ffdd59, #ff6b6b, #4ecdc4, #fff);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: magicGradient 3s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            animation: magicRainbow 4s ease-in-out infinite;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+            position: relative;
         }
 
-        @keyframes magicGradient {
+        .magic-title::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 20px;
+            animation: magicGlow 3s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes magicRainbow {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
 
+        @keyframes magicGlow {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.7; transform: scale(1.05); }
+        }
+
         .magic-subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-size: clamp(1.3rem, 3.5vw, 2.5rem);
             margin-bottom: 2rem;
             opacity: 0;
-            animation: magicFadeIn 1s ease-out 0.5s forwards;
+            animation: magicSlideIn 1.5s ease-out 0.5s forwards;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
 
-        .magic-dates {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+        .magic-ages-badge {
+            display: inline-block;
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
             margin-bottom: 3rem;
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 1.2rem 2.5rem;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 50px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             opacity: 0;
-            animation: magicFadeIn 1s ease-out 1s forwards;
-        }
-
-        @keyframes magicFadeIn {
-            to { opacity: 1; }
-        }
-
-        .magic-cta-container {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .magic-cta-button {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
+            animation: magicSlideIn 1.5s ease-out 1s forwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
-            cursor: pointer;
-            opacity: 0;
-            animation: magicSlideUp 0.8s ease-out 1.5s forwards;
         }
 
-        @keyframes magicSlideUp {
+        .magic-ages-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: magicShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes magicShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes magicSlideIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-            to {
+            to { 
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
+        .magic-cta-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .magic-cta-button {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0;
+            animation: magicBounceIn 1s ease-out 1.5s forwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes magicBounceIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
         .magic-cta-primary {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffdd59);
+            background-size: 300% 300%;
             color: white;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            animation: magicRainbow 3s ease-in-out infinite;
         }
 
         .magic-cta-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.5);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(255, 107, 107, 0.4);
         }
 
         .magic-cta-secondary {
@@ -210,25 +315,436 @@
         .magic-cta-secondary:hover {
             background: white;
             color: #764ba2;
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Schedule Timeline */
+        .magic-schedule {
+            padding: 5rem 1rem;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magic-schedule::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+            animation: scheduleGlow 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes scheduleGlow {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; }
+        }
+
+        .magic-schedule-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #fff, #ffdd59, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+        }
+
+        .magic-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .magic-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #ff6b6b, #4ecdc4, #ffdd59, #ff6b6b);
+            background-size: 100% 200%;
+            animation: timelineFlow 4s ease-in-out infinite;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        @keyframes timelineFlow {
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 0% 100%; }
+        }
+
+        .magic-timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: timelineReveal 0.8s ease-out forwards;
+        }
+
+        .magic-timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .magic-timeline-item:nth-child(3) { animation-delay: 0.4s; }
+        .magic-timeline-item:nth-child(4) { animation-delay: 0.6s; }
+        .magic-timeline-item:nth-child(5) { animation-delay: 0.8s; }
+        .magic-timeline-item:nth-child(6) { animation-delay: 1s; }
+
+        @keyframes timelineReveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .magic-timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .magic-timeline-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magic-timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .magic-timeline-content:hover::before {
+            left: 100%;
+        }
+
+        .magic-timeline-content:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .magic-timeline-time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffdd59;
+            margin-bottom: 0.5rem;
+        }
+
+        .magic-timeline-activity {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .magic-timeline-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .magic-timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            position: relative;
+            z-index: 3;
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Programs Section */
+        .magic-programs {
+            padding: 5rem 1rem;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+            position: relative;
+        }
+
+        .magic-programs-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .magic-programs-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 0 1rem;
+        }
+
+        .magic-program-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: programReveal 0.8s ease-out forwards;
+        }
+
+        .magic-program-card:nth-child(2) { animation-delay: 0.2s; }
+        .magic-program-card:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes programReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .magic-program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffdd59, #667eea);
+            background-size: 300% 300%;
+            animation: magicRainbow 3s ease-in-out infinite;
+        }
+
+        .magic-program-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .magic-program-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .magic-program-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .magic-program-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .magic-program-time {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .magic-program-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .magic-program-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .magic-program-features li:hover {
+            transform: translateX(10px);
+            color: #667eea;
+        }
+
+        .magic-program-features li::before {
+            content: '✨';
+            font-size: 1.3rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.3) rotate(180deg); }
+        }
+
+        .magic-price-section {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magic-price-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffdd59, #667eea);
+            background-size: 300% 300%;
+            animation: magicRainbow 4s ease-in-out infinite;
+            z-index: -1;
+            border-radius: 22px;
+        }
+
+        .magic-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .magic-price-period {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .magic-discount-badge {
+            background: linear-gradient(45deg, #ff6b6b, #ffdd59);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            animation: discountPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes discountPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .magic-payment-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .magic-buy-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .magic-buy-button:hover {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
         }
 
         /* Workshops Section */
         .magic-workshops {
-            padding: 4rem 1rem;
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 1rem;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: white;
             position: relative;
+            overflow: hidden;
+        }
+
+        .magic-workshops::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 1px, transparent 2px);
+            background-size: 50px 50px, 80px 80px;
+            animation: workshopFloat 20s linear infinite;
+        }
+
+        @keyframes workshopFloat {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-50px) translateY(-50px); }
         }
 
         .magic-workshops-title {
             text-align: center;
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
-            margin-bottom: 3rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
         }
 
         .magic-workshops-grid {
@@ -236,30 +752,32 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             padding: 0 1rem;
+            position: relative;
+            z-index: 2;
         }
 
         .magic-workshop-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2.5rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             opacity: 0;
             transform: translateY(50px);
-            animation: magicCardReveal 0.8s ease-out forwards;
+            animation: workshopReveal 0.8s ease-out forwards;
         }
 
-        .magic-workshop-card:nth-child(2) { animation-delay: 0.2s; }
-        .magic-workshop-card:nth-child(3) { animation-delay: 0.4s; }
-        .magic-workshop-card:nth-child(4) { animation-delay: 0.6s; }
-        .magic-workshop-card:nth-child(5) { animation-delay: 0.8s; }
+        .magic-workshop-card:nth-child(2) { animation-delay: 0.1s; }
+        .magic-workshop-card:nth-child(3) { animation-delay: 0.2s; }
+        .magic-workshop-card:nth-child(4) { animation-delay: 0.3s; }
 
-        @keyframes magicCardReveal {
+        @keyframes workshopReveal {
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -267,8 +785,9 @@
         }
 
         .magic-workshop-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            transform: translateY(-15px) scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
         .magic-workshop-card::before {
@@ -278,684 +797,1037 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: all 0.6s ease;
         }
 
         .magic-workshop-card:hover::before {
-            left: 100%;
-        }
+           left: 100%;
+       }
 
-        .magic-workshop-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            position: relative;
-            overflow: hidden;
-        }
+       .magic-workshop-icon {
+           width: 100px;
+           height: 100px;
+           margin: 0 auto 2rem;
+           border-radius: 50%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: rgba(255, 255, 255, 0.2);
+           backdrop-filter: blur(10px);
+           border: 2px solid rgba(255, 255, 255, 0.3);
+           animation: workshopIconFloat 3s ease-in-out infinite;
+       }
 
-        .magic-workshop-icon img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-        }
+       @keyframes workshopIconFloat {
+           0%, 100% { transform: translateY(0) rotate(0deg); }
+           50% { transform: translateY(-10px) rotate(5deg); }
+       }
 
-        .magic-workshop-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #333;
-        }
+       .magic-workshop-icon img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(1.2) contrast(1.1);
+    border: 3px solid rgba(255,255,255,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-        .magic-workshop-age {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+.magic-workshop-icon:hover img {
+    transform: scale(1.15) rotate(5deg);
+    border-color: rgba(255,255,255,0.6);
+    filter: brightness(1.3) contrast(1.2) drop-shadow(0 0 20px rgba(255,255,255,0.4));
+}
 
-        .magic-workshop-description {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
+       .magic-workshop-title {
+           font-size: 1.8rem;
+           font-weight: 700;
+           margin-bottom: 1rem;
+       }
 
-        /* Calendar Section */
-        .magic-calendar {
-            padding: 4rem 1rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-        }
+       .magic-workshop-description {
+           line-height: 1.6;
+           opacity: 0.9;
+           margin-bottom: 1.5rem;
+       }
 
-        .magic-calendar-title {
-            text-align: center;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 3rem;
-        }
+       .magic-workshop-benefits {
+           background: rgba(255, 255, 255, 0.1);
+           padding: 1.5rem;
+           border-radius: 15px;
+           margin-top: 1.5rem;
+       }
 
-        .magic-calendar-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 0 1rem;
-        }
+       .magic-workshop-benefits h4 {
+           margin-bottom: 1rem;
+           color: #ffdd59;
+           font-weight: 600;
+       }
 
-        .magic-week-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: magicSlideInLeft 0.8s ease-out forwards;
-        }
+       .magic-workshop-benefits ul {
+           list-style: none;
+           padding: 0;
+           text-align: left;
+       }
 
-        .magic-week-card:nth-child(even) {
-            transform: translateX(50px);
-            animation-name: magicSlideInRight;
-        }
+       .magic-workshop-benefits li {
+           padding: 0.5rem 0;
+           position: relative;
+           padding-left: 1.5rem;
+       }
 
-        .magic-week-card:nth-child(2) { animation-delay: 0.1s; }
-        .magic-week-card:nth-child(3) { animation-delay: 0.2s; }
-        .magic-week-card:nth-child(4) { animation-delay: 0.3s; }
-        .magic-week-card:nth-child(5) { animation-delay: 0.4s; }
-        .magic-week-card:nth-child(6) { animation-delay: 0.5s; }
-        .magic-week-card:nth-child(7) { animation-delay: 0.6s; }
-        .magic-week-card:nth-child(8) { animation-delay: 0.7s; }
-        .magic-week-card:nth-child(9) { animation-delay: 0.8s; }
-        .magic-week-card:nth-child(10) { animation-delay: 0.9s; }
+       .magic-workshop-benefits li::before {
+           content: '⚡';
+           position: absolute;
+           left: 0;
+           animation: benefitGlow 2s ease-in-out infinite alternate;
+       }
 
-        @keyframes magicSlideInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+       @keyframes benefitGlow {
+           0% { opacity: 0.7; }
+           100% { opacity: 1; }
+       }
 
-        @keyframes magicSlideInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+       /* Calendar Section */
+       .magic-calendar {
+           padding: 5rem 1rem;
+           background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
+           color: white;
+           position: relative;
+           overflow: hidden;
+       }
 
-        .magic-week-card:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.2);
-        }
+       .magic-calendar::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background: 
+               radial-gradient(circle at 30% 30%, rgba(255, 107, 107, 0.1) 0%, transparent 70%),
+               radial-gradient(circle at 70% 70%, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
+           animation: calendarGlow 8s ease-in-out infinite alternate;
+       }
 
-        .magic-week-dates {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem;
-            border-radius: 10px;
-        }
+       @keyframes calendarGlow {
+           0% { opacity: 0.5; }
+           100% { opacity: 0.8; }
+       }
 
-        .magic-week-time {
-            font-size: 1rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-style: italic;
-        }
+       .magic-calendar-title {
+           text-align: center;
+           font-size: clamp(2.5rem, 5vw, 4rem);
+           font-weight: 800;
+           margin-bottom: 4rem;
+           position: relative;
+           z-index: 2;
+       }
 
-        .magic-week-workshops {
-            list-style: none;
-            padding: 0;
-        }
+       .magic-calendar-grid {
+           max-width: 1400px;
+           margin: 0 auto;
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 2rem;
+           padding: 0 1rem;
+           position: relative;
+           z-index: 2;
+       }
 
-        .magic-week-workshops li {
-            background: rgba(255, 255, 255, 0.1);
-            margin: 0.5rem 0;
-            padding: 0.8rem;
-            border-radius: 8px;
-            border-left: 4px solid #ffdd59;
-            transition: all 0.3s ease;
-        }
+       .magic-week-card {
+           background: rgba(255, 255, 255, 0.1);
+           border-radius: 20px;
+           padding: 2rem;
+           backdrop-filter: blur(15px);
+           border: 1px solid rgba(255, 255, 255, 0.2);
+           transition: all 0.4s ease;
+           position: relative;
+           overflow: hidden;
+           opacity: 0;
+           transform: translateX(-50px);
+           animation: weekReveal 0.8s ease-out forwards;
+       }
 
-        .magic-week-workshops li:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(10px);
-        }
+       .magic-week-card:nth-child(even) {
+           transform: translateX(50px);
+       }
 
-        /* Pricing Section */
-        .magic-pricing {
-            padding: 4rem 1rem;
-            background: linear-gradient(180deg, #f8f9fa 0%, white 100%);
-        }
+       .magic-week-card:nth-child(1) { animation-delay: 0.1s; }
+       .magic-week-card:nth-child(2) { animation-delay: 0.2s; }
+       .magic-week-card:nth-child(3) { animation-delay: 0.3s; }
+       .magic-week-card:nth-child(4) { animation-delay: 0.4s; }
+       .magic-week-card:nth-child(5) { animation-delay: 0.5s; }
+       .magic-week-card:nth-child(6) { animation-delay: 0.6s; }
+       .magic-week-card:nth-child(7) { animation-delay: 0.7s; }
+       .magic-week-card:nth-child(8) { animation-delay: 0.8s; }
+       .magic-week-card:nth-child(9) { animation-delay: 0.9s; }
+       .magic-week-card:nth-child(10) { animation-delay: 1s; }
 
-        .magic-pricing-title {
-            text-align: center;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 3rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+       @keyframes weekReveal {
+           to {
+               opacity: 1;
+               transform: translateX(0);
+           }
+       }
 
-        .magic-pricing-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+       .magic-week-card:hover {
+           transform: scale(1.05);
+           background: rgba(255, 255, 255, 0.2);
+           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+       }
 
-        .magic-pricing-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: scale(0.9);
-            animation: magicPricingReveal 1s ease-out 0.5s forwards;
-        }
+       .magic-week-dates {
+           font-size: 1.5rem;
+           font-weight: 700;
+           margin-bottom: 1rem;
+           text-align: center;
+           background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+           padding: 1rem;
+           border-radius: 15px;
+           color: white;
+       }
 
-        @keyframes magicPricingReveal {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+       .magic-week-workshops {
+           list-style: none;
+           padding: 0;
+       }
 
-        .magic-pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffdd59, #667eea);
-            background-size: 300% 300%;
-            animation: magicGradient 3s ease-in-out infinite;
-        }
+       .magic-week-workshops li {
+           background: rgba(255, 255, 255, 0.1);
+           margin: 0.8rem 0;
+           padding: 1rem;
+           border-radius: 12px;
+           border-left: 4px solid #ffdd59;
+           transition: all 0.3s ease;
+           position: relative;
+           overflow: hidden;
+       }
 
-        .magic-price {
-            font-size: 4rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-        }
+       .magic-week-workshops li::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: -100%;
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+           transition: left 0.5s ease;
+       }
 
-        .magic-price-period {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
+       .magic-week-workshops li:hover {
+           background: rgba(255, 255, 255, 0.2);
+           transform: translateX(10px);
+       }
 
-        .magic-features {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-            text-align: left;
-        }
+       .magic-week-workshops li:hover::before {
+           left: 100%;
+       }
 
-        .magic-features li {
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            opacity: 0;
-            animation: magicFeatureReveal 0.5s ease-out forwards;
-        }
+       /* Registration Section */
+       .magic-registration {
+           padding: 5rem 1rem;
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+           background-size: 400% 400%;
+           animation: gradientShift 8s ease-in-out infinite;
+           color: white;
+           text-align: center;
+           position: relative;
+           overflow: hidden;
+       }
 
-        .magic-features li:nth-child(1) { animation-delay: 1s; }
-        .magic-features li:nth-child(2) { animation-delay: 1.2s; }
-        .magic-features li:nth-child(3) { animation-delay: 1.4s; }
-        .magic-features li:nth-child(4) { animation-delay: 1.6s; }
-        .magic-features li:nth-child(5) { animation-delay: 1.8s; }
+       .magic-registration::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background: 
+               radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+               radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.1) 1px, transparent 2px);
+           background-size: 60px 60px, 100px 100px;
+           animation: registrationFloat 15s linear infinite;
+       }
 
-        @keyframes magicFeatureReveal {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+       @keyframes registrationFloat {
+           0% { transform: translateX(0) translateY(0); }
+           100% { transform: translateX(-60px) translateY(-60px); }
+       }
 
-        .magic-features li::before {
-            content: '✨';
-            font-size: 1.2rem;
-            animation: magicSparkle 2s ease-in-out infinite;
-        }
+       .magic-registration-content {
+           max-width: 800px;
+           margin: 0 auto;
+           position: relative;
+           z-index: 2;
+       }
 
-        @keyframes magicSparkle {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.2) rotate(180deg); }
-        }
+       .magic-registration-title {
+           font-size: clamp(2.5rem, 5vw, 4rem);
+           font-weight: 800;
+           margin-bottom: 2rem;
+           animation: registrationPulse 3s ease-in-out infinite;
+       }
 
-        .magic-payment-container {
-            margin-top: 2rem;
-            padding: 2rem;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            opacity: 0;
-            animation: magicFadeIn 1s ease-out 2s forwards;
-        }
+       @keyframes registrationPulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.05); }
+       }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .magic-hero {
-                min-height: 70vh;
-                padding: 1rem;
-            }
+       .magic-registration-description {
+           font-size: 1.3rem;
+           margin-bottom: 3rem;
+           line-height: 1.6;
+           opacity: 0.95;
+       }
 
-            .magic-hero-content {
-                max-width: 95%;
-            }
+       .magic-registration-buttons {
+           display: flex;
+           gap: 2rem;
+           justify-content: center;
+           flex-wrap: wrap;
+           margin-top: 3rem;
+       }
 
-            .magic-cta-container {
-                flex-direction: column;
-                align-items: center;
-            }
+       .magic-registration-btn {
+           padding: 1.5rem 3rem;
+           border: none;
+           border-radius: 50px;
+           font-size: 1.3rem;
+           font-weight: 700;
+           text-decoration: none;
+           display: inline-flex;
+           align-items: center;
+           gap: 1rem;
+           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+           position: relative;
+           overflow: hidden;
+           cursor: pointer;
+       }
 
-            .magic-cta-button {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
+       .magic-registration-primary {
+           background: linear-gradient(45deg, #ff6b6b, #ffdd59);
+           color: white;
+           box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+       }
 
-            .magic-workshops,
-            .magic-calendar,
-            .magic-pricing {
-                padding: 2rem 0.5rem;
-            }
+       .magic-registration-primary:hover {
+           transform: translateY(-8px) scale(1.05);
+           box-shadow: 0 25px 50px rgba(255, 107, 107, 0.6);
+       }
 
-            .magic-workshops-grid,
-            .magic-calendar-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 0 0.5rem;
-            }
+       .magic-registration-secondary {
+           background: rgba(255, 255, 255, 0.2);
+           color: white;
+           border: 2px solid white;
+           backdrop-filter: blur(15px);
+       }
 
-            .magic-workshop-card,
-            .magic-week-card,
-            .magic-pricing-card {
-                padding: 1.5rem;
-            }
+       .magic-registration-secondary:hover {
+           background: white;
+           color: #764ba2;
+           transform: translateY(-8px) scale(1.05);
+       }
 
-            .magic-pricing-card {
-                padding: 2rem 1.5rem;
-            }
-        }
+       .magic-contact-info {
+           margin-top: 4rem;
+           padding: 2rem;
+           background: rgba(255, 255, 255, 0.1);
+           border-radius: 20px;
+           backdrop-filter: blur(15px);
+           border: 1px solid rgba(255, 255, 255, 0.2);
+       }
 
-        /* Ultra small devices */
-        @media (max-width: 480px) {
-            .magic-hero {
-                min-height: 60vh;
-            }
+       .magic-contact-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           gap: 1.5rem;
+           margin-top: 2rem;
+       }
 
-            .magic-title {
-                font-size: 2rem;
-            }
+       .magic-contact-item {
+           display: flex;
+           align-items: center;
+           gap: 1rem;
+           padding: 1rem;
+           background: rgba(255, 255, 255, 0.1);
+           border-radius: 15px;
+           transition: all 0.3s ease;
+       }
 
-            .magic-subtitle {
-                font-size: 1rem;
-            }
+       .magic-contact-item:hover {
+           background: rgba(255, 255, 255, 0.2);
+           transform: scale(1.02);
+       }
 
-            .magic-dates {
-                font-size: 0.9rem;
-                padding: 0.8rem 1.5rem;
-            }
+       .magic-contact-icon {
+           font-size: 1.5rem;
+           opacity: 0.9;
+       }
 
-            .magic-workshop-card,
-            .magic-week-card {
-                padding: 1rem;
-            }
+       .magic-contact-text {
+           font-size: 0.95rem;
+           line-height: 1.4;
+       }
 
-            .magic-pricing-card {
-                padding: 1.5rem 1rem;
-            }
+       /* Mobile Responsive Design */
+       @media (max-width: 768px) {
+           .magic-hero {
+               min-height: 80vh;
+               padding: 1rem;
+           }
 
-            .magic-price {
-                font-size: 3rem;
-            }
-        }
+           .magic-hero-content {
+               max-width: 95%;
+           }
 
-        /* Magic Scroll Animations */
-        .magic-scroll-reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
-        }
+           .magic-cta-container {
+               flex-direction: column;
+               align-items: center;
+               gap: 1rem;
+           }
 
-        .magic-scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
+           .magic-cta-button {
+               width: 100%;
+               max-width: 280px;
+               justify-content: center;
+           }
 
-        /* Fix pentru imagini */
-        .magic-workshop-icon img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            filter: none !important;
-            opacity: 1 !important;
-        }
+           .magic-timeline::before {
+               left: 20px;
+           }
 
-        /* Iconuri pentru AI */
-        .magic-ai-icon {
-            width: 50px;
-            height: 50px;
-            color: white;
-        }
-    </style>
+           .magic-timeline-item {
+               flex-direction: column !important;
+               align-items: flex-start;
+               padding-left: 60px;
+           }
 
-    <!-- Stripe JS for payment -->
-    <script src="https://js.stripe.com/v3/buy-button.js"></script>
+           .magic-timeline-content {
+               margin: 1rem 0 0 0;
+               width: 100%;
+           }
+
+           .magic-timeline-icon {
+               position: absolute;
+               left: 0;
+               top: 0;
+               width: 40px;
+               height: 40px;
+               font-size: 1rem;
+           }
+
+           .magic-programs-grid {
+               grid-template-columns: 1fr;
+               gap: 2rem;
+               padding: 0 0.5rem;
+           }
+
+           .magic-program-card {
+               padding: 2rem 1.5rem;
+           }
+
+           .magic-workshops,
+           .magic-calendar,
+           .magic-schedule,
+           .magic-programs,
+           .magic-registration {
+               padding: 3rem 0.5rem;
+           }
+
+           .magic-workshops-grid,
+           .magic-calendar-grid {
+               grid-template-columns: 1fr;
+               gap: 1.5rem;
+               padding: 0 0.5rem;
+           }
+
+           .magic-workshop-card,
+           .magic-week-card {
+               padding: 1.5rem;
+           }
+
+           .magic-registration-buttons {
+               flex-direction: column;
+               align-items: center;
+               gap: 1rem;
+           }
+
+           .magic-registration-btn {
+               width: 100%;
+               max-width: 300px;
+               justify-content: center;
+           }
+
+           .magic-contact-grid {
+               grid-template-columns: 1fr;
+               gap: 1rem;
+           }
+
+           .magic-payment-buttons {
+               gap: 0.8rem;
+           }
+       }
+
+       /* Ultra small devices */
+       @media (max-width: 480px) {
+           .magic-hero {
+               min-height: 70vh;
+           }
+
+           .magic-title {
+               font-size: 2.2rem;
+           }
+
+           .magic-subtitle {
+               font-size: 1.1rem;
+           }
+
+           .magic-ages-badge {
+               font-size: 1rem;
+               padding: 1rem 2rem;
+           }
+
+           .magic-workshop-card,
+           .magic-week-card,
+           .magic-program-card {
+               padding: 1.2rem;
+           }
+
+           .magic-price {
+               font-size: 2.8rem;
+           }
+
+           .magic-timeline-item {
+               padding-left: 50px;
+           }
+
+           .magic-timeline-icon {
+               width: 35px;
+               height: 35px;
+               font-size: 0.9rem;
+           }
+       }
+
+       /* Enhanced scroll animations */
+       .magic-scroll-reveal {
+           opacity: 0;
+           transform: translateY(50px);
+           transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       }
+
+       .magic-scroll-reveal.revealed {
+           opacity: 1;
+           transform: translateY(0);
+       }
+
+       /* Loading animation */
+       .magic-loading {
+           opacity: 0;
+           transition: opacity 1s ease-in-out;
+       }
+
+       .magic-loaded {
+           opacity: 1;
+       }
+
+       /* Enhanced hover effects */
+       .magic-hover-glow {
+           position: relative;
+           overflow: hidden;
+       }
+
+       .magic-hover-glow::after {
+           content: '';
+           position: absolute;
+           top: -50%;
+           left: -50%;
+           width: 200%;
+           height: 200%;
+           background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+           opacity: 0;
+           transform: scale(0);
+           transition: all 0.6s ease;
+           pointer-events: none;
+       }
+
+       .magic-hover-glow:hover::after {
+           opacity: 1;
+           transform: scale(1);
+       }
+   </style>
+
+   <!-- Stripe JS for payment -->
+   <script src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
-<body class="magic-week-container">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK2RQLDG"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body class="magic-week-container magic-loading">
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK2RQLDG"
+       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="index.html" class="logo">
-                <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
-            </a>  
-            <button class="menu-button">☰</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Acasă</a></li>
-                <li class="dropdown">
-                    <a href="programare.html">Programare</a>
-                    <div class="dropdown-content">
-                        <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
-                        <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
-                        <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
-                        <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
-                        <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
-                        <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
-                        <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
-                        <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
-                        <a href="courses/godot.html">🎬 Godot - Game Development</a>
-                        <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
-                        <a href="courses/python.html">🐍 Python - Aplicații</a>
-                        <a href="courses/frontend.html">💻 Frontend - Web</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="robotics.html">Robotică</a>
-                    <div class="dropdown-content">
-                        <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
-                        <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
-                        <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
-                        <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">Despre Noi</a>
-                    <div class="dropdown-content">
-                        <a href="contact.html">📞 Contactează-ne</a>
-                        <a href="about.html">👥 Traineri</a>
-                        <a href="galerie.html">📸 Galerie</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+   <!-- Navigation -->
+   <nav class="navbar">
+       <div class="nav-content">
+           <a href="index.html" class="logo">
+               <img src="./assets/images/logo-techminds-sigla.png" alt="TMA Logo">
+           </a>  
+           <button class="menu-button">☰</button>
+           <ul class="nav-links">
+               <li><a href="index.html">Acasă</a></li>
+               <li class="dropdown">
+                   <a href="programare.html">Programare</a>
+                   <div class="dropdown-content">
+                       <a href="courses/scratch.html">🎮 Scratch - Jocuri</a>
+                       <a href="courses/appinventor.html">📱 AppInventor - Aplicații Mobile</a>
+                       <a href="courses/construct.html">🎯 Construct 3 - Jocuri 2D</a>
+                       <a href="courses/gdevelop.html">🎲 GDevelop - Platforme 2D</a>
+                       <a href="courses/alice.html">🌍 Alice 3 - Animații 3D</a>
+                       <a href="courses/makecode-arcade.html">🎮 micro:bit - Jocuri & Electronice</a>
+                       <a href="courses/minecraft.html">⛏️ Minecraft - Modding</a>
+                       <a href="courses/roblox.html">🌐 Roblox - Jocuri Online</a>
+                       <a href="courses/godot.html">🎬 Godot - Game Development</a>
+                       <a href="courses/greenfoot.html">☕ Greenfoot - Java</a>
+                       <a href="courses/python.html">🐍 Python - Aplicații</a>
+                       <a href="courses/frontend.html">💻 Frontend - Web</a>
+                   </div>
+               </li>
+               <li class="dropdown">
+                   <a href="robotics.html">Robotică</a>
+                   <div class="dropdown-content">
+                       <a href="courses/essentials.html">🧩 LEGO Essentials - Robotică Introductivă</a>
+                       <a href="courses/prime.html">🤖 LEGO Prime - Robotică Avansată</a>
+                       <a href="courses/microbit.html">🔌 micro:bit - Electronică Programabilă</a>
+                       <a href="courses/arduino.html">⚡ Arduino - Robotică & Electronică</a>
+                   </div>
+               </li>
+               <li class="dropdown">
+                   <a href="about.html">Despre Noi</a>
+                   <div class="dropdown-content">
+                       <a href="contact.html">📞 Contactează-ne</a>
+                       <a href="about.html">👥 Traineri</a>
+                       <a href="galerie.html">📸 Galerie</a>
+                   </div>
+               </li>
+           </ul>
+       </div>
+   </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="magic-hero">
-            <div class="magic-floating-particles"></div>
-            
-            <div class="magic-hero-content">
-                <h1 class="magic-title">TechMinds Magic Week</h1>
-                <p class="magic-subtitle">Ateliere de vară spectaculoase în tehnologie!</p>
-                <div class="magic-dates">
-                    📅 23 iunie - 30 august 2025 | ⏰ 11:00 - 13:30 | 👥 6-14 ani
-                </div>
-                
-                <div class="magic-cta-container">
-                    <a href="#pricing" class="magic-cta-button magic-cta-primary">
-                        🚀 Înscrie-te acum
-                    </a>
-                    <a href="#workshops" class="magic-cta-button magic-cta-secondary">
-                        🔍 Vezi atelierele
-                    </a>
-                </div>
-            </div>
-        </section>
+   <main>
+       <!-- Hero Section -->
+       <section class="magic-hero">
+           <div class="magic-cosmic-background"></div>
+           <div class="magic-floating-particles"></div>
+           
+           <div class="magic-hero-content">
+               <h1 class="magic-title">TechMinds Magic Week</h1>
+               <p class="magic-subtitle">Afterschool spectaculos în tehnologie!</p>
+               <div class="magic-ages-badge">
+                   🌟 6-10+ ani | 📅 23 iunie - 30 august 2025
+               </div>
+               
+               <div class="magic-cta-container">
+                   <a href="#programs" class="magic-cta-button magic-cta-primary magic-hover-glow">
+                       🚀 Vezi programele
+                   </a>
+                   <a href="https://techminds-academy.ro/inscriere" class="magic-cta-button magic-cta-secondary magic-hover-glow">
+                       📝 Înscrie-te acum
+                   </a>
+               </div>
+           </div>
+       </section>
 
-        <!-- Workshops Section -->
-        <section id="workshops" class="magic-workshops magic-scroll-reveal">
-            <h2 class="magic-workshops-title">Atelierele noastre magice</h2>
-            
-            <div class="magic-workshops-grid">
-                <div class="magic-workshop-card">
-                    <div class="magic-workshop-icon">
-                        <img src="https://techminds-academy.ro/assets/images/minecraft.png" alt="Minecraft">
-                    </div>
-                    <h3 class="magic-workshop-title">Minecraft Modding</h3>
-                    <div class="magic-workshop-age">9+ ani</div>
-                    <p class="magic-workshop-description">
-                        Creează propriile tale moduri și aventuri în lumea Minecraft! Învață să programezi și să construiești lumi incredibile.
-                    </p>
-                </div>
-
-                <div class="magic-workshop-card">
-                    <div class="magic-workshop-icon">
-                        <img src="https://techminds-academy.ro/assets/images/roblox.png" alt="Roblox">
-                    </div>
-                    <h3 class="magic-workshop-title">Roblox Development</h3>
-                    <div class="magic-workshop-age">10+ ani</div>
-                    <p class="magic-workshop-description">
-                        Dezvoltă jocuri spectaculoase în Roblox! De la concepte simple la jocuri complexe.
-                    </p>
-                </div>
-
-                <div class="magic-workshop-card">
-                    <div class="magic-workshop-icon">
-                        <img src="https://techminds-academy.ro/assets/images/prime.webp" alt="Robotică">
-                    </div>
-                    <h3 class="magic-workshop-title">Robotică LEGO</h3>
-                    <div class="magic-workshop-age">6-8 ani & 9+ ani</div>
-                    <p class="magic-workshop-description">
-                        Construiește și programează roboți fascinanți cu LEGO! Explorează lumea roboticii într-un mod distractiv și educativ.
-                    </p>
-                </div>
-
-                <div class="magic-workshop-card">
-                    <div class="magic-workshop-icon">
-                        <img src="https://techminds-academy.ro/assets/images/gdevelop.png" alt="GDevelop">
-                    </div>
-                    <h3 class="magic-workshop-title">GDevelop Games</h3>
-                    <div class="magic-workshop-age">6-8 ani & 9+ ani</div>
-                    <p class="magic-workshop-description">
-                        Creează jocuri 2D profesionale fără cod! Dezvoltă-ți creativitatea și învață principiile game design-ului.
-                   </p>
+       <!-- Schedule Timeline Section -->
+       <section id="schedule" class="magic-schedule magic-scroll-reveal">
+           <h2 class="magic-schedule-title">Programul zilnic</h2>
+           
+           <div class="magic-timeline">
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">🌅</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">08:50 - 09:30</div>
+                       <div class="magic-timeline-activity">Bună dimineața!</div>
+                       <div class="magic-timeline-description">Întâmpinare caldă și pregătire pentru o zi plină de descoperiri</div>
+                   </div>
                </div>
 
-               <div class="magic-workshop-card">
-                   <div class="magic-workshop-icon">
-                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="magic-ai-icon">
-                           <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z"/>
-                           <path d="M20 12C20 13.3807 18.8807 14.5 17.5 14.5C16.1193 14.5 15 13.3807 15 12C15 10.6193 16.1193 9.5 17.5 9.5C18.8807 9.5 20 10.6193 20 12Z"/>
-                           <path d="M14.5 6C14.5 7.38071 13.3807 8.5 12 8.5C10.6193 8.5 9.5 7.38071 9.5 6C9.5 4.61929 10.6193 3.5 12 3.5C13.3807 3.5 14.5 4.61929 14.5 6Z"/>
-                           <path d="M14.5 18C14.5 19.3807 13.3807 20.5 12 20.5C10.6193 20.5 9.5 19.3807 9.5 18C9.5 16.6193 10.6193 15.5 12 15.5C13.3807 15.5 14.5 16.6193 14.5 18Z"/>
-                       </svg>
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">🎯</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">09:30 - 10:30</div>
+                       <div class="magic-timeline-activity">Primul Atelier</div>
+                       <div class="magic-timeline-description">Explorarea tehnologiei prin ateliere interactive și captivante</div>
                    </div>
-                   <h3 class="magic-workshop-title">Inteligență Artificială</h3>
-                   <div class="magic-workshop-age">8+ ani</div>
+               </div>
+
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">🎮</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">10:30 - 11:00</div>
+                       <div class="magic-timeline-activity">Pauză + Joc interactiv</div>
+                       <div class="magic-timeline-description">Relaxare și socializare prin jocuri educative</div>
+                   </div>
+               </div>
+
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">⚡</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">11:00 - 12:00</div>
+                       <div class="magic-timeline-activity">Al doilea Atelier</div>
+                       <div class="magic-timeline-description">Continuarea aventurii tehnologice cu noi provocări</div>
+                   </div>
+               </div>
+
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">🍽️</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">12:00 - 13:00</div>
+                       <div class="magic-timeline-activity">Masa de prânz</div>
+                       <div class="magic-timeline-description">Pauză pentru masă (inclusă doar în programul Full Day)</div>
+                   </div>
+               </div>
+
+               <div class="magic-timeline-item">
+                   <div class="magic-timeline-icon">🎊</div>
+                   <div class="magic-timeline-content">
+                       <div class="magic-timeline-time">13:00 - 17:30</div>
+                       <div class="magic-timeline-activity">Activități distractive</div>
+                       <div class="magic-timeline-description">Continuarea programului cu activități variate și educative (doar Full Day)</div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <!-- Programs Section -->
+       <section id="programs" class="magic-programs magic-scroll-reveal">
+           <h2 class="magic-programs-title">Alege programul perfect</h2>
+           
+           <div class="magic-programs-grid">
+               <!-- Half Day Program -->
+               <div class="magic-program-card magic-hover-glow">
+                   <div class="magic-program-header">
+                       <div class="magic-program-icon">🌅</div>
+                       <h3 class="magic-program-title">Half Day</h3>
+                       <div class="magic-program-time">08:50 - 12:00</div>
+                   </div>
+
+                   <ul class="magic-program-features">
+                       <li>Ateliere de dimineață complete</li>
+                       <li>Program Luni - Vineri</li>
+                       <li>2.5 ore de ateliere pe zi</li>
+                       <li>Grupuri mici (5-7 copii)</li>
+                       <li>Jocuri interactive între ateliere</li>
+                   </ul>
+
+                   <div class="magic-price-section">
+                       <div class="magic-price">650 LEI</div>
+                       <div class="magic-price-period">per săptămână</div>
+                       <div class="magic-discount-badge">🎁 5% reducere pentru frați/best friends</div>
+                   </div>
+
+                   <div class="magic-payment-buttons">
+                       <stripe-buy-button
+                           buy-button-id="buy_btn_1RV5OsL5EMW6XT7634pKhCs6"
+                           publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                           locale="ro"
+                       >
+                       </stripe-buy-button>
+                   </div>
+               </div>
+
+               <!-- Full Day Program -->
+               <div class="magic-program-card magic-hover-glow">
+                   <div class="magic-program-header">
+                       <div class="magic-program-icon">🌟</div>
+                       <h3 class="magic-program-title">Full Day</h3>
+                       <div class="magic-program-time">08:50 - 17:30</div>
+                   </div>
+
+                   <ul class="magic-program-features">
+                       <li>Ateliere de dimineață + activități</li>
+                       <li>Masa de prânz inclusă</li>
+                       <li>Program Luni - Vineri</li>
+                       <li>Grupuri mici (5-7 copii)</li>
+                       <li>Activități diverse după-amiaza</li>
+                       <li>Supraveghere completă</li>
+                   </ul>
+
+                   <div class="magic-price-section">
+                       <div class="magic-price">1150 LEI</div>
+                       <div class="magic-price-period">per săptămână</div>
+                       <div class="magic-discount-badge">🎁 5% reducere pentru frați/best friends</div>
+                   </div>
+
+                   <div class="magic-payment-buttons">
+                       <stripe-buy-button
+                           buy-button-id="buy_btn_1RV5OsL5EMW6XT7634pKhCs6"
+                           publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
+                           locale="ro"
+                       >
+                       </stripe-buy-button>
+                   </div>
+               </div>
+
+               <!-- Individual Workshop -->
+               <div class="magic-program-card magic-hover-glow">
+                   <div class="magic-program-header">
+                       <div class="magic-program-icon">🎯</div>
+                       <h3 class="magic-program-title">Atelier Individual</h3>
+                       <div class="magic-program-time">9:30 - 12:00</div>
+                   </div>
+
+                   <ul class="magic-program-features">
+                       <li>Doar atelierele de dimineață</li>
+                       <li>Fără activități suplimentare</li>
+                       <li>Program Luni - Vineri</li>
+                       <li>Alături de grupele Half/Full Day</li>
+                       <li>Focalizare pe tehnologie</li>
+                   </ul>
+
+                   <div class="magic-price-section">
+                       <div class="magic-price">550 LEI</div>
+                       <div class="magic-price-period">per săptămână</div>
+                       <div class="magic-discount-badge">🎁 5% reducere pentru frați/best friends</div>
+                   </div>
+
+                   <div class="magic-payment-buttons">
+                       <stripe-buy-button
+                           buy-button-id="buy_btn_1RV5OsL5EMW6XT7634pKhCs6"
+                           publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhp00hOSPDNXi"
+                           locale="ro"
+                       >
+                       </stripe-buy-button>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <!-- Workshops Section -->
+       <section id="workshops" class="magic-workshops magic-scroll-reveal">
+           <h2 class="magic-workshops-title">Atelierele noastre spectaculoase</h2>
+           
+           <div class="magic-workshops-grid">
+               <div class="magic-workshop-card magic-hover-glow">
+                   <div class="magic-workshop-icon">
+                       <img src="https://techminds-academy.ro/assets/images/minecraft.png" alt="Minecraft">
+                   </div>
+                   <h3 class="magic-workshop-title">Minecraft Modding</h3>
                    <p class="magic-workshop-description">
-                       Descoperă secretele AI! Creează chatboti, sisteme de recunoaștere și aplicații inteligente într-un mod accesibil și captivant.
+                       Folosind MCreator și Blockbench, copiii vor învăța să creeze propriul conținut pentru Minecraft – de la obiecte și personaje la structuri complexe.
                    </p>
+                   <div class="magic-workshop-benefits">
+                       <h4>Beneficii:</h4>
+                       <ul>
+                           <li>Transformă pasiunea pentru Minecraft în abilități practice</li>
+                           <li>Dezvoltă creativitatea prin crearea propriului conținut</li>
+                           <li>Învață concepte de game design într-un mediu familiar</li>
+                       </ul>
+                   </div>
+               </div>
+
+               <div class="magic-workshop-card magic-hover-glow">
+                   <div class="magic-workshop-icon">
+                       <img src="https://techminds-academy.ro/assets/images/roblox.png" alt="Roblox">
+                   </div>
+                   <h3 class="magic-workshop-title">Roblox Studio</h3>
+                   <p class="magic-workshop-description">
+                       Limbajul Lua pentru a crea jocuri complexe, învățând să scrie cod real într-un mediu captivant și popular.
+                   </p>
+                   <div class="magic-workshop-benefits">
+                       <h4>Beneficii:</h4>
+                       <ul>
+                           <li>Primul pas în programarea reală cu rezultate imediat vizibile</li>
+                           <li>Creează jocuri ce pot fi publicate pe platforma Roblox</li>
+                           <li>Dezvoltă abilități de programare cerute în industrie</li>
+                       </ul>
+                   </div>
+               </div>
+
+               <div class="magic-workshop-card magic-hover-glow">
+                   <div class="magic-workshop-icon">
+                       <img src="https://techminds-academy.ro/assets/images/gdevelop.png" alt="GDevelop">
+                   </div>
+                   <h3 class="magic-workshop-title">GDevelop Games</h3>
+                   <p class="magic-workshop-description">
+                       Oferă copiilor un sistem intuitiv de „evenimente și acțiuni", permițându-le să creeze jocuri 2D complexe pentru diverse platforme.
+                   </p>
+                   <div class="magic-workshop-benefits">
+                       <h4>Beneficii:</h4>
+                       <ul>
+                           <li>Creează jocuri complete cu mecanici complexe și efecte vizuale</li>
+                           <li>Dezvoltă gândirea logică și abilitățile de rezolvare a problemelor</li>
+                           <li>Învață concepte reale din industria dezvoltării de jocuri</li>
+                       </ul>
+                   </div>
+               </div>
+
+               <div class="magic-workshop-card magic-hover-glow">
+                   <div class="magic-workshop-icon">
+                       <img src="https://techminds-academy.ro/assets/images/essentials.webp" alt="LEGO Robotics">
+                   </div>
+                   <h3 class="magic-workshop-title">LEGO SPIKE Essentials</h3>
+                   <p class="magic-workshop-description">
+                       Acest curs introduce participanții în robotică prin utilizarea seturilor LEGO Spike Essentials. Elevii vor construi și programa roboți simpli.
+                   </p>
+                   <div class="magic-workshop-benefits">
+                       <h4>Beneficii:</h4>
+                       <ul>
+                           <li>Introduce conceptele de bază ale roboticii</li>
+                           <li>Dezvoltă creativitatea și gândirea logică</li>
+                           <li>Oferă o experiență practică și distractivă</li>
+                       </ul>
+                   </div>
                </div>
            </div>
        </section>
 
        <!-- Calendar Section -->
        <section id="calendar" class="magic-calendar magic-scroll-reveal">
-           <h2 class="magic-calendar-title">Calendar săptămânal</h2>
+           <h2 class="magic-calendar-title">Calendar săptămânal ateliere</h2>
            
            <div class="magic-calendar-grid">
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">23.06 - 27.06</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🎮 Minecraft Modding</li>
-                       <li>🌐 Roblox Development</li>
+                       <li>⛏️ Minecraft Modding</li>
+                       <li>🌐 Roblox Studio</li>
                        <li>🤖 Robotică LEGO</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">30.06 - 04.07</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🧠 Inteligență Artificială</li>
+                       <li>⛏️ Minecraft Modding</li>
+                       <li>🌐 Roblox Studio</li>
                        <li>🎲 GDevelop Games</li>
-                       <li>🎮 Minecraft Modding</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">07.07 - 11.07</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🌐 Roblox Development</li>
+                       <li>🌐 Roblox Studio</li>
                        <li>🤖 Robotică LEGO</li>
                        <li>🎲 GDevelop Games</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">14.07 - 18.07</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🧠 Inteligență Artificială</li>
-                       <li>🌐 Roblox Development</li>
-                       <li>🎮 Minecraft Modding</li>
+                       <li>🤖 Robotică LEGO</li>
+                       <li>🌐 Roblox Studio</li>
+                       <li>⛏️ Minecraft Modding</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">21.07 - 25.07</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
                        <li>🤖 Robotică LEGO</li>
                        <li>🎲 GDevelop Games</li>
-                       <li>🌐 Roblox Development</li>
+                       <li>🌐 Roblox Studio</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">28.07 - 01.08</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🧠 Inteligență Artificială</li>
-                       <li>🌐 Roblox Development</li>
-                       <li>🎮 Minecraft Modding</li>
+                       <li>🎲 GDevelop Games</li>
+                       <li>🌐 Roblox Studio</li>
+                       <li>⛏️ Minecraft Modding</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">04.08 - 08.08</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
                        <li>🤖 Robotică LEGO</li>
                        <li>🎲 GDevelop Games</li>
-                       <li>🌐 Roblox Development</li>
+                       <li>🌐 Roblox Studio</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">11.08 - 15.08</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🧠 Inteligență Artificială</li>
-                       <li>🌐 Roblox Development</li>
-                       <li>🤖 Robotică LEGO</li>
+                       <li>⛏️ Minecraft Modding</li>
+                       <li>🌐 Roblox Studio</li>
+                       <li>🎲 GDevelop Games</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">18.08 - 22.08</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🎮 Minecraft Modding</li>
-                       <li>🌐 Roblox Development</li>
+                       <li>⛏️ Minecraft Modding</li>
+                       <li>🌐 Roblox Studio</li>
                        <li>🤖 Robotică LEGO</li>
                    </ul>
                </div>
 
-               <div class="magic-week-card">
+               <div class="magic-week-card magic-hover-glow">
                    <div class="magic-week-dates">25.08 - 29.08</div>
-                   <div class="magic-week-time">⏰ Luni - Vineri, 11:00 - 13:30</div>
                    <ul class="magic-week-workshops">
-                       <li>🧠 Inteligență Artificială</li>
-                       <li>🌐 Roblox Development</li>
-                       <li>🎮 Minecraft Modding</li>
+                       <li>🎲 GDevelop Games</li>
+                       <li>🌐 Roblox Studio</li>
+                       <li>⛏️ Minecraft Modding</li>
                    </ul>
                </div>
            </div>
        </section>
 
-       <!-- Pricing Section -->
-       <section id="pricing" class="magic-pricing magic-scroll-reveal">
-           <h2 class="magic-pricing-title">Investește în viitorul copilului tău</h2>
-           
-           <div class="magic-pricing-container">
-               <div class="magic-pricing-card">
-                   <div class="magic-price">650 LEI</div>
-                   <div class="magic-price-period">per săptămână</div>
-                   
-                   <ul class="magic-features">
-                       <li>📅 5 zile complete de ateliere (Luni - Vineri)</li>
-                       <li>⏰ Program zilnic 11:00 - 13:30</li>
-                       <li>🎓 Diplomă de participare personalizată</li>
-                       <li>🍎 Gustare zilnică cu fructe proaspete</li>
-                       <li>👥 Grupe mici, atenție personalizată</li>
-                   </ul>
+       <!-- Registration Section -->
+       <section id="registration" class="magic-registration magic-scroll-reveal">
+           <div class="magic-registration-content">
+               <h2 class="magic-registration-title">Înscrie-te la aventura magică!</h2>
+               <p class="magic-registration-description">
+                   Locurile sunt limitate și se ocupă rapid! Înscrierea se face în ordinea plăților pentru a garanta calitatea experienciei educaționale.
+               </p>
 
-                   <div class="magic-payment-container">
-                       <h4 style="margin-bottom: 1rem; color: #333;">🚀 Rezervă-ți locul acum!</h4>
-                       <p style="color: #666; margin-bottom: 1.5rem;">Locuri limitate - înscrierea se face în ordinea plăților</p>
-                       
-                       <div class="card-payment">
-                           <stripe-buy-button
-                               buy-button-id="buy_btn_1RV5OsL5EMW6XT7634pKhCs6"
-                               publishable-key="pk_live_51QytJOL5EMW6XT76sXU2ClpATgCSG51QDlqdWDvOEHBP2FJPoP3QfbnI468yFZiFUOl62CsTezPHLo8nDmUhRhDp00hOSPDNXi"
-                               locale="ro"
-                           >
-                           </stripe-buy-button>
+               <div class="magic-registration-buttons">
+                   <a href="https://techminds-academy.ro/inscriere" class="magic-registration-btn magic-registration-primary magic-hover-glow">
+                       📝 Completează formularul de înscriere
+                   </a>
+                   <a href="#programs" class="magic-registration-btn magic-registration-secondary magic-hover-glow">
+                       💡 Compară programele
+                   </a>
+               </div>
+
+               <div class="magic-contact-info">
+                   <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Contact & Informații</h3>
+                   <div class="magic-contact-grid">
+                       <div class="magic-contact-item magic-hover-glow">
+                           <div class="magic-contact-icon">📞</div>
+                           <div class="magic-contact-text">
+                               <strong>Telefon:</strong><br>
+                               +40 758 707 448
+                           </div>
                        </div>
-                       
-                       <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                           💡 <strong>Plata integrală</strong> - Achitare completă pentru săptămâna selectată
-                       </p>
+                       <div class="magic-contact-item magic-hover-glow">
+                           <div class="magic-contact-icon">✉️</div>
+                           <div class="magic-contact-text">
+                               <strong>Email:</strong><br>
+                               office@techminds-academy.ro
+                           </div>
+                       </div>
+                       <div class="magic-contact-item magic-hover-glow">
+                           <div class="magic-contact-icon">🌐</div>
+                           <div class="magic-contact-text">
+                               <strong>Website:</strong><br>
+                               techminds-academy.ro
+                           </div>
+                       </div>
+                       <div class="magic-contact-item magic-hover-glow">
+                           <div class="magic-contact-icon">📍</div>
+                           <div class="magic-contact-text">
+                               <strong>Adresă:</strong><br>
+                               Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center, Sector 1, București
+                           </div>
+                       </div>
                    </div>
                </div>
            </div>
@@ -1035,54 +1907,72 @@
    </footer>
 
    <script>
-       // Magic Week Specific JavaScript
+       // Enhanced Magic Week JavaScript
        document.addEventListener('DOMContentLoaded', function() {
-           // Create floating particles
-           function createMagicParticles() {
+           // Enhanced particle system
+           function createEnhancedParticles() {
                const particleContainer = document.querySelector('.magic-floating-particles');
-               const particleCount = 50;
+               const particleCount = 80;
 
                for (let i = 0; i < particleCount; i++) {
                    const particle = document.createElement('div');
                    particle.classList.add('magic-particle');
                    
-                   // Random position
+                   // Enhanced random positioning and timing
                    particle.style.left = Math.random() * 100 + '%';
-                   particle.style.animationDelay = Math.random() * 6 + 's';
-                   particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                   particle.style.animationDelay = Math.random() * 8 + 's';
+                   particle.style.animationDuration = (Math.random() * 6 + 8) + 's';
+                   
+                   // Random size variation
+                   const size = Math.random() * 4 + 3;
+                   particle.style.width = size + 'px';
+                   particle.style.height = size + 'px';
                    
                    particleContainer.appendChild(particle);
                }
            }
 
-           // Smooth scrolling for anchor links
-           function setupSmoothScrolling() {
+           // Enhanced smooth scrolling with easing
+           function setupEnhancedScrolling() {
                const links = document.querySelectorAll('a[href^="#"]');
                links.forEach(link => {
                    link.addEventListener('click', function(e) {
                        e.preventDefault();
                        const target = document.querySelector(this.getAttribute('href'));
                        if (target) {
-                           target.scrollIntoView({
-                               behavior: 'smooth',
-                               block: 'start'
+                           const headerOffset = 100;
+                           const elementPosition = target.getBoundingClientRect().top;
+                           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                           window.scrollTo({
+                               top: offsetPosition,
+                               behavior: 'smooth'
                            });
                        }
                    });
                });
            }
 
-           // Scroll reveal animations
-           function setupScrollReveal() {
+           // Advanced scroll reveal with intersection observer
+           function setupAdvancedScrollReveal() {
                const observerOptions = {
                    threshold: 0.1,
-                   rootMargin: '0px 0px -50px 0px'
+                   rootMargin: '0px 0px -80px 0px'
                };
 
                const observer = new IntersectionObserver((entries) => {
                    entries.forEach(entry => {
                        if (entry.isIntersecting) {
                            entry.target.classList.add('revealed');
+                           
+                           // Add staggered animation for children
+                           const children = entry.target.querySelectorAll('.magic-workshop-card, .magic-week-card, .magic-program-card');
+                           children.forEach((child, index) => {
+                               setTimeout(() => {
+                                   child.style.opacity = '1';
+                                   child.style.transform = 'translateY(0)';
+                               }, index * 100);
+                           });
                        }
                    });
                }, observerOptions);
@@ -1091,124 +1981,215 @@
                revealElements.forEach(el => observer.observe(el));
            }
 
-           // Enhanced card hover effects
-           function setupCardEffects() {
-               const cards = document.querySelectorAll('.magic-workshop-card, .magic-week-card');
+           // Enhanced card interactions with magnetic effect
+           function setupEnhancedCardEffects() {
+               const cards = document.querySelectorAll('.magic-workshop-card, .magic-week-card, .magic-program-card');
                cards.forEach(card => {
                    card.addEventListener('mouseenter', function() {
-                       this.style.transform = 'translateY(-10px) scale(1.02)';
+                       this.style.transform = 'translateY(-15px) scale(1.03)';
+                       this.style.zIndex = '10';
                    });
                    
                    card.addEventListener('mouseleave', function() {
                        this.style.transform = 'translateY(0) scale(1)';
+                       this.style.zIndex = '1';
+                   });
+
+                   // Magnetic effect for mouse movement
+                   card.addEventListener('mousemove', function(e) {
+                       const rect = this.getBoundingClientRect();
+                       const x = e.clientX - rect.left;
+                       const y = e.clientY - rect.top;
+                       const centerX = rect.width / 2;
+                       const centerY = rect.height / 2;
+                       const rotateX = (y - centerY) / 10;
+                       const rotateY = (centerX - x) / 10;
+                       
+                       this.style.transform = `translateY(-15px) scale(1.03) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                   });
+
+                   card.addEventListener('mouseleave', function() {
+                       this.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
                    });
                });
            }
 
-           // Dynamic gradient animation for title
-           function setupTitleAnimation() {
+           // Dynamic title animation with color cycling
+           function setupDynamicTitleAnimation() {
                const title = document.querySelector('.magic-title');
                if (title) {
                    let hue = 0;
                    setInterval(() => {
-                       hue = (hue + 1) % 360;
-                       title.style.filter = `hue-rotate(${hue}deg)`;
+                       hue = (hue + 0.5) % 360;
+                       title.style.filter = `hue-rotate(${hue}deg) brightness(1.1)`;
                    }, 50);
                }
            }
 
-           // Parallax effect for hero section
-           function setupParallaxEffect() {
+           // Enhanced parallax with multiple layers
+           function setupAdvancedParallax() {
                window.addEventListener('scroll', () => {
                    const scrolled = window.pageYOffset;
-                   const parallaxElements = document.querySelectorAll('.magic-floating-particles');
+                   const parallaxElements = document.querySelectorAll('.magic-floating-particles, .magic-cosmic-background');
                    
-                   parallaxElements.forEach(element => {
-                       const speed = 0.5;
+                   parallaxElements.forEach((element, index) => {
+                       const speed = 0.3 + (index * 0.1);
                        element.style.transform = `translateY(${scrolled * speed}px)`;
                    });
+
+                   // Enhanced navbar background
+                   const navbar = document.querySelector('.navbar');
+                   if (navbar) {
+                       if (scrolled > 100) {
+                           navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+                           navbar.style.backdropFilter = 'blur(20px)';
+                       } else {
+                           navbar.style.background = 'rgba(0, 0, 0, 0.1)';
+                           navbar.style.backdropFilter = 'blur(10px)';
+                       }
+                   }
                });
            }
 
-           // Enhanced image loading
-           function ensureImagesLoad() {
-               const images = document.querySelectorAll('.magic-workshop-icon img');
-               images.forEach(img => {
-                   img.addEventListener('error', function() {
-                       console.log('Image failed to load:', this.src);
-                       // Fallback to a placeholder or retry
-                       this.style.display = 'none';
-                       const parent = this.parentElement;
-                       parent.innerHTML = '<div style="color: white; font-size: 2rem;">🎮</div>';
-                   });
-                   
-                   img.addEventListener('load', function() {
-                       this.style.opacity = '1';
-                       this.style.filter = 'none';
-                   });
+           // Loading sequence with enhanced animations
+           function setupLoadingSequence() {
+               document.body.classList.remove('magic-loading');
+               document.body.classList.add('magic-loaded');
+               
+               // Staggered element appearance
+               const elements = document.querySelectorAll('.magic-hero-content > *');
+               elements.forEach((element, index) => {
+                   element.style.opacity = '0';
+                   element.style.transform = 'translateY(50px)';
+                   setTimeout(() => {
+                       element.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                       element.style.opacity = '1';
+                       element.style.transform = 'translateY(0)';
+                   }, index * 200 + 500);
                });
            }
 
-           // Initialize all effects
-           createMagicParticles();
-           setupSmoothScrolling();
-           setupScrollReveal();
-           setupCardEffects();
-           setupTitleAnimation();
-           setupParallaxEffect();
-           ensureImagesLoad();
+           // Mobile optimizations
+           function setupMobileOptimizations() {
+               const isMobile = window.innerWidth <= 768;
+               
+               if (isMobile) {
+                   // Reduce particle count on mobile
+                   const particles = document.querySelectorAll('.magic-particle');
+                   particles.forEach((particle, index) => {
+                       if (index > 30) particle.remove();
+                   });
 
-           // Add loading animation
-           document.body.style.opacity = '0';
-           setTimeout(() => {
-               document.body.style.transition = 'opacity 1s ease-in-out';
-               document.body.style.opacity = '1';
-           }, 100);
+                   // Optimize animations for mobile
+                   document.body.style.setProperty('--animation-duration', '0.5s');
+               }
+           }
 
-           // Add some extra sparkle effects
-           function addSparkleEffects() {
-               const sparkleElements = document.querySelectorAll('.magic-workshop-card, .magic-week-card');
+           // Enhanced sparkle effects
+           function addAdvancedSparkleEffects() {
+               const sparkleElements = document.querySelectorAll('.magic-hover-glow');
                sparkleElements.forEach(element => {
                    element.addEventListener('mouseenter', function() {
-                       // Add temporary sparkle effect
-                       const sparkle = document.createElement('div');
-                       sparkle.innerHTML = '✨';
-                       sparkle.style.position = 'absolute';
-                       sparkle.style.top = Math.random() * 100 + '%';
-                       sparkle.style.left = Math.random() * 100 + '%';
-                       sparkle.style.fontSize = '1.5rem';
-                       sparkle.style.opacity = '0';
-                       sparkle.style.transition = 'all 0.5s ease';
-                       sparkle.style.pointerEvents = 'none';
-                       sparkle.style.zIndex = '10';
-                       
-                       this.appendChild(sparkle);
-                       
-                       setTimeout(() => {
-                           sparkle.style.opacity = '1';
-                           sparkle.style.transform = 'translateY(-20px)';
-                       }, 10);
-                       
-                       setTimeout(() => {
-                           sparkle.remove();
-                       }, 500);
+                       for (let i = 0; i < 3; i++) {
+                           setTimeout(() => {
+                               const sparkle = document.createElement('div');
+                               sparkle.innerHTML = ['✨', '⭐', '💫'][Math.floor(Math.random() * 3)];
+                               sparkle.style.position = 'absolute';
+                               sparkle.style.top = Math.random() * 100 + '%';
+                               sparkle.style.left = Math.random() * 100 + '%';
+                               sparkle.style.fontSize = '1.5rem';
+                               sparkle.style.opacity = '0';
+                               sparkle.style.transition = 'all 1s ease';
+                               sparkle.style.pointerEvents = 'none';
+                               sparkle.style.zIndex = '15';
+                               
+                               this.appendChild(sparkle);
+                               
+                               setTimeout(() => {
+                                   sparkle.style.opacity = '1';
+                                   sparkle.style.transform = 'translateY(-30px) scale(1.5)';
+                               }, 10);
+                               
+                               setTimeout(() => {
+                                   sparkle.style.opacity = '0';
+                                   sparkle.style.transform = 'translateY(-50px) scale(0)';
+                               }, 500);
+                               
+                               setTimeout(() => {
+                                   sparkle.remove();
+                               }, 1000);
+                           }, i * 200);
+                       }
                    });
                });
            }
 
-           addSparkleEffects();
+           // Enhanced mobile menu
+           function setupEnhancedMobileMenu() {
+               const menuButton = document.querySelector('.menu-button');
+               const navLinks = document.querySelector('.nav-links');
+
+               if (menuButton && navLinks) {
+                   menuButton.addEventListener('click', function() {
+                       navLinks.classList.toggle('active');
+                       this.classList.toggle('active');
+                       
+                       // Animate menu items
+                       const menuItems = navLinks.querySelectorAll('li');
+                       menuItems.forEach((item, index) => {
+                           if (navLinks.classList.contains('active')) {
+                               item.style.animation = `menuItemSlide 0.5s ease forwards ${index * 0.1}s`;
+                           } else {
+                               item.style.animation = '';
+                           }
+                       });
+                   });
+               }
+           }
+
+           // Initialize all enhanced features
+           createEnhancedParticles();
+           setupEnhancedScrolling();
+           setupAdvancedScrollReveal();
+           setupEnhancedCardEffects();
+           setupDynamicTitleAnimation();
+           setupAdvancedParallax();
+           setupMobileOptimizations();
+           addAdvancedSparkleEffects();
+           setupEnhancedMobileMenu();
+           
+           // Delayed loading for optimal performance
+           setTimeout(() => {
+               setupLoadingSequence();
+           }, 100);
+
+           // Performance optimization: Debounced scroll events
+           let scrollTimeout;
+           window.addEventListener('scroll', () => {
+               if (scrollTimeout) {
+                   clearTimeout(scrollTimeout);
+               }
+               scrollTimeout = setTimeout(() => {
+                   // Additional scroll-based animations can be added here
+               }, 10);
+           });
        });
 
-       // Mobile menu functionality
-       const menuButton = document.querySelector('.menu-button');
-       const navLinks = document.querySelector('.nav-links');
-
-       if (menuButton && navLinks) {
-           menuButton.addEventListener('click', function() {
-               navLinks.classList.toggle('active');
-               this.classList.toggle('active');
-           });
-       }
+       // Add CSS animation keyframes for enhanced effects
+       const style = document.createElement('style');
+       style.textContent = `
+           @keyframes menuItemSlide {
+               from {
+                   opacity: 0;
+                   transform: translateX(-20px);
+               }
+               to {
+                   opacity: 1;
+                   transform: translateX(0);
+               }
+           }
+       `;
+       document.head.appendChild(style);
    </script>
 
    <!-- Common Scripts -->
