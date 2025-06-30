@@ -166,7 +166,9 @@
 
 /* Stiluri pentru puncte cheie - design grid cu carduri */
 .tmi-key-points {
-  margin-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .tmi-key-points h3 {
@@ -190,9 +192,8 @@
 
 .tmi-key-points-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* adaptiv */
+  gap: 1.5rem;
 }
 
 .tmi-key-point-item {
